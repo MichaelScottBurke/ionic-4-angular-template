@@ -20,6 +20,20 @@
 
 <body>
   <app-root></app-root>
+  
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDbNHVoBPDqSfir95TTz8W5T0AhbLducyQ",
+    authDomain: "ionic-4-angular-template.firebaseapp.com",
+    databaseURL: "https://ionic-4-angular-template.firebaseio.com",
+    projectId: "ionic-4-angular-template",
+    storageBucket: "ionic-4-angular-template.appspot.com",
+    messagingSenderId: "401468377114"
+  };
+  firebase.initializeApp(config);
+</script>
 </body>
 
 </html>
