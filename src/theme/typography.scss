@@ -1,0 +1,116 @@
+//global styles move???
+//for global styles
+:root {
+  html, body {
+    color: rgba(black, .87);
+  }
+  //to do: this is getting overridden, where?
+} 
+
+//this fixes an issue where the font is larger but inspects at proper size; unsure which value fixes: To do, test each of below to see
+html, body { 
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+body, p {
+font-size: 14px;
+}
+
+ ion-text  {
+   p, h1, h2, h3, h4, h5, h6 {
+     color: rgba(black, .87);
+   }
+ }
+
+ion-text {
+ h1, h2, h3, h4, h5, h6 {
+ font-weight: 500 !important;     
+}
+}
+
+/*
+$font-family: 'Roboto, "Helvetica Neue", sans-serif';
+$display-4:     normal 300 9.6rem ;
+$display-3:     ;
+$display-2:     ;
+$display-1:     ;
+$headline:      ;
+$title:         ;
+$subheading-2:  ;
+$subheading-1:  ;
+$body-2:        ;
+$body-1:        ;
+$caption:       ;
+$button:        ;
+$input:         ;
+*/
+
+.ign-display-4 {
+font-size: 112px;
+font-weight: 300;
+line-height: 112px;
+}
+.ign-display-3 {
+font-size: 56px;
+font-weight: 400;
+line-height: 56px;
+}
+
+
+.ign-title, ion-text h2 {
+font-size: 20px;
+font-weight: 500;
+line-height: 32px;
+}
+
+ign-subheading-2,  ion-text h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.ign-subheading-1,  ion-text h4  { 
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+
+//type color
+//variables on light background
+$high-emphasis: .87;
+$med-emphasis: .60;
+$disabled: .38;
+$active: .87;
+$inactive: .54;
+$divider: .12;
+
+//black text & icon color
+.high-emphasis-text {
+color: rgba(black, $high-emphasis);
+}
+.medium-emphasis-text {
+color: rgba(black, $med-emphasis);
+}
+.disabled-text {
+color: rgba(black, $disabled);
+}
+.active-icon, [active-icon] {
+color: rgba(black, $active);
+}
+.inactive-icon, [inactive-icon] {
+color: rgba(black, $inactive);
+}
+.disabled-icon, [disabled-icon] {
+color: rgba(black, $disabled);
+}

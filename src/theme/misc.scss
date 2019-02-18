@@ -1,0 +1,19 @@
+//for doc examples
+//gray panel to house examples
+.example-panel {
+  background: #ededed;
+  border: 1px solid #dedede;
+  padding: 48px;
+  margin: 0 0 48px 0;
+}
+
+//buttons
+ion-anchor:hover {
+  text-decoration: underline;
+}
+
+//contained, flat buttons
+//contained button requires class to remove shadow (To Do: have tokens for elevation)
+.no-elevation {
+  --box-shadow: none;
+}

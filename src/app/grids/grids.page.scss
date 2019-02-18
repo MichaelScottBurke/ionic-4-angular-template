@@ -1,0 +1,201 @@
+//variables for padding and margins
+$space-xxs: 2px;
+$space-xs: 4px;
+$space-s: 8px;
+$space-m: 16px; //most common
+$space-l: 24px;
+$space-xl: 32px;
+$space-xxl: 48px;
+$space-xxxl: 72px;
+
+
+@media screen and (max-width: 360px) { 
+  //
+}
+
+//container
+.container {background: #ccc; padding: $space-m;}
+
+//simple grid can be broken into whole, half, quarters and thirds
+$whole: 4fr;
+$half: 2fr;
+$quarter: 1fr;
+$threeQuarter: 3fr;
+
+/*grid setup*/
+section  {
+  margin-bottom: $space-m;
+}
+.grid-demo section, .flex-demo section {
+ display: grid;
+}
+
+/* row 1 */
+/* Full  */
+.whole-width {
+  grid-template-columns: $whole;
+  grid-row-gap: $space-m;
+  grid-column-gap: $space-m;
+}
+
+@media screen and (max-width: 360px) {
+.whole-width {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 3/4, 1/4 */
+.three-quarter-one-quarter-width {
+grid-template-columns: $threeQuarter 1fr;
+grid-row-gap: $space-m;
+grid-column-gap: $space-m;}
+
+@media screen and (max-width: 360px) {
+.three-quarter-one-quarter-width {
+grid-template-columns: $threeQuarter 1fr;}}
+
+
+/* 1/4, 3/4 */
+.one-quarter-three-quarter-width {
+grid-template-columns: 1fr $threeQuarter;
+grid-row-gap: $space-m;
+grid-column-gap: $space-m;}
+
+@media screen and (max-width: 360px) {
+.one-quarter-three-quarter-width {
+grid-template-columns: 1fr $threeQuarter;}
+}
+
+/* 1/2, 1/2 */
+.half-width {
+grid-template-columns: 2fr 2fr;
+grid-row-gap: $space-m;
+grid-column-gap: $space-m;}
+
+@media screen and (max-width: 360px) {
+  .half-width {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+/* 1/4, 1/4, 1/4, 1/4 */
+.four-quarters {
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-row-gap: $space-m;
+grid-column-gap: $space-m;}
+
+@media screen and (max-width: 360px) {
+.four-quarters {
+grid-template-columns: 1fr 1fr 1fr 1fr;}
+}
+
+/* 1/4, 1/2, 1/4 */
+.quarter-half-quarter {
+grid-template-columns: 1fr 2fr 1fr;
+grid-row-gap: $space-m;
+grid-column-gap: $space-m;}
+
+@media screen and (max-width: 360px) {
+.quarter-half-quarter {
+grid-template-columns: 1fr 2fr 1fr;}}
+
+/* 1/4, 1/2, 1/4 */
+.half-quarter-quarter {
+grid-template-columns: 2fr 1fr 1fr;
+grid-row-gap: $space-m;
+grid-column-gap: $space-m;}
+
+@media screen and (max-width: 360px) {
+  .half-quarter-quarter {
+  grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+/* quarter-quarter-half */
+.quarter-quarter-half {
+grid-template-columns: 1fr 1fr 2fr;
+grid-row-gap: $space-m;
+grid-column-gap: $space-m;}
+
+@media screen and (max-width: 360px) {
+  .quarter-quarter-half {
+  grid-template-columns: 1fr 1fr 2fr;
+  }
+}
+
+/* row 9: thirds */
+.row-9 {
+grid-template-columns: 1fr 1fr 1fr;
+grid-row-gap: $space-m;
+grid-column-gap: $space-m;}
+
+@media screen and (max-width: 360px) {
+  .row-9 {
+  //grid-template-columns: 1fr 1fr 2fr;
+  }
+}
+
+/* row 10: thirds */
+.whole-width0 {
+grid-template-columns: 2fr 1fr;
+grid-row-gap: $space-m;
+grid-column-gap: $space-m;}
+
+@media screen and (max-width: 360px) {
+  .whole-width0 {
+  //grid-template-columns: 1fr 1fr 2fr;
+  }
+}
+
+/* row 11: thirds */
+.whole-width1 {
+grid-template-columns: 1fr 2fr;
+grid-row-gap: $space-m;
+grid-column-gap: $space-m;}
+
+@media screen and (max-width: 360px) {
+  .whole-width1 {
+  //grid-template-columns: 1fr 1fr 2fr;
+  }
+}
+
+
+/*styles for the grid-items */
+.grid-demo .box { background-color: #0F4790;}
+.flex-demo .box { background-color: #0F4790;}
+.box {
+ box-sizing: border-box;
+ display: -webkit-box;
+ display: -webkit-flex;
+ display:    -moz-box;
+ display: -ms-flexbox;
+ display:         flex;
+ -webkit-flex-direction: column;
+     -ms-flex-direction: column;
+         flex-direction: column;
+ padding-right: 0;
+ padding-left: 0;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    height: 88px;
+}
+
+
+//global styles
+
+
+/*font styles*/
+h1, h2, h3, h4, h5, h6 {
+ font-weight: 500;
+}
+
+.child-title {
+ margin: 0;
+ padding-top: 20px;
+ padding-bottom: 20px;
+ color: #fff;
+ text-align: center;
+ font-size: 30px;
+}

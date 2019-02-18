@@ -9,3 +9,11 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,900');
+
+@import url('https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css');
+
+//app styles
+@import "./theme/typography.scss";
+@import "./theme/misc.scss";

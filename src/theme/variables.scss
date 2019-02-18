@@ -116,5 +116,12 @@
 
 --ion-color-contrast: #ccc;
 
+:host(.button-outline) {
+  --border-width: 1px !important;
+}
+:host {
+  --border-width: 1px;
+}
+
 }
 
