@@ -71,24 +71,16 @@ export class AppComponent {
   ];
 
   public patternPages = [
-    /*
-    {
-      title: 'Avatars',
-      url: '/home',
-      icon: ' '
-    },
-    */
     {
       title: 'Buttons',
       url: '/buttons',
-      icon: ' '
+      icon: ''
     },
     {
       title: 'Cards',
       url: '/cards',
       icon: ''
     },
-    ,
     {
       title: 'Checkboxes',
       url: '/checkboxes',
