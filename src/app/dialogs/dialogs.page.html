@@ -12,5 +12,29 @@
   </ion-header>
 
 <ion-content padding>
+    <h2>Alert dialogs</h2>
+    <p class="medium-emphasis-text">Alert dialogs interrupt users with urgent information, details, or actions. To close, an action must be selected.</p>
+    <ion-button (click)="presentAlert()" color="secondary">Alert dialog</ion-button>
+    <ion-button (click)="presentAlertTitle()" color="secondary">Alert dialog w title</ion-button>
+    <p class="medium-emphasis-text">A single action may be provided only if it’s an acknowledgement.</p>
+    <ion-button (click)="presentAlertSingleAction()" color="secondary">Alert dialog w single action</ion-button>
+    
+    <ion-item lines="full"></ion-item>
+    <h2>Simple dialogs</h2>
+    <p class="medium-emphasis-text">Simple dialogs display items that are immediately actionable when selected. They don’t have text buttons. Alternatively, use menus for contextual iunformation or select (dropdown) menus for less disruption for simple lists of choices.</p>
+    
+    <ion-button (click)="presentAlert()" color="secondary">Simple dialog</ion-button>
+    <ion-button (click)="presentAlertTitle()" color="secondary">Simple dialog w title</ion-button>
 
+    <ion-item lines="full"></ion-item>
+    <h2>Confirmation dialogs</h2>
+    <p class="medium-emphasis-text">Confirmation dialogs require users to confirm a choice before the dialog is dismissed.</p>
+    <ion-button (click)="presentAlertRadio()" color="secondary">Confirmation dialog (radio)</ion-button>
+    <ion-button (click)="presentAlertCheckbox()" color="secondary">Confirmation dialog (checkbox)</ion-button>
+
+    <ion-button (click)="presentAlertCombo()" color="secondary">Confirmation dialog combo</ion-button>
+
+    <ion-item lines="full"></ion-item>
+    <h2>Full-screen dialogs</h2>
+    <p class="medium-emphasis-text">Full-screen dialogs fill the entire screen, containing actions that require a series of tasks to complete.</p>
 </ion-content>

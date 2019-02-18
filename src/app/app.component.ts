@@ -122,6 +122,11 @@ export class AppComponent {
       icon: ''
     },
     {
+      title: 'Snackbars',
+      url: '/snackbars',
+      icon: ''
+    },
+    {
       title: 'Steppers',
       url: '/steppers',
       icon: ''

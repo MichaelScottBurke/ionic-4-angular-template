@@ -125,3 +125,27 @@
 
 }
 
+
+
+//default overrides
+
+//outline buttons: default to 2px instead of 1
+
+button.button-native {
+  border-width: 1px;
+}
+
+//buttons in dialogs
+.alert-button.sc-ion-alert-md {
+  color:  var(--ion-color-secondary);
+}
+
+//radio & checkbox buttons
+.alert-radio-inner.sc-ion-alert-md {
+  background-color: var(--ion-color-secondary);
+}
+
+[aria-checked=true].sc-ion-alert-md .alert-radio-icon.sc-ion-alert-md {
+  border-color: var(--ion-color-secondary);
+}
+
