@@ -3,15 +3,15 @@
   --ion-color-primary-rgb: 27,127,102;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255,255,255;
-  --ion-color-primary-shade: #18705a;
-  --ion-color-primary-tint: #328c75;
+  --ion-color-primary-shade: #0D533D; //dark
+  --ion-color-primary-tint: #B5E1D8; //light
 
   --ion-color-secondary: #0F4790;
   --ion-color-secondary-rgb: 15,71,144;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255,255,255;
-  --ion-color-secondary-shade: #0d3e7f;
-  --ion-color-secondary-tint: #27599b;
+  --ion-color-secondary-shade: #0A2B58; //dark
+  --ion-color-secondary-tint: #BBDDF5;  //light
 
   --ion-color-tertiary: #509E2F;
   --ion-color-tertiary-rgb: 80,158,47;
@@ -113,24 +113,28 @@
 --ion-item-border-color: initial;
 --ion-item-color: initial;
 --ion-placeholder-color: initial;
-
 --ion-color-contrast: #ccc;
 
-:host(.button-outline) {
-  --border-width: 1px !important;
-}
-:host {
-  --border-width: 1px;
 }
 
-}
 
+ion-input {
+  --placeholder-color: green;     /* placeholder text color */
+  color: var(--ion-color-secondary); /* input text color to primary */
+}
 
 
 //default overrides
+//selected radio button default
+
+//selected check box button default
+
 
 //outline buttons: default to 2px instead of 1
 
+.button-outline {
+  --border-width: 1px;
+}
 button.button-native {
   border-width: 1px;
 }
@@ -149,3 +153,20 @@ button.button-native {
   border-color: var(--ion-color-secondary);
 }
 
+//text inputs & text areas
+//floating labels
+.label-floating.sc-ion-label-md-h, .label-stacked.sc-ion-label-md-h {
+  //--color: var(--ion-color-secondary);
+}
+
+
+
+//dialogs (alerts) as modal screen (for greater form element functionality)
+.modal-dialog div[role='dialog'] {
+  max-height: 360px !important;
+  max-width: 360px !important;
+}
+
+ion-input {
+  --placeholder-color: var(--ion-color-secondary) !important;     /* placeholder text color */
+}

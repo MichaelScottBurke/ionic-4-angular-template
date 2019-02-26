@@ -1,9 +1,83 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>buttons-fabs</ion-title>
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <h1 class="ign-display-3">Buttons: FABs</h1>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <p class="medium-emphasis-text">A floating action button (FAB) performs the primary, or most common, action on a
+    screen. It appears in front of all screen content, typically as a circular shape with an icon in its center. FABs
+    come in three types: regular, mini, and extended.</p>
+  <h2>Standard</h2>
+  <p>
+      <ion-fab-button color="secondary">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+  </p>
+
+  <p>
+    <ion-fab-button color="secondary" disabled>
+        <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </p>
+
+  <h2>mini</h2>
+  <p class="medium-emphasis-text"></p>
+
+  <h2>Speed dial (AKA 'expandable FAB')</h2>
+  <p class="medium-emphasis-text">When pressed a FAB can display three to six related action in the form of a speed dial.</p>
+  <div style="position: relative; height: 100px;">
+      <ion-fab vertical="center" horizontal="center" slot="fixed">
+          <ion-fab-button color="secondary">
+            <ion-icon name="share"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="top">
+            <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+          </ion-fab-list>
+          <ion-fab-list side="bottom">
+            <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+          </ion-fab-list>
+          <ion-fab-list side="start">
+            <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+          </ion-fab-list>
+          <ion-fab-list side="end">
+            <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+  </div>
+  <div style="position: relative; height: 100px;">
+      <ion-fab vertical="center" horizontal="center" slot="fixed">
+          <ion-fab-button color="secondary">
+            <ion-icon name="share"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list>
+            <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+          </ion-fab-list>
+          <ion-fab-list>
+            <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+          </ion-fab-list>
+          <ion-fab-list>
+            <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+          </ion-fab-list>
+          <ion-fab-list>
+            <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+  </div>
+
+  <h2>Examples</h2>
+  <!-- fab placed to the top end -->
+  <div class="example-panel">
+    <div class="example-mobile-outline mat-elevation-z16" style="position: relative;">
+        <app-fab-example></app-fab-example>
+    </div>
+  </div>
 
 </ion-content>

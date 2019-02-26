@@ -55,12 +55,17 @@ export class AppComponent {
     },
     {
       title: 'Form layout',
-      url: '/iconography',
+      url: '/forms',
       icon: ''
     },
     {
       title: 'List-detail layout',
       url: '/list-detail',
+      icon: ''
+    },
+    {
+      title: 'Modal layout',
+      url: '/modal-layout',
       icon: ''
     },
     {
@@ -77,6 +82,11 @@ export class AppComponent {
       icon: ''
     },
     {
+      title: 'Buttons: FABs',
+      url: '/buttons-fabs',
+      icon: ''
+    },
+    {
       title: 'Cards',
       url: '/cards',
       icon: ''
@@ -84,6 +94,11 @@ export class AppComponent {
     {
       title: 'Checkboxes',
       url: '/checkboxes',
+      icon: ''
+    },
+    {
+      title: 'Chips',
+      url: '/chips',
       icon: ''
     },
     {

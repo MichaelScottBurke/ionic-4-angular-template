@@ -1,4 +1,10 @@
 //for doc examples
+//side nav menu
+ion-menu.menu-type-overlay.menu-enabled.menu-side-start.hydrated.split-pane-side.menu-pane-visible {
+  max-width: 360px;
+}
+
+
 //gray panel to house examples
 .example-panel {
   background: #ededed;
@@ -7,13 +13,45 @@
   margin: 0 0 48px 0;
 }
 
+.example-mobile-outline {
+  background-color: white;
+  min-height: 640px;
+  width: 360px;
+  margin: 0 auto;
+}
+
 //buttons
+ion-anchor {
+  padding-right: 16px !important;
+}
 ion-anchor:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 //contained, flat buttons
 //contained button requires class to remove shadow (To Do: have tokens for elevation)
 .no-elevation {
   --box-shadow: none;
+}
+
+
+//elevation move to elevation tokens
+.mat-elevation-z16 {
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2), 0px 16px 24px 2px rgba(0,0,0,0.14), 0px 6px 30px 5px rgba(0,0,0,0.12);
+}
+
+//fieldset reset
+fieldset {
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-block-start: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-end: 0;
+  min-inline-size: min-content;
+  border-width: 0px;
+  border-style: none;
+  border-color: transparent;
+  border-image: initial;
 }

@@ -9,10 +9,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TypographyPipe } from './typography.pipe';
+import { ModalExamplePage } from './examples/modal-example/modal-example.page';
 
 @NgModule({
-  declarations: [AppComponent, TypographyPipe],
-  entryComponents: [],
+  declarations: [AppComponent, TypographyPipe, ModalExamplePage],
+  entryComponents: [ModalExamplePage ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),

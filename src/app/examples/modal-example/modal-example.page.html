@@ -1,0 +1,30 @@
+  <ion-content padding>
+    <h1 class="">{{ modalTitle }} </h1>
+    <!-- >p class="medium-emphasis-text">{{ modalSubtitle }}</p-->
+    <ion-list no-padding>
+      <ion-radio-group>
+        <ion-item lines="none">
+          <ion-label>Yes</ion-label>
+          <ion-radio slot="start" color="secondary" value="yes"></ion-radio>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label>No</ion-label>
+          <ion-radio slot="start" color="secondary" value="no"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-item>
+      <ion-label position="floating">How could we improve?</ion-label>
+      <ion-textarea #improveComments></ion-textarea>
+    </ion-item>
+    <div>
+        <ion-label class="ign-caption medium-emphasis-text"position="end">{{improveComments.value.length}} / 500</ion-label>
+    </div>
+  </ion-content>
+  <ion-footer no-border>
+    <ion-toolbar>
+      <ion-button color="secondary" fill="clear" (click)="closeModal()" slot="end">cancel</ion-button>
+      <ion-button color="secondary" fill="clear" (click)="closeModal()" slot="end">submit</ion-button>
+    </ion-toolbar>
+  </ion-footer>

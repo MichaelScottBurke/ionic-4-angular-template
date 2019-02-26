@@ -1,235 +1,411 @@
 <ion-header no-border>
-    <ion-toolbar color="primary">
-        <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-    </ion-toolbar>
-    <ion-toolbar color="primary">
-      <ion-title>
-        <h1 class="ign-display-3">Grids (layout)</h1>
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <h1 class="ign-display-3">Grids (layout)</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content padding>
-
-<h2>CSS (layout) grid</h2>
-<p>Browser support: IE: 10+ partial support with -ms- prefix; Chrome: 57+ supported; Firefox: 52+ supported; Safari: 10.1+ supported <a href="https://caniuse.com/#feat=css-grid">See all</a></p>
-<section class="container grid-demo">
+  <h2>Ion grid</h2>
   <h3>Quarters</h3>
-  <section class="whole-width">
-    <div class="box box-a">
-      <h1 class="child-title">A,B,C,D</h1>
-    </div>
-  </section>
-  <section class="half-width">
-    <div class="box box-a">
-      <h1 class="child-title">A,B</h1>
-    </div>
+  <ion-grid class="ion-grid-example">
+    <ion-row>
+      <ion-col>
+        <div>
+          A,B,C,D
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>
+          A,B
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          C,D
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9">
+        <div>
+          A,B,C
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div>
+          D
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <div>
+          A
+        </div>
+      </ion-col>
+      <ion-col size="9">
+        <div>
+          B,C,D
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <div>
+          A
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div>
+          B,C
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div>
+          D
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <div>
+          A,B
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div>
+          C
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div>
+          D
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <div>
+          A
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div>
+          B
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div>
+          C,D
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>
+          A
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          B
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          C
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          D
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <h3>Thirds</h3>
+  <ion-grid class="ion-grid-example">
+      <ion-row>
+        <ion-col>
+          <div>
+            A,B,C
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8">
+          <div>
+            A,B
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <div>
+            C
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <div>
+            A
+          </div>
+        </ion-col>
+        <ion-col size="8">
+          <div>
+            B,C
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size="4">
+            <div>
+              A
+            </div>
+          </ion-col>
+          <ion-col size="4">
+            <div>
+              B
+            </div>
+          </ion-col>
+          <ion-col size="4">
+              <div>
+                C
+              </div>
+            </ion-col>
+        </ion-row>      
+      
+    </ion-grid>
+
+  <h2>CSS (layout) grid</h2>
+  <p>Browser support: IE: 10+ partial support with -ms- prefix; Chrome: 57+ supported; Firefox: 52+ supported; Safari:
+    10.1+ supported <a href="https://caniuse.com/#feat=css-grid">See all</a></p>
+  <section class="container grid-demo">
+    <h3>Quarters</h3>
+    <section class="whole-width">
       <div class="box box-a">
-      <h1 class="child-title">C,D</h1>
-    </div>
-  </section>
-
-  <section class="three-quarter-one-quarter-width">
-    <div class="box box-a">
-      <h1 class="child-title">A,B,C</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">D</h1>
-    </div>
-  </section>
-
-  <section class="one-quarter-three-quarter-width">
-    <div class="box box-a">
-      <h1 class="child-title">A</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">B,C,D</h1>
-    </div>
-  </section>
-
-  <section class="quarter-half-quarter">
-    <div class="box box-a">
-      <h1 class="child-title">A</h1>
-    </div>
+        <h1 class="child-title">A,B,C,D</h1>
+      </div>
+    </section>
+    <section class="half-width">
       <div class="box box-a">
-      <h1 class="child-title">B,C</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">D</h1>
-    </div>
-  </section>
-
-  <section class="half-quarter-quarter">
-    <div class="box box-a">
-      <h1 class="child-title">A,B</h1>
-    </div>
+        <h1 class="child-title">A,B</h1>
+      </div>
       <div class="box box-a">
-      <h1 class="child-title">C</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">D</h1>
-    </div>
-  </section>
+        <h1 class="child-title">C,D</h1>
+      </div>
+    </section>
 
-  <section class="quarter-quarter-half">
-    <div class="box box-a">
-      <h1 class="child-title">A</h1>
-    </div>
+    <section class="three-quarter-one-quarter-width">
       <div class="box box-a">
-      <h1 class="child-title">B</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">C,D</h1>
-    </div>
+        <h1 class="child-title">A,B,C</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">D</h1>
+      </div>
+    </section>
+
+    <section class="one-quarter-three-quarter-width">
+      <div class="box box-a">
+        <h1 class="child-title">A</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">B,C,D</h1>
+      </div>
+    </section>
+
+    <section class="quarter-half-quarter">
+      <div class="box box-a">
+        <h1 class="child-title">A</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">B,C</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">D</h1>
+      </div>
+    </section>
+
+    <section class="half-quarter-quarter">
+      <div class="box box-a">
+        <h1 class="child-title">A,B</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">C</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">D</h1>
+      </div>
+    </section>
+
+    <section class="quarter-quarter-half">
+      <div class="box box-a">
+        <h1 class="child-title">A</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">B</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">C,D</h1>
+      </div>
     </section>
 
     <section class="four-quarters">
-    <div class="box box-a">
-      <h1 class="child-title">A</h1>
-    </div>
       <div class="box box-a">
-      <h1 class="child-title">B</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">C</h1>
-    </div>
+        <h1 class="child-title">A</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">B</h1>
+      </div>
       <div class="box box-b">
-      <h1 class="child-title">D</h1>
-    </div>
-  </section>
+        <h1 class="child-title">C</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">D</h1>
+      </div>
+    </section>
 
 
-  <h3>Thirds</h3>
-  <section class="row-9">
-    <div class="box box-a">
-      <h1 class="child-title">A</h1>
-    </div>
+    <h3>Thirds</h3>
+    <section class="row-9">
       <div class="box box-a">
-      <h1 class="child-title">B</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">C</h1>
-    </div>
-  </section>
+        <h1 class="child-title">A</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">B</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">C</h1>
+      </div>
+    </section>
     <section class="row-10">
-    <div class="box box-a">
-      <h1 class="child-title">A, B</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">C</h1>
-    </div>
-  </section>
-    <section class="row-11">
-    <div class="box box-a">
-      <h1 class="child-title">A</h1>
-    </div>
       <div class="box box-a">
-      <h1 class="child-title">B, C</h1>
-    </div>
-  </section>
-
-</section>
-
-<h2>CSS Flex</h2>
-<p>Browser support: IE: 10+ partial support with -ms- prefix; Chrome: 57+ supported; Firefox: 52+ supported; Safari: 10.1+ supported <a href="https://caniuse.com/#feat=css-grid">See all</a></p>
-<section class="container flex-demo">
-  <h3>Quarters</h3>
-  <section class="whole-width">
-    <div class="box box-a">
-      <h1 class="child-title">A,B,C,D</h1>
-    </div>
-  </section>
-
-  <section class="three-quarter-one-quarter-width">
-    <div class="box box-a">
-      <h1 class="child-title">A,B,C</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">D</h1>
-    </div>
-  </section>
-
-  <section class="one-quarter-three-quarter-width">
-    <div class="box box-a">
-      <h1 class="child-title">A</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">B,C,D</h1>
-    </div>
-  </section>
-
-  <section class="half-width">
-    <div class="box box-a">
-      <h1 class="child-title">A,B</h1>
-    </div>
-      <div class="box box-a">
-      <h1 class="child-title">C,D</h1>
-    </div>
-  </section>
-
-  <section class="four-quarters">
-    <div class="box box-a">
-      <h1 class="child-title">A</h1>
-    </div>
-      <div class="box box-a">
-      <h1 class="child-title">B</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">C</h1>
-    </div>
+        <h1 class="child-title">A, B</h1>
+      </div>
       <div class="box box-b">
-      <h1 class="child-title">D</h1>
-    </div>
+        <h1 class="child-title">C</h1>
+      </div>
+    </section>
+    <section class="row-11">
+      <div class="box box-a">
+        <h1 class="child-title">A</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">B, C</h1>
+      </div>
+    </section>
+
   </section>
 
-  <section class="quarter-half-quarter">
-    <div class="box box-a">
-      <h1 class="child-title">A</h1>
-    </div>
+  <h2>CSS Flex</h2>
+  <p>Browser support: IE: 10+ partial support with -ms- prefix; Chrome: 57+ supported; Firefox: 52+ supported; Safari:
+    10.1+ supported <a href="https://caniuse.com/#feat=css-grid">See all</a></p>
+  <section class="container flex-demo">
+    <h3>Quarters</h3>
+    <section class="whole-width">
       <div class="box box-a">
-      <h1 class="child-title">B,C</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">D</h1>
-    </div>
-  </section>
+        <h1 class="child-title">A,B,C,D</h1>
+      </div>
+    </section>
 
-  <section class="half-quarter-quarter">
-    <div class="box box-a">
-      <h1 class="child-title">A,B</h1>
-    </div>
+    <section class="three-quarter-one-quarter-width">
       <div class="box box-a">
-      <h1 class="child-title">C</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">D</h1>
-    </div>
-  </section>
+        <h1 class="child-title">A,B,C</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">D</h1>
+      </div>
+    </section>
 
-  <section class="row-8">
-    <div class="box box-a">
-      <h1 class="child-title">A</h1>
-    </div>
+    <section class="one-quarter-three-quarter-width">
       <div class="box box-a">
-      <h1 class="child-title">B</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">C,D</h1>
-    </div>
-  </section>
-  <h3>Thirds</h3>
-  <section class="row-9">
-    <div class="box box-a">
-      <h1 class="child-title">A</h1>
-    </div>
+        <h1 class="child-title">A</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">B,C,D</h1>
+      </div>
+    </section>
+
+    <section class="half-width">
       <div class="box box-a">
-      <h1 class="child-title">B</h1>
-    </div>
-    <div class="box box-b">
-      <h1 class="child-title">C,D</h1>
-    </div>
+        <h1 class="child-title">A,B</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">C,D</h1>
+      </div>
+    </section>
+
+    <section class="four-quarters">
+      <div class="box box-a">
+        <h1 class="child-title">A</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">B</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">C</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">D</h1>
+      </div>
+    </section>
+
+    <section class="quarter-half-quarter">
+      <div class="box box-a">
+        <h1 class="child-title">A</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">B,C</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">D</h1>
+      </div>
+    </section>
+
+    <section class="half-quarter-quarter">
+      <div class="box box-a">
+        <h1 class="child-title">A,B</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">C</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">D</h1>
+      </div>
+    </section>
+
+    <section class="row-8">
+      <div class="box box-a">
+        <h1 class="child-title">A</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">B</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">C,D</h1>
+      </div>
+    </section>
+    <h3>Thirds</h3>
+    <section class="row-9">
+      <div class="box box-a">
+        <h1 class="child-title">A</h1>
+      </div>
+      <div class="box box-a">
+        <h1 class="child-title">B</h1>
+      </div>
+      <div class="box box-b">
+        <h1 class="child-title">C,D</h1>
+      </div>
+    </section>
   </section>
-</section>
 </ion-content>

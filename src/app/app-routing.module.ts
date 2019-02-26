@@ -35,7 +35,19 @@ const routes: Routes = [
   { path: 'sliders', loadChildren: './sliders/sliders.module#SlidersPageModule' },
   { path: 'steppers', loadChildren: './steppers/steppers.module#SteppersPageModule' },
   { path: 'bottom-navigation', loadChildren: './bottom-navigation/bottom-navigation.module#BottomNavigationPageModule' },
-  { path: 'text-fields', loadChildren: './text-fields/text-fields.module#TextFieldsPageModule' }
+  { path: 'text-fields', loadChildren: './text-fields/text-fields.module#TextFieldsPageModule' },
+  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  { path: 'toolbars', loadChildren: './toolbars/toolbars.module#ToolbarsPageModule' },
+  { path: 'forms', loadChildren: './forms/forms.module#FormsPageModule' },
+  { path: 'fab-example', loadChildren: './examples/fab-example/fab-example.module#FabExamplePageModule' },
+  { path: 'form-example', loadChildren: './examples/form-example/form-example.module#FormExamplePageModule' },
+  { path: 'card-over', loadChildren: './card-over/card-over.module#CardOverPageModule' },
+  { path: 'detail-view', loadChildren: './detail-view/detail-view.module#DetailViewPageModule' },
+  { path: 'list-detail', loadChildren: './list-detail/list-detail.module#ListDetailPageModule' },
+  { path: 'hub', loadChildren: './hub/hub.module#HubPageModule' },
+  { path: 'card-over-example', loadChildren: './examples/card-over-example/card-over-example.module#CardOverExamplePageModule' },
+  { path: 'modal-example', loadChildren: './examples/modal-example/modal-example.module#ModalExamplePageModule' },
+  { path: 'modal-layout', loadChildren: './modal-layout/modal-layout.module#ModalLayoutPageModule' }
 ];
 
 @NgModule({
