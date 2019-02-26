@@ -67,7 +67,7 @@ export class ListsPage implements OnInit {
      {
        id: 2112,
        name: 'Calvin Davis', 
-       job: 'Sr. Claims Representative', 
+       job: 'Senior Claims Representative', 
        photo: 'https://pbs.twimg.com/profile_images/786914171422142469/l1qF9oeF.jpg',
        checked: false
       }     

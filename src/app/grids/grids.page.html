@@ -13,6 +13,45 @@
 
 <ion-content padding>
   <h2>Ion grid</h2>
+  <p class="medium-emphasis-text">Ionic OOB configurable grid</p>
+  <h3>Quarters (Responsive)</h3>
+  <!-- 
+    input widths
+.input-s {width: 104px;} /* 1-8 characters */
+.input-m {width: 160px;} /* 9 - 32 characters */
+.input-l {width: 448px;}  /* 33-66 characters */
+.input-full {width: 100%;}  /* 66+ characters */
+
+  -->
+  <ion-grid class="ion-grid-example" style="background: gray">
+      <ion-row>
+        <ion-col>
+            <div class="input-full">Input full</div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <div class="input-l">Input l</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <div class="input-m">Input m</div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                  <div class="input-s">Input s</div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <div class="input-xs">Input xs</div>
+                </ion-col>
+              </ion-row>
+    </ion-grid>
+
+
   <h3>Quarters</h3>
   <ion-grid class="ion-grid-example">
     <ion-row>
@@ -188,7 +227,7 @@
     </ion-grid>
 
   <h2>CSS (layout) grid</h2>
-  <p>Browser support: IE: 10+ partial support with -ms- prefix; Chrome: 57+ supported; Firefox: 52+ supported; Safari:
+  <p class="medium-emphasis-text">Browser support: IE: 10+ partial support with -ms- prefix; Chrome: 57+ supported; Firefox: 52+ supported; Safari:
     10.1+ supported <a href="https://caniuse.com/#feat=css-grid">See all</a></p>
   <section class="container grid-demo">
     <h3>Quarters</h3>
