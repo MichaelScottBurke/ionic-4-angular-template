@@ -1,4 +1,5 @@
 :root {
+
   --ion-color-primary: #1B7F66;
   --ion-color-primary-rgb: 27,127,102;
   --ion-color-primary-contrast: #ffffff;
@@ -63,36 +64,28 @@
   --ion-color-light-shade: #d8d7d5;
   --ion-color-light-tint: #f6f5f3;
 
-  /*
+  //background color (content canvas)
+  --ion-color-background: var(--ion-color-light);
 
-  --ion-color-dark: #41403E;
-  --ion-color-dark-rgb: 65,64,62;
-  --ion-color-dark-contrast: #ffffff;
-  --ion-color-dark-contrast-rgb: 255,255,255;
-  --ion-color-dark-shade: #393837;
-  --ion-color-dark-tint: #545351;
+  //global color
+  --black-rgb: 0,0,0;
+  --white-rgb: 255,255,255;
 
-  --ion-color-medium: #aaaaaa;
-  --ion-color-medium-rgb: 170,170,170;
-  --ion-color-medium-contrast: #000000;
-  --ion-color-medium-contrast-rgb: 0,0,0;
-  --ion-color-medium-shade: #969696;
-  --ion-color-medium-tint: #b3b3b3;
+  //text color
+  --ion-high-emphasis-text: rgba(0,0,0,.87);
+  --ion-medium-emphasis-text: rgba(0,0,0,.60);
+  --ion-disabled-text: rgba(0,0,0,.38);
+  
 
-  --ion-color-light: #F5F4F2;
-  --ion-color-light-rgb: 245,244,242;
-  --ion-color-light-contrast: #000000;
-  --ion-color-light-contrast-rgb: 0,0,0;
-  --ion-color-light-shade: #d8d7d5;
-  --ion-color-light-tint: #f6f5f3;
-  */
+  --ion-text-color: #212121; //equivalent to rgba .87
+  --ion-text-color-rgb: rgb(33,33,33);
 
 /* other variables */
-
+/*
 --ion-background-color: initial;
 --ion-background-color-rgb: initial;
---ion-text-color: initial;
---ion-text-color-rgb: initial;
+--ion-text-color: rgba(black,.87);
+--ion-text-color-rgb: #212121;
 --ion-backdrop-color: initial;
 --ion-overlay-background-color: initial;
 --ion-border-color: initial;
@@ -114,13 +107,10 @@
 --ion-item-color: initial;
 --ion-placeholder-color: initial;
 --ion-color-contrast: #ccc;
+*/
 
-}
+--ion-input-md-input-clear-icon-svg: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M256 48C140.559 48 48 140.559 48 256c0 115.436 92.559 208 208 208 115.435 0 208-92.564 208-208 0-115.441-92.564-208-208-208zm104.002 282.881l-29.12 29.117L256 285.117l-74.881 74.881-29.121-29.117L226.881 256l-74.883-74.881 29.121-29.116L256 226.881l74.881-74.878 29.12 29.116L285.119 256l74.883 74.881z'/></svg>";
 
-
-ion-input {
-  --placeholder-color: green;     /* placeholder text color */
-  color: var(--ion-color-secondary); /* input text color to primary */
 }
 
 
@@ -153,12 +143,6 @@ button.button-native {
   border-color: var(--ion-color-secondary);
 }
 
-//text inputs & text areas
-//floating labels
-.label-floating.sc-ion-label-md-h, .label-stacked.sc-ion-label-md-h {
-  //--color: var(--ion-color-secondary);
-}
-
 
 
 //dialogs (alerts) as modal screen (for greater form element functionality)
@@ -167,6 +151,27 @@ button.button-native {
   max-width: 360px !important;
 }
 
-ion-input {
-  --placeholder-color: var(--ion-color-secondary) !important;     /* placeholder text color */
+ion-radio {
+  --color-checked: var(--ion-color-secondary);
+}
+
+//text fields (inputs) & text areas
+//floating labels
+ion-label.label-floating {
+  --color: var(--ion-medium-emphasis-text) !important;
+}
+
+//focus input divider border
+ion-item {
+  --highlight-color-focused: var(--ion-color-secondary) !important;
+}
+
+ion-item.item-input, ion-item.item-select {
+  --border-radius: 4px 4px 0 0;
+  --background: rgba(0,0,0,.04);
+}
+
+//input clear icon
+.input-clear-icon.sc-ion-input-md {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M256 48C140.559 48 48 140.559 48 256c0 115.436 92.559 208 208 208 115.435 0 208-92.564 208-208 0-115.441-92.564-208-208-208zm104.002 282.881l-29.12 29.117L256 285.117l-74.881 74.881-29.121-29.117L226.881 256l-74.883-74.881 29.121-29.116L256 226.881l74.881-74.878 29.12 29.116L285.119 256l74.883 74.881z'/></svg>");
 }

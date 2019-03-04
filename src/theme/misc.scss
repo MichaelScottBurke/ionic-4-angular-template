@@ -15,9 +15,39 @@ ion-menu.menu-type-overlay.menu-enabled.menu-side-start.hydrated.split-pane-side
 
 .example-mobile-outline {
   background-color: white;
-  min-height: 640px;
+  //height: 640px;
   width: 360px;
+  //width: 75%;
   margin: 0 auto;
+  iframe {
+    border: none;
+    height: 640px;
+    width: 100%;
+  }
+}
+
+.example-tablet-outline {
+  background-color: white;
+  //height: 640px;
+  max-width: 768px;
+  margin: 0 auto;
+  iframe {
+    border: none;
+    height: 1024px;
+    width: 100%;
+  }
+}
+
+.example-desktop-outline {
+  background-color: white;
+  //height: 640px;
+  min-width: 1024px;
+  margin: 0 auto;
+  iframe {
+    border: none;
+    height: 768px;
+    width: 100%;
+  }
 }
 
 //buttons

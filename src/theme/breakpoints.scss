@@ -1,5 +1,5 @@
 //media query sizes (for mobile)
-$mq-xxs: 'only screen and (min-width: 0px)';
+$mq-xxs: 'only screen and (max-width: 599px)';
 $mq-xs: 'only screen and (min-width: 600px)';
 $mq-s: 'only screen and (min-width: 840px)';
 $mq-m: 'only screen and (min-width: 960px)';

@@ -96,7 +96,7 @@
         <ion-text><h4>Icon</h4></ion-text>
         <ion-card>
         <ion-list>
-          <ion-item lines="none" *ngFor="let i of items">
+          <ion-item lines="none" href="javascript: void();" *ngFor="let i of items">
             <ion-icon slot="start" [name]="i.icon" >
               {{ i.icon }}
             </ion-icon>
@@ -132,7 +132,7 @@
         <ion-text><h4>Avatar</h4></ion-text>
         <ion-card>
         <ion-list>
-          <ion-item lines="none" *ngFor="let m of messages">
+          <ion-item lines="none" href="javascript: void();" *ngFor="let m of messages">
             <ion-avatar slot="start">
               <img src="{{m.avatar}}" alt="{{m.from}}">
             </ion-avatar>
@@ -154,7 +154,7 @@
         <ion-text><h4>Icon</h4></ion-text>
         <ion-card>
         <ion-list>
-          <ion-item lines="none" *ngFor="let i of items">
+          <ion-item lines="none" href="javascript: void();" *ngFor="let i of items">
             <ion-icon slot="start" [name]="i.icon"></ion-icon>
             <ion-label>
               <h2> {{ i.name }}</h2>

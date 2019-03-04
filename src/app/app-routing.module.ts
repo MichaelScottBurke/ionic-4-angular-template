@@ -47,7 +47,9 @@ const routes: Routes = [
   { path: 'hub', loadChildren: './hub/hub.module#HubPageModule' },
   { path: 'card-over-example', loadChildren: './examples/card-over-example/card-over-example.module#CardOverExamplePageModule' },
   { path: 'modal-example', loadChildren: './examples/modal-example/modal-example.module#ModalExamplePageModule' },
-  { path: 'modal-layout', loadChildren: './modal-layout/modal-layout.module#ModalLayoutPageModule' }
+  { path: 'modal-layout', loadChildren: './modal-layout/modal-layout.module#ModalLayoutPageModule' },
+  { path: 'form-grid-example', loadChildren: './examples/form-grid-example/form-grid-example.module#FormGridExamplePageModule' },
+  { path: 'test-iframe', loadChildren: './assets/templates/test-iframe/test-iframe.module#TestIframePageModule' }
 ];
 
 @NgModule({

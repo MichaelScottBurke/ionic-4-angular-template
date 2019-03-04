@@ -5,15 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FormsPage } from './forms.page';
-import { FormExamplePage } from '../examples/form-example/form-example.page';
-import { FormGridExamplePage } from '../examples/form-grid-example/form-grid-example.page';
-
+import { TestIframePage } from './test-iframe.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: FormsPage
+    component: TestIframePage
   }
 ];
 
@@ -24,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [FormsPage, FormExamplePage, FormGridExamplePage]
+  declarations: [TestIframePage]
 })
-export class FormsPageModule {}
+export class TestIframePageModule {}

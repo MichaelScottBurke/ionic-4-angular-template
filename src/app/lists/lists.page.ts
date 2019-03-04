@@ -75,7 +75,7 @@ export class ListsPage implements OnInit {
 
     items = [ 
       {
-      icon: 'security',
+      icon: 'medal',
       color: '',
       name: 'Security', 
       subtitle: 'We keep your account protected', 

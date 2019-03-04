@@ -12,3 +12,7 @@
 .input-m {max-width: 320px;} /* 17-32 characters */
 .input-l {max-width: 448px;}  /* 33-66 characters */
 .input-full {width: 100%;}  /* 66+ characters */
+
+.ionic-examples ion-col {
+  background-color: red !important;
+}
