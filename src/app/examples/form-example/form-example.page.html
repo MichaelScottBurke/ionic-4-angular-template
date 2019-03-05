@@ -1,149 +1,163 @@
 <ion-header>
-    <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-          <ion-button size="large"> <ion-icon slot="start" name="close"></ion-icon></ion-button>
-      </ion-buttons>
-      <ion-buttons slot="end">
-          <ion-button fill="clear">save</ion-button>
-          <!-- ion-button size="large"> <ion-icon slot="start" name="more"></ion-icon></ion-button-->
-      </ion-buttons>
-      <ion-title>Edit Company</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button size="large">
+        <ion-icon slot="start" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">save</ion-button>
+      <!-- ion-button size="large"> <ion-icon slot="start" name="more"></ion-icon></ion-button-->
+    </ion-buttons>
+    <ion-title>Edit Company</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-<ion-content padding class="form-width">
-    <!-- h2>Edit Western Mutual Insurance Company</h2-->
-    <p class="medium-emphasis-text">Companies are legal entities: associations, corporations, partnerships,
-      proprietorships, trusts, etc., that have a legitimate standing in the eyes of law.</p>
-    <form>
-      <section>
-        <h3>Company information</h3>
-        <ion-grid class="ion-grid-example" no-padding>
-          <ion-row>
-            <ion-col size="12" size-sm="9">
+<ion-content class="card-over-content">
+  <ion-toolbar class="card-over-toolbar" color="primary" ion-fixed no-padding>
+    &nbsp;
+  </ion-toolbar>
+  <ion-card class="card-over-card">
+    <ion-card-header>
+      <ion-card-title>Edit Company</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- h2>Edit Western Mutual Insurance Company</h2-->
+      <p class="medium-emphasis-text">Companies are legal entities: associations, corporations, partnerships,
+        proprietorships, trusts, etc., that have a legitimate standing in the eyes of law.</p>
+      <form>
+        <section>
+          <h3>Company information</h3>
+          <ion-grid class="ion-grid-example" no-padding>
+            <ion-row>
+              <ion-col size="12" size-sm="9">
+                <ion-item>
+                  <ion-label class="medium-emphasis-text" position="floating">Company name *</ion-label>
+                  <ion-input value="Western Mutual Insurance Company" required="true" clearInput></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="6" size-sm="3">
+                <ion-item>
+                  <ion-label position="floating">Code</ion-label>
+                  <ion-input inputmode="text" maxlength="6" value="WMIC"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12" size-sm="9">
+                <ion-item>
+                  <ion-label position="floating">Doing business as *</ion-label>
+                  <ion-input inputmode="text" value="Western Mutual" clearInput></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6" size-sm="3">
+                <ion-item>
+                  <ion-label position="floating"><abbr title="Federal Employer Identification Number">FEIN</abbr>*
+                  </ion-label>
+                  <ion-input type="number" maxlength="9" value="171223397"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </section>
+
+        <section>
+          <h3>Business structure *</h3>
+          <p class="medium-emphasis-text">Choose the type of business that best fits your organizational structure.</p>
+          <ion-list lines="none">
+            <ion-radio-group>
               <ion-item>
-                <ion-label position="floating">Company name *</ion-label>
-                <ion-input value="Western Mutual Insurance Company" required="true" clearInput></ion-input>
+                <ion-label>Corporation</ion-label>
+                <ion-radio slot="start" value="corporation"></ion-radio>
               </ion-item>
-            </ion-col>
-            <ion-col size="6" size-sm="3">
+
               <ion-item>
-                <ion-label position="floating">Code</ion-label>
-                <ion-input inputmode="text" maxlength="6" value="WMIC"></ion-input>
+                <ion-label>Sole proprietorship</ion-label>
+                <ion-radio slot="start" value="solepro"></ion-radio>
               </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="12" size-sm="9">
+
               <ion-item>
-                <ion-label position="floating">Doing business as *</ion-label>
-                <ion-input inputmode="text" value="Western Mutual" clearInput></ion-input>
+                <ion-label>General partnership</ion-label>
+                <ion-radio slot="start" value="hudson"></ion-radio>
               </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="6" size-sm="3">
+
               <ion-item>
-                <ion-label position="floating"><abbr title="Federal Employer Identification Number">FEIN</abbr>*</ion-label>
-                <ion-input type="number" maxlength="9" value="171223397"></ion-input>
+                <ion-label>Limited liability partnership (LLP)</ion-label>
+                <ion-radio slot="start" value="llp"></ion-radio>
               </ion-item>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </section>
-  
-      <section>
-        <h3>Business structure *</h3>
-        <p class="medium-emphasis-text">Choose the type of business that best fits your organizational structure.</p>
-        <ion-list lines="none">
-          <ion-radio-group>
-            <ion-item>
-              <ion-label>Corporation</ion-label>
-              <ion-radio slot="start" value="corporation"></ion-radio>
-            </ion-item>
-  
-            <ion-item>
-              <ion-label>Sole proprietorship</ion-label>
-              <ion-radio slot="start" value="solepro"></ion-radio>
-            </ion-item>
-  
-            <ion-item>
-              <ion-label>General partnership</ion-label>
-              <ion-radio slot="start" value="hudson"></ion-radio>
-            </ion-item>
-  
-            <ion-item>
-              <ion-label>Limited liability partnership (LLP)</ion-label>
-              <ion-radio slot="start" value="llp"></ion-radio>
-            </ion-item>
-  
-            <ion-item>
-              <ion-label>Limited partnership</ion-label>
-              <ion-radio slot="start" value="limitedpartner"></ion-radio>
-            </ion-item>
-            <ion-item>
-              <ion-label>Other</ion-label>
-              <ion-radio slot="start" value="other"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-        </ion-list>
-      </section>
-  
-      <section>
-        <h3>Address</h3>
-        <ion-grid class="ion-grid-example">
-          <ion-row>
-            <ion-col size="12" size-sm="9">
+
               <ion-item>
-                <ion-label position="floating">Country *</ion-label>
-                <ion-select>
-                  <ion-select-option *ngFor="let country of countries" [value]="country.code">{{country.name}}
-                  </ion-select-option>
-                </ion-select>
+                <ion-label>Limited partnership</ion-label>
+                <ion-radio slot="start" value="limitedpartner"></ion-radio>
               </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
               <ion-item>
-                <ion-label position="floating">Address line 1 *</ion-label>
-                <ion-input clearInput></ion-input>
+                <ion-label>Other</ion-label>
+                <ion-radio slot="start" value="other"></ion-radio>
               </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-item>
-                <ion-label position="floating">Address line 2</ion-label>
-                <ion-input clearInput></ion-input>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="12" size-sm="5">
-              <ion-item>
-                <ion-label position="floating">City *</ion-label>
-                <ion-input></ion-input>
-              </ion-item>
-            </ion-col>
-            <ion-col size="12" size-sm="4">
-              <ion-item>
-                <ion-label position="floating">State *</ion-label>
-                <ion-select>
-                  <ion-select-option *ngFor="let state of states" [value]="state.code">{{state.name}}</ion-select-option>
-                </ion-select>
-              </ion-item>
-            </ion-col>
-            <ion-col size="6" size-sm="3">
-              <ion-item>
-                <ion-label position="floating">Zip code *</ion-label>
-                <ion-input></ion-input>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-  
-      </section>
-    </form>
+            </ion-radio-group>
+          </ion-list>
+        </section>
+
+        <section>
+          <h3>Address</h3>
+          <ion-grid class="ion-grid-example">
+            <ion-row>
+              <ion-col size="12" size-sm="9">
+                <ion-item>
+                  <ion-label position="floating">Country *</ion-label>
+                  <ion-select>
+                    <ion-select-option *ngFor="let country of countries" [value]="country.code">{{country.name}}
+                    </ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="floating">Address line 1 *</ion-label>
+                  <ion-input clearInput></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="floating">Address line 2</ion-label>
+                  <ion-input clearInput></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12" size-sm="5">
+                <ion-item>
+                  <ion-label position="floating">City *</ion-label>
+                  <ion-input></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12" size-sm="4">
+                <ion-item>
+                  <ion-label position="floating">State *</ion-label>
+                  <ion-select>
+                    <ion-select-option *ngFor="let state of states" [value]="state.code">{{state.name}}
+                    </ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col size="6" size-sm="3">
+                <ion-item>
+                  <ion-label position="floating">Zip code *</ion-label>
+                  <ion-input></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+        </section>
+      </form>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

@@ -72,7 +72,7 @@ font-weight: 500;
 line-height: 32px;
 }
 
-ign-subheading-2,  ion-text h3 {
+.ign-subheading-2,  ion-text h3 {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
@@ -84,6 +84,7 @@ ign-subheading-2,  ion-text h3 {
   line-height: 24px;
 }
 
+.ign-caption {}
 
 
 //type color
@@ -100,10 +101,10 @@ $divider: .12;
 color: rgba(black, $high-emphasis);
 }
 .medium-emphasis-text {
-color: rgba(black, $med-emphasis);
+color: rgba(black, $med-emphasis) !important;
 }
 .disabled-text {
-color: rgba(black, $disabled);
+color: rgba(black, $disabled) !important;
 }
 .active-icon, [active-icon] {
 color: rgba(black, $active);

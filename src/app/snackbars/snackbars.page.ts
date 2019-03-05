@@ -12,7 +12,7 @@ export class SnackbarsPage {
 
   async presentToast() {
     const toast = await this.toastController.create({
-      message: 'Your settings have been saved.',
+      message: 'Your edits have been saved.',
       duration: 2000
     });
     toast.present();
@@ -20,7 +20,7 @@ export class SnackbarsPage {
 
   async presentToastWithOptions() {
     const toast = await this.toastController.create({
-      message: 'Click to Close',
+      message: 'Your edits have been saved.',
       showCloseButton: true,
       position: 'top',
       closeButtonText: 'Done'
@@ -31,10 +31,11 @@ export class SnackbarsPage {
 
   async successToast() {
     const toast = await this.toastController.create({
-      message: 'Click to Close',
-      showCloseButton: true,
+      message: 'Your edits have been saved.',
+      showCloseButton: false,
       position: 'bottom',
-      closeButtonText: 'Done'
+      duration: 5000
+      //closeButtonText: 'Done'
     });
     toast.present();
   }

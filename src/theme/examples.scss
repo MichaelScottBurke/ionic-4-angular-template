@@ -1,0 +1,92 @@
+//gray panel to house examples
+.example-panel {
+  background: #ededed;
+  border: 1px solid #dedede;
+  //padding: 48px;
+  margin: 0 0 48px 0;
+
+  //handset
+  @media #{$mq-xxs} {
+    padding: 16px;
+  }
+
+  //tablet portrait
+  @media #{$mq-xs} {
+    padding: 8px;
+  }
+
+  //tablet landscape
+  @media #{$mq-s} {
+    padding: 8px;
+  }
+
+  //laptop
+  @media #{$mq-m} {
+    padding: 16px;
+  }
+
+  //desktop small
+  @media #{$mq-l} {
+    padding: 24px;
+  }
+
+  //desktop medium
+  @media #{$mq-xl} {
+    padding: 32px;
+  }
+
+  //desktop large...
+  @media #{$mq-xxl} {
+    padding: 48px;
+  }
+}
+
+.example-mobile-outline {
+  background-color: white;
+  //height: 640px;
+  width: 360px;
+  //width: 75%;
+  margin: 0 auto;
+  iframe {
+    border: none;
+    height: 640px;
+    width: 100%;
+  }
+}
+
+.example-tablet-outline {
+  background-color: white;
+  //height: 640px;
+  max-width: 768px;
+  margin: 0 auto;
+  iframe {
+    border: none;
+    height: 1024px;
+    width: 100%;
+  }
+}
+
+.example-desktop-outline {
+  background-color: white;
+  //height: 640px;
+  min-width: 1024px;
+  margin: 0 auto;
+  iframe {
+    border: none;
+    height: 768px;
+    width: 100%;
+  }
+}
+
+.example-responsive-outline {
+  background-color: white;
+  //height: 640px;
+  min-width: 360px;
+  max-width: 1280px;
+  margin: 0 auto;
+  iframe {
+    border: none;
+    height: 1024px;
+    width: 100%;
+  }
+}
