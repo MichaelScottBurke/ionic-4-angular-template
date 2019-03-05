@@ -34,7 +34,7 @@ font-size: 14px;
 
 ion-text {
  h1, h2, h3, h4, h5, h6 {
- font-weight: 500 !important;     
+ //font-weight: 500 !important;     
 }
 }
 
@@ -121,10 +121,29 @@ ion-card.card-over-card {
    color: inherit !important;
    h1, h2, h3, h4, h5, h6 {
     margin:0 0 8px 0;
-    font-weight: 500 !important;     
+
   }
   }
 }
+
+.card-over-content {
+  h2, h3, h4, h5, h6 {
+    font-weight: 500 !important;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+}
+
 
 //variables on light background
 $high-emphasis: .87;
