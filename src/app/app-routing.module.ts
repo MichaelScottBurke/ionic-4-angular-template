@@ -49,7 +49,12 @@ const routes: Routes = [
   { path: 'modal-example', loadChildren: './examples/modal-example/modal-example.module#ModalExamplePageModule' },
   { path: 'modal-layout', loadChildren: './modal-layout/modal-layout.module#ModalLayoutPageModule' },
   { path: 'form-grid-example', loadChildren: './examples/form-grid-example/form-grid-example.module#FormGridExamplePageModule' },
-  { path: 'test-iframe', loadChildren: './assets/templates/test-iframe/test-iframe.module#TestIframePageModule' }
+  { path: 'test-iframe', loadChildren: './assets/templates/test-iframe/test-iframe.module#TestIframePageModule' },
+  { path: 'detail-view', loadChildren: './examples/detail-view/detail-view.module#DetailViewPageModule' },
+  { path: 'detail-view-example', loadChildren: './examples/detail-view-example/detail-view-example.module#DetailViewExamplePageModule' },
+  { path: 'form-example-two', loadChildren: './examples/form-example-two/form-example-two.module#FormExampleTwoPageModule' },
+  { path: 'list-example', loadChildren: './examples/list-example/list-example.module#ListExamplePageModule' },
+  { path: 'hub-layout-example', loadChildren: './examples/hub-layout-example/hub-layout-example.module#HubLayoutExamplePageModule' }
 ];
 
 @NgModule({

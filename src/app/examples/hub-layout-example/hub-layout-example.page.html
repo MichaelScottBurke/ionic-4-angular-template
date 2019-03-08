@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button size="large">
+        <ion-icon slot="start" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button size="large">
+        <ion-icon slot="start" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="card-over-title">
+      <h1>Pay</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="hub-layout">
+  <div class="hub-layout-header">
+    <div class="hub-layout-content">
+      <img src="../assets/images/PayHeading.png" alt="latest pay statement breakdown"
+        style="width: 360px; margin: 0 auto;display:block">
+    </div>
+  </div>
+  <div class="hub-layout-content">
+    <section class="hub-layout-section">
+      <ion-item-divider lines="none" class="hub-layout-section-header" color="background">
+          <h2 class="ign-subheading-2"><a routerLink="/hub-layout-example">Pay</a></h2>
+        <ion-buttons slot="end">
+          <ion-button fill="clear" color="secondary">
+            <ion-icon aria-label="more actions" name="more"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item-divider>
+      <div class="card-list-horizontal">
+        <ion-grid no-padding>
+          <ion-row nowrap>
+            <ion-col *ngFor="let p of pays">
+              <ion-card>
+                <ion-list lines="none">
+                  <ion-item lines=" none" href="javascript: void();">
+                    <ion-avatar slot="start" class="avatar-icon">
+                      <ion-icon name="logo-usd"></ion-icon>
+                    </ion-avatar>
+                    <ion-label>
+                      <h2>{{ p.amount }}</h2>
+                      <h3 class="medium-emphasis-text">{{ p.date }}</h3>
+                    </ion-label>
+                    <ion-button color="warning" fill="clear" size="large" slot="end">
+                      <ion-icon *ngIf="p.insights==true" aria-label="pay insight" name="bulb"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-list>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </section>
+    <section class="hub-layout-section">
+      <ion-item-divider lines="none" class="hub-layout-section-header" color="background">
+        <h2 class="ign-subheading-2"><a routerLink="/hub-layout-example">Taxes</a></h2>
+        <ion-buttons slot="end">
+          <ion-button fill="clear" color="secondary">add</ion-button>
+          <ion-button fill="clear" color="secondary">
+            <ion-icon aria-label="more actions" name="more"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item-divider>
+      <ion-card>
+        <ion-list>
+          <ion-item lines="none" href="javascript: void();" *ngFor="let t of taxes">
+            <ion-label>
+              <h2>{{ t.name }}</h2>
+              <h3 class="medium-emphasis-text">{{ t.description }}</h3>
+            </ion-label>
+          </ion-item>
+          <ion-item lines="none" href="javascript: void();">
+            <ion-label color="secondary">
+              <h3>See all</h3>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </section>
+
+    <section class="hub-layout-section">
+
+      <ion-item-divider lines="none" class="hub-layout-section-header" color="background">
+        <h2 class="ign-subheading-2"><a routerLink="/hub-layout-example">Direct deposit</a></h2>
+        <ion-buttons slot="end">
+          <ion-button fill="clear" color="secondary">add</ion-button>
+          <ion-button fill="clear" color="secondary">
+            <ion-icon aria-label="more actions" name="more"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item-divider>
+      <ion-card>
+        <ion-list>
+          <ion-item lines="none" href="javascript: void();" *ngFor="let b of banks">
+            <ion-label>
+              <h2>{{ b.name }} - {{b.type}}</h2>
+              <p class="medium-emphasis-text">{{ b.amount }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-item lines="none" href="javascript: void();">
+            <ion-label color="secondary">
+              <h3>See all</h3>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </section>
+
+  </div>
+</ion-content>

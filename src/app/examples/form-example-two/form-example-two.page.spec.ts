@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TestIframePage } from './test-iframe.page';
+import { FormExampleTwoPage } from './form-example-two.page';
 
-describe('TestIframePage', () => {
-  let component: TestIframePage;
-  let fixture: ComponentFixture<TestIframePage>;
+describe('FormExampleTwoPage', () => {
+  let component: FormExampleTwoPage;
+  let fixture: ComponentFixture<FormExampleTwoPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TestIframePage ],
+      declarations: [ FormExampleTwoPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TestIframePage);
+    fixture = TestBed.createComponent(FormExampleTwoPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

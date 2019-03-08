@@ -16,3 +16,8 @@
 .ionic-examples ion-col {
   background-color: red !important;
 }
+
+//ion grid, css grid, flex grid examples background color
+ion-grid ion-col div, .grid-demo .box, .flex-demo .box {
+  background-color: var(--ion-color-secondary-tint);
+}

@@ -1,17 +1,22 @@
+@import "../../../css/breakpoints.scss";
 .form-width {
   //max-width: 672px;
 }
 
-section section {
-  margin-bottom: 24px;
+//form actions
+.card-actions {
+  margin-top: 48px;
 }
 
-
-@import "../../../theme/breakpoints.scss";
+//app bar actions
+@media #{$mq-xs} {
+  .card-over-buttons {
+    display: none;
+  }
+}
 
 // Background: content canvas
 ion-content.card-over-content.hydrated {
-
   //handset
   @media #{$mq-xxs} {
     //--ion-background-color: white ;
@@ -23,9 +28,7 @@ ion-content.card-over-content.hydrated {
     --background: var(--ion-color-background);
   }
 
-
   //desktop
-
 }
 
 @media #{$mq-xs} {
@@ -36,10 +39,10 @@ ion-content.card-over-content.hydrated {
 
 // Card: main content
 ion-card.card-over-card {
+  max-width: 816px;
   margin: -56px auto 32px auto;
   background: white;
   z-index: 10;
-  
 
   //handset
   @media #{$mq-xxs} {
@@ -51,42 +54,56 @@ ion-card.card-over-card {
     ion-card-header {
       display: none;
     }
+    .card-actions {
+      display: none;
+    }
   }
 
   //tablet portrait
   @media #{$mq-xs} {
     width: 92%;
-    padding-top: 15px;
-    //padding: 43px 24px 24px 24px;
+    //padding-top: 15px;
+    padding: 15px 24px 24px 24px;
   }
 
   //tablet landscape
   @media #{$mq-s} {
     width: 75%;
-    //padding: 43px 32px 32px 32px;
+    padding: 15px 32px 32px 32px;
   }
 
   //laptop
   @media #{$mq-m} {
     width: 75%;
-    //padding: 43px 48px 48px 48px;
+    padding: 15px 48px 48px 48px;
   }
 
   //desktop small
   @media #{$mq-l} {
-    width: 65%;
-    //padding: 43px 48px 48px 48px;
+    width: 75%;
   }
 
   //desktop medium
   @media #{$mq-xl} {
     width: 65%;
-    //padding: 43px 48px 48px 48px;
   }
 
   //desktop large...
   @media #{$mq-xxl} {
     width: 65%;
-    //padding: 43px 48px 48px 48px;
   }
+}
+
+
+//To Do: fix for select menu height bug
+
+
+//to do: move to global
+ion-item[no-padding-start] {
+  --padding-start: none;
+}
+
+//fixes discrepency between input and select
+ion-select {
+  --padding-bottom: 5px !important;
 }

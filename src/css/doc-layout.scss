@@ -1,0 +1,77 @@
+@import "./breakpoints.scss";
+//document layout styles
+.doc-layout-header {
+  //handset
+  @media #{$mq-xxs} {
+    padding: 0;
+    margin-left: -4px;
+  }
+
+  //tablet portrait
+  @media #{$mq-xs} {
+    padding: 0 calc(24px - 16px);
+  }
+
+  //tablet landscape
+  @media #{$mq-s} {
+    padding: 16px calc(32px - 16px);
+  }
+
+  //laptop
+  @media #{$mq-m} {
+    padding: 24px calc(48px - 16px);
+  }
+
+  //desktop small
+  @media #{$mq-l} {
+    padding: 24px  calc(64px - 16px);
+  }
+
+  //desktop medium
+  @media #{$mq-xl} {
+    padding: 24px  calc(72px - 16px);
+  }
+
+  //desktop large...
+  @media #{$mq-xxl} {
+    padding: 24px  calc(96px - 16px);
+  }
+
+}
+.doc-layout {
+  //handset
+  @media #{$mq-xxs} {
+    padding: 16px;
+  }
+
+  //tablet portrait
+  @media #{$mq-xs} {
+    padding: 16px 24px;
+  }
+
+  //tablet landscape
+  @media #{$mq-s} {
+    padding: 16px 32px;
+  }
+
+  //laptop
+  @media #{$mq-m} {
+    padding: 24px 48px;
+  }
+
+  //desktop small
+  @media #{$mq-l} {
+    padding: 24px  64px;
+  }
+
+  //desktop medium
+  @media #{$mq-xl} {
+    padding: 24px  72px;
+  }
+
+  //desktop large...
+  @media #{$mq-xxl} {
+    padding: 24px  96px;
+  }
+
+}

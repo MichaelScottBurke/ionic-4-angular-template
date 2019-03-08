@@ -1,6 +1,6 @@
 //gray panel to house examples
-.example-panel {
-  background: #ededed;
+div.example-panel {
+  background-color: #ededed;
   border: 1px solid #dedede;
   //padding: 48px;
   margin: 0 0 48px 0;
@@ -38,6 +38,9 @@
   //desktop large...
   @media #{$mq-xxl} {
     padding: 48px;
+  }
+  ion-card {
+    --background: white;
   }
 }
 

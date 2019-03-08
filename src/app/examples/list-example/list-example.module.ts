@@ -5,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TestIframePage } from './test-iframe.page';
+import { ListExamplePage } from './list-example.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: TestIframePage
+    component: ListExamplePage
   }
 ];
 
@@ -21,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [TestIframePage]
+  declarations: [ListExamplePage]
 })
-export class TestIframePageModule {}
+export class ListExamplePageModule {}

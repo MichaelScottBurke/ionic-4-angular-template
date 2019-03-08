@@ -5,8 +5,6 @@ ion-menu.menu-type-overlay.menu-enabled.menu-side-start.hydrated.split-pane-side
 }
 
 
-
-
 //buttons
 ion-anchor {
   padding-right: 16px !important;
@@ -42,3 +40,32 @@ fieldset {
   border-color: transparent;
   border-image: initial;
 }
+
+//text fields additional elements
+.assistive-text {
+  padding: 4px 16px 0 16px;
+}
+
+
+//need to integrate w/ modal?
+.modal-wrapper.modal-wrapper-md.sc-ion-modal-md {
+  --min-height: 420px !important;
+}
+
+//anchor tag defaults
+a, a:visited {
+  color: var(--ion-color-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a[disabled] {
+  pointer-events: none;
+  cursor: default;
+  color: var(--ion-disabled-text);
+}
+
+
