@@ -53,7 +53,11 @@ const routes: Routes = [
   { path: 'detail-view-example', loadChildren: './examples/detail-view-example/detail-view-example.module#DetailViewExamplePageModule' },
   { path: 'form-example-two', loadChildren: './examples/form-example-two/form-example-two.module#FormExampleTwoPageModule' },
   { path: 'list-example', loadChildren: './examples/list-example/list-example.module#ListExamplePageModule' },
-  { path: 'hub-layout-example', loadChildren: './examples/hub-layout-example/hub-layout-example.module#HubLayoutExamplePageModule' }
+  { path: 'hub-layout-example', loadChildren: './examples/hub-layout-example/hub-layout-example.module#HubLayoutExamplePageModule' },
+  { path: 'app-bar-top-example', loadChildren: './examples/app-bar-top-example/app-bar-top-example.module#AppBarTopExamplePageModule' },
+  { path: 'top-app-bar-example2', loadChildren: './examples/top-app-bar-example2/top-app-bar-example2.module#TopAppBarExample2PageModule' },
+  { path: 'top-app-bar-example3', loadChildren: './examples/top-app-bar-example3/top-app-bar-example3.module#TopAppBarExample3PageModule' },
+  { path: 'app-bars', loadChildren: './examples/app-bars/app-bars.module#AppBarsPageModule' }
 ];
 
 @NgModule({

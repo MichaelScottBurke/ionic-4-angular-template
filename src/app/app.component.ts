@@ -77,6 +77,10 @@ export class AppComponent {
 
   public patternPages = [
     {
+      title: 'App Bars',
+      url: '/app-bars'
+    },
+    {
       title: 'Buttons',
       url: '/buttons',
       icon: ''
@@ -156,8 +160,20 @@ export class AppComponent {
       url: '/text-fields',
       icon: ''
     }
-  ]
+  ];
 
+  public examplePages = [
+    {
+      title: 'Form example 1',
+      url: '/form-example',
+      icon: ''
+    },
+    {
+      title: 'Modal example 1',
+      url: '/modal-example',
+      icon: ''
+    },
+  ];
   
 
   constructor(

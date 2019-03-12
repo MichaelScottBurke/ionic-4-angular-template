@@ -10,6 +10,7 @@
         </ion-toolbar>
       </ion-header>
       <ion-content>
+        
         <ion-list>
           <ion-menu-toggle auto-hide="false">
           <!-- home links -->
@@ -46,6 +47,16 @@
             </ion-item-divider>
             <ion-item  *ngFor="let p of patternPages" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">              <ion-label>
                 {{p.title}}
+              </ion-label>
+            </ion-item>
+            <!-- pattern links -->
+           <ion-item-divider>
+              <ion-label>
+                Examples
+              </ion-label>
+            </ion-item-divider>
+            <ion-item  *ngFor="let e of examplePages" lines="none" [routerDirection]="'root'" [routerLink]="[e.url]">              <ion-label>
+                {{e.title}}
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
