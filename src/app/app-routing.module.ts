@@ -57,7 +57,22 @@ const routes: Routes = [
   { path: 'app-bar-top-example', loadChildren: './examples/app-bar-top-example/app-bar-top-example.module#AppBarTopExamplePageModule' },
   { path: 'top-app-bar-example2', loadChildren: './examples/top-app-bar-example2/top-app-bar-example2.module#TopAppBarExample2PageModule' },
   { path: 'top-app-bar-example3', loadChildren: './examples/top-app-bar-example3/top-app-bar-example3.module#TopAppBarExample3PageModule' },
-  { path: 'app-bars', loadChildren: './examples/app-bars/app-bars.module#AppBarsPageModule' }
+  { path: 'app-bars', loadChildren: './app-bars/app-bars.module#AppBarsPageModule' },
+  { path: 'app-bar-example-menu', loadChildren: './examples/app-bar-example-menu/app-bar-example-menu.module#AppBarExampleMenuPageModule' },
+  { path: 'app-bar-example-back', loadChildren: './examples/app-bar-example-back/app-bar-example-back.module#AppBarExampleBackPageModule' },
+  { path: 'app-bar-example-close', loadChildren: './examples/app-bar-example-close/app-bar-example-close.module#AppBarExampleClosePageModule' },
+  { path: 'app-bar-example-subtitle', loadChildren: './examples/app-bar-example-subtitle/app-bar-example-subtitle.module#AppBarExampleSubtitlePageModule' },
+  { path: 'app-bar-example-avatar', loadChildren: './examples/app-bar-example-avatar/app-bar-example-avatar.module#AppBarExampleAvatarPageModule' },
+  { path: 'app-bar-example-tab', loadChildren: './examples/app-bar-example-tab/app-bar-example-tab.module#AppBarExampleTabPageModule' },
+  { path: 'app-bar-example-tabfixed', loadChildren: './examples/app-bar-example-tabfixed/app-bar-example-tabfixed.module#AppBarExampleTabfixedPageModule' },
+  { path: 'app-bar-example-tabsubtitle', loadChildren: './examples/app-bar-example-tabsubtitle/app-bar-example-tabsubtitle.module#AppBarExampleTabsubtitlePageModule' },
+  { path: 'app-bar-example-tabavatar', loadChildren: './examples/app-bar-example-tabavatar/app-bar-example-tabavatar.module#AppBarExampleTabavatarPageModule' },
+  { path: 'app-bar-example-avatarstart', loadChildren: './examples/app-bar-example-avatarstart/app-bar-example-avatarstart.module#AppBarExampleAvatarstartPageModule' },
+  { path: 'card-example1', loadChildren: './examples/card-example1/card-example1.module#CardExample1PageModule' },
+  { path: 'card-example2', loadChildren: './examples/card-example2/card-example2.module#CardExample2PageModule' },
+  { path: 'card-example3', loadChildren: './examples/card-example3/card-example3.module#CardExample3PageModule' },
+  { path: 'card-example4', loadChildren: './examples/card-example4/card-example4.module#CardExample4PageModule' },
+  { path: 'card-example5', loadChildren: './example/card-example5/card-example5.module#CardExample5PageModule' }
 ];
 
 @NgModule({

@@ -44,18 +44,25 @@ div.example-panel {
   }
 }
 
-.example-mobile-outline {
+.example-mobile-outline, .example-mobile-outline-short {
   background-color: white;
   //height: 640px;
   width: 360px;
   //width: 75%;
-  margin: 0 auto;
+  margin: 0 auto 32px auto;
   iframe {
     border: none;
     height: 640px;
     width: 100%;
   }
 }
+
+.example-mobile-outline-short { 
+  iframe { 
+    height: 220px !important;
+  }
+}
+
 
 .example-tablet-outline {
   background-color: white;

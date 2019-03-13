@@ -90,6 +90,11 @@
   //disabled opacity
   //--ion-button-opacity: .38 !important;
 
+  //icon color
+  --ion-active-icon-black: rgba(0,0,0,.87);
+  --ion-inactive-icon-black: rgba(0,0,0,.54);
+  --ion-disabled-icon-black: rgba(0,0,0,.38);
+
 
 /* other variables */
 /*
@@ -181,6 +186,9 @@ ion-item.item-input, ion-item.item-select {
   --border-radius: 4px 4px 0 0;
   --background: rgba(0,0,0,.04);
 }
+
+//icons as decoration in list items
+
 
 //input clear icon
 .input-clear-icon.sc-ion-input-md {
