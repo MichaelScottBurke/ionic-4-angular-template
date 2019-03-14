@@ -28,6 +28,7 @@
 			<ion-grid>
 				<ion-row>
 					<ion-col>
+							<h4 text-center class="ign-caption medium-emphasis-text">image on top</h4>
 						<ion-card>
 							<img image-fit
 								src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"
@@ -52,7 +53,7 @@
 								<p>In times of pain, when the future is too terrifying to contemplate and the past too painful to
 									remember, I have learned to pay attention to right now.<cite>- Julia Cameron</cite></p>
 							</ion-card-content>
-							<ion-footer>
+
 								<ion-toolbar>
 									<ion-buttons slot="start">
 										<ion-button color="secondary" fill="clear">action 1</ion-button>
@@ -64,10 +65,11 @@
 										</ion-button>
 									</ion-buttons>
 								</ion-toolbar>
-							</ion-footer>
+
 						</ion-card>
 					</ion-col>
 					<ion-col>
+							<h4 text-center class="ign-caption medium-emphasis-text">image within content</h4>
 							<ion-card>
 									<ion-card-header>
 											<ion-card-title>
@@ -90,7 +92,6 @@
 									<ion-card-content>
 										<p>Life is full of screwups. You're supposed to fail sometimes. It's a required part of the human existence.<cite>- Sarah Dessen</cite></p>
 									</ion-card-content>
-									<ion-footer>
 										<ion-toolbar>
 											<ion-buttons slot="start">
 												<ion-button color="secondary" fill="clear">action 1</ion-button>
@@ -102,10 +103,10 @@
 												</ion-button>
 											</ion-buttons>
 										</ion-toolbar>
-									</ion-footer>
 								</ion-card>
 					</ion-col>
 					<ion-col>
+							<h4 text-center class="ign-caption medium-emphasis-text">image on bottom</h4>
 							<ion-card>
 									<ion-card-header>
 											<ion-card-title>
@@ -139,6 +140,7 @@
 				</ion-row>
 				<ion-row>
 					<ion-col>
+							<h4 text-center class="ign-caption medium-emphasis-text">image only</h4>
 						<ion-card>
 								<img image-fit
 								src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"
@@ -146,30 +148,53 @@
 						</ion-card>
 					</ion-col>
 					<ion-col>
+							<h4 text-center class="ign-caption medium-emphasis-text">text over image</h4>
 							<ion-card class="image-card">
 									<img image-fit
 									src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"
 									title="placeholder image example of data visualization">
 									<ion-card-header text-center>
 										<ion-card-title class="ign-display-2">Title</ion-card-title>
-										<ion-card-subtitle>Subtitle</ion-card-subtitle>
+										<ion-card-subtitle class="medium-emphasis-text">Subtitle</ion-card-subtitle>
 								</ion-card-header>
 							</ion-card>
 						</ion-col>
 						<ion-col>
+								<h4 text-center class="ign-caption medium-emphasis-text">image on left or right</h4>
 								<ion-card>
-										<img image-fit
-										src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"
-										title="placeholder image example of data visualization">
+									<ion-list>
+										<ion-item lines="none">
+												<ion-thumbnail slot="start">
+														<ion-img src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"></ion-img>
+													</ion-thumbnail>
+													<ion-label>
+														<h2 class="ign-headline">Title</h2>
+														<h3 class="medium-emphasis-text">Subtitle</h3>
+														<p text-wrap>​“Success is liking yourself, liking what you do, and liking how you do it.” – Maya Angelou</p>
+													</ion-label>
+										</ion-item>
+									</ion-list>
 								</ion-card>
+								<ion-card>
+										<ion-list>
+											<ion-item lines="none">
+													<ion-thumbnail slot="end">
+															<ion-img src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"></ion-img>
+														</ion-thumbnail>
+														<ion-label>
+															<h2 class="ign-headline">Title</h2>
+															<h3>Subtitle</h3>
+															<p text-wrap>​“Success is liking yourself, liking what you do, and liking how you do it.” – Maya Angelou</p>
+														</ion-label>
+											</ion-item>
+										</ion-list>
+									</ion-card>
 							</ion-col>
 				</ion-row>
 			</ion-grid>
 		</div>
 
 		<h2>Examples</h2>
-		<p class="medium-emphasis-text">Cards are very flexible and composable components that can host a variety of atoms.
-		</p>
 		<div class="example-panel">
 			<ion-grid>
 				<ion-row>
@@ -256,7 +281,6 @@
 									</ion-chip>
 								</ion-item>
 							</ion-card-content>
-							<ion-footer>
 								<ion-toolbar>
 									<ion-buttons slot="start">
 										<ion-button color="secondary" fill="clear">reserve</ion-button>
@@ -273,7 +297,6 @@
 										</ion-button>
 									</ion-buttons>
 								</ion-toolbar>
-							</ion-footer>
 						</ion-card>
 					</ion-col>
 					<ion-col>
@@ -304,7 +327,7 @@
 										With a friendly personality, Norwich Terriers are today mostly a companion dog breed.</p>
 								</div>
 							</ion-card-content>
-							<ion-footer>
+							
 								<ion-toolbar>
 									<ion-buttons slot="start">
 										<ion-button color="secondary" fill="clear">more details</ion-button>
@@ -318,7 +341,7 @@
 										</ion-button>
 									</ion-buttons>
 								</ion-toolbar>
-							</ion-footer>
+							
 						</ion-card>
 
 
@@ -340,7 +363,7 @@
 										kingdom, and bred to hunt small rodents.</p>
 								</div>
 							</ion-card-content>
-							<ion-footer>
+							
 								<ion-toolbar>
 									<ion-buttons slot="start">
 										<ion-button color="secondary" fill="clear">more details</ion-button>
@@ -354,7 +377,7 @@
 										</ion-button>
 									</ion-buttons>
 								</ion-toolbar>
-							</ion-footer>
+							
 						</ion-card>
 					</ion-col>
 				</ion-row>
@@ -383,9 +406,9 @@
 							</ion-card-header>
 							<ion-card-content>
 							</ion-card-content>
-							<ion-footer>
+							
 								<ion-progress-bar type="indeterminate"></ion-progress-bar>
-							</ion-footer>
+							
 						</ion-card>
 					</ion-col>
 					<ion-col>
@@ -435,7 +458,7 @@
 									<p>Content paragraph</p>
 								</div>
 							</ion-card-content>
-							<ion-footer>
+							
 								<ion-toolbar>
 									<ion-buttons slot="start">
 										<ion-button color="secondary" fill="clear">action 1</ion-button>
@@ -453,7 +476,7 @@
 										</ion-button>
 									</ion-buttons>
 								</ion-toolbar>
-							</ion-footer>
+							
 						</ion-card>
 						-->
 
