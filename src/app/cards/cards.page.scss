@@ -1,5 +1,29 @@
 @import "../../css/doc-layout.scss";
 
 ion-card-content p {
-  margin-bottom: 24px;
+  //margin-bottom: 24px;
+}
+
+div.example-panel ion-card {
+  min-width: 328px;
+  max-width: 328px;
+}
+
+//fix h2 tags in card title 
+ion-card-title h2 {margin-top: 0;}
+
+//image card
+ion-card.image-card {
+  background-color: black;
+  ion-card-header.hydrated {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    background: transparent;
+    ion-card-title { color: white;}
+    ion-card-subtitle {color: #ddd;}
+}
+img {
+  opacity: .5;
+}
 }

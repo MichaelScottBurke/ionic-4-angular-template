@@ -20,7 +20,7 @@ export class ModalLayoutPage implements OnInit {
       component: ModalExamplePage,
       componentProps: {
         "paramID": '1',
-        "paramTitle": "Enjoy using UltiPro?",
+        "paramTitle": "Enjoy using Things?",
         "paramSubtitle": "Test subtitle"
       },
       cssClass: "modal-dialog"

@@ -18,16 +18,163 @@
 		<p class="medium-emphasis-text">Cards contain content and actions about a single subject. They should be easy to
 			scan for relevant and actionable information. Elements, like text and images, should be placed on them in a way
 			that clearly indicates hierarchy.</p>
-		<p class="medium-emphasis-text">Use cards instead of lists when items have more than three elements of meta
+		<p class="medium-emphasis-text">Use cards instead of lists when items have more than three lines of meta
 			information or when visual interest and variety is important. </p>
+
+		<h2>Types</h2>
+		<p class="medium-emphasis-text">Cards are very flexible and composable components that can host a variety of atoms.
+		</p>
+		<div class="example-panel">
+			<ion-grid>
+				<ion-row>
+					<ion-col>
+						<ion-card>
+							<img image-fit
+								src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"
+								title="placeholder image example of data visualization">
+							<ion-card-header>
+
+								<ion-card-title>
+									<ion-item lines="none">
+										<ion-avatar slot="start">
+											<img
+												src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/avatar_circular.png"
+												alt="avatar placeholder">
+										</ion-avatar>
+										<ion-label>
+											<h2 class="ign-headline">Card title</h2>
+											<p>Card subtitle</p>
+										</ion-label>
+									</ion-item>
+								</ion-card-title>
+							</ion-card-header>
+							<ion-card-content>
+								<p>In times of pain, when the future is too terrifying to contemplate and the past too painful to
+									remember, I have learned to pay attention to right now.<cite>- Julia Cameron</cite></p>
+							</ion-card-content>
+							<ion-footer>
+								<ion-toolbar>
+									<ion-buttons slot="start">
+										<ion-button color="secondary" fill="clear">action 1</ion-button>
+										<ion-button color="secondary" fill="clear">action 2</ion-button>
+									</ion-buttons>
+									<ion-buttons slot="end">
+										<ion-button color="secondary">
+											<ion-icon slot="start" name="more"></ion-icon>
+										</ion-button>
+									</ion-buttons>
+								</ion-toolbar>
+							</ion-footer>
+						</ion-card>
+					</ion-col>
+					<ion-col>
+							<ion-card>
+									<ion-card-header>
+											<ion-card-title>
+													<ion-item lines="none">
+														<ion-avatar slot="start">
+															<img
+																src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/avatar_circular.png"
+																alt="avatar placeholder">
+														</ion-avatar>
+														<ion-label>
+															<h2 class="ign-headline">Card title</h2>
+															<p>Card subtitle</p>
+														</ion-label>
+													</ion-item>
+												</ion-card-title>
+									</ion-card-header>
+									<img image-fit
+										src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"
+										title="placeholder image example of data visualization">
+									<ion-card-content>
+										<p>Life is full of screwups. You're supposed to fail sometimes. It's a required part of the human existence.<cite>- Sarah Dessen</cite></p>
+									</ion-card-content>
+									<ion-footer>
+										<ion-toolbar>
+											<ion-buttons slot="start">
+												<ion-button color="secondary" fill="clear">action 1</ion-button>
+												<ion-button color="secondary" fill="clear">action 2</ion-button>
+											</ion-buttons>
+											<ion-buttons slot="end">
+												<ion-button color="secondary">
+													<ion-icon slot="start" name="more"></ion-icon>
+												</ion-button>
+											</ion-buttons>
+										</ion-toolbar>
+									</ion-footer>
+								</ion-card>
+					</ion-col>
+					<ion-col>
+							<ion-card>
+									<ion-card-header>
+											<ion-card-title>
+													<div class="ign-caption medium-emphasis-text">Category subtitle</div>
+													<h2 class="ign-headline">Card title</h2>
+												</ion-card-title>
+									</ion-card-header>
+									<ion-card-content class="high-emphasis-text">
+										<div class="ign-display-4">
+											88.8%
+										</div>
+									</ion-card-content>
+									<!--ion-footer>
+										<ion-toolbar>
+											<ion-buttons slot="start">
+												<ion-button color="secondary" fill="clear">action 1</ion-button>
+												<ion-button color="secondary" fill="clear">action 2</ion-button>
+											</ion-buttons>
+											<ion-buttons slot="end">
+												<ion-button color="secondary">
+													<ion-icon slot="start" name="more"></ion-icon>
+												</ion-button>
+											</ion-buttons>
+										</ion-toolbar>
+									</ion-footer-->
+									<img image-fit
+										src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"
+										title="placeholder image example of data visualization">
+								</ion-card>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col>
+						<ion-card>
+								<img image-fit
+								src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"
+								title="placeholder image example of data visualization">
+						</ion-card>
+					</ion-col>
+					<ion-col>
+							<ion-card class="image-card">
+									<img image-fit
+									src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"
+									title="placeholder image example of data visualization">
+									<ion-card-header text-center>
+										<ion-card-title class="ign-display-2">Title</ion-card-title>
+										<ion-card-subtitle>Subtitle</ion-card-subtitle>
+								</ion-card-header>
+							</ion-card>
+						</ion-col>
+						<ion-col>
+								<ion-card>
+										<img image-fit
+										src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/16_9_Straight.png"
+										title="placeholder image example of data visualization">
+								</ion-card>
+							</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+
 		<h2>Examples</h2>
 		<p class="medium-emphasis-text">Cards are very flexible and composable components that can host a variety of atoms.
 		</p>
 		<div class="example-panel">
-			<ion-grid no-padding>
+			<ion-grid>
 				<ion-row>
 					<ion-col>
-						<h4 text-center class="ign-caption medium-emphasis-text">text only</h4>
+						<h4 text-center class="ign-caption medium-emphasis-text">&nbsp;</h4>
 						<ion-card>
 							<ion-card-content>
 								<p text-left><span>"</span>Every day you wait is another day you will never get back
@@ -36,7 +183,7 @@
 						</ion-card>
 					</ion-col>
 					<ion-col>
-						<h4 text-center class="ign-caption medium-emphasis-text">single list item</h4>
+						<h4 text-center class="ign-caption medium-emphasis-text">&nbsp;</h4>
 						<ion-card>
 							<ion-list lines="none">
 								<ion-item lines=" none" href="javascript: void();">
@@ -55,7 +202,7 @@
 						</ion-card>
 					</ion-col>
 					<ion-col>
-						<h4 text-center class="ign-caption medium-emphasis-text">single list item</h4>
+						<h4 text-center class="ign-caption medium-emphasis-text">&nbsp;</h4>
 						<ion-card>
 							<ion-card-header>
 								<ion-card-subtitle>Card Subtitle</ion-card-subtitle>
@@ -71,84 +218,196 @@
 				</ion-row>
 				<ion-row>
 					<ion-col>
-							<ion-card>
-									<img ion-card-image
-									src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/LudlowPrime.png">
-									<ion-card-header>
-										<ion-card-title class="ign-headline">Ludlow & Prime</ion-card-title>
-										<ion-card-subtitle>Seafood restaurant</ion-card-subtitle>
-									</ion-card-header>
-									<ion-card-content>
-											<div>
-													<ion-label color="warning">4.3 &nbsp;</ion-label>
-													<ion-icon color="warning" aria-label="rating star" name="star"></ion-icon>
-													<ion-icon color="warning" aria-label="rating star" name="star"></ion-icon>
-													<ion-icon color="warning" aria-label="rating star" name="star"></ion-icon>
-													<ion-icon color="warning" aria-label="rating star" name="star"></ion-icon>
-													<ion-icon color="warning" aria-label="rating star" name="star-half"></ion-icon>
-													<ion-label>&nbsp;(91)</ion-label>
-											</div>
-										<p class="medium-emphasis-text">Ludlow & Prime joins the neighborhood as a locally owned & operated Restaurant &
-											Lounge serving USDA Prime Steaks & Cuts, Fresh Seafood & Oysters, Gumbo & many other everyday favorites.</p>
-										<!-- mat-divider inset></mat-divider-->
-										<h2 class="ign-body-2">Tonight's availability</h2>
-										<ion-item lines="none">
-											<ion-chip>
-												<ion-label>5:30PM</ion-label>
-											</ion-chip>
-											<ion-chip selected color="secondary" outline>
-												<ion-label>7:30PM</ion-label>
-											</ion-chip>
-											<ion-chip>
-												<ion-label>8:00PM</ion-label>
-											</ion-chip>
-											<ion-chip>
-												<ion-label>9:00PM</ion-label>
-											</ion-chip>
-										</ion-item>
-									</ion-card-content>
-									<ion-footer>
-											<ion-toolbar>
-													<ion-buttons slot="start">
-															<ion-button color="secondary" fill="clear">reserve</ion-button>
-													</ion-buttons>
-													<ion-buttons slot="end">
-															<ion-button color="secondary"><ion-icon slot="start" name="call"></ion-icon></ion-button>
-															<ion-button  color="secondary"><ion-icon slot="start" name="bookmark"></ion-icon></ion-button>
-															<ion-button  color="secondary"><ion-icon slot="start" name="share"></ion-icon></ion-button>
-													</ion-buttons>
-											</ion-toolbar>
-										</ion-footer>
-								</ion-card>
+						<ion-card>
+							<img ion-card-image
+								src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/LudlowPrime.png">
+							<ion-card-header>
+								<ion-card-title class="ign-headline">Ludlow & Prime</ion-card-title>
+								<ion-card-subtitle>Seafood restaurant</ion-card-subtitle>
+							</ion-card-header>
+							<ion-card-content>
+								<div>
+									<ion-label color="warning">4.3 &nbsp;</ion-label>
+									<ion-icon color="warning" aria-label="rating star" name="star"></ion-icon>
+									<ion-icon color="warning" aria-label="rating star" name="star"></ion-icon>
+									<ion-icon color="warning" aria-label="rating star" name="star"></ion-icon>
+									<ion-icon color="warning" aria-label="rating star" name="star"></ion-icon>
+									<ion-icon color="warning" aria-label="rating star" name="star-half"></ion-icon>
+									<ion-label>&nbsp;(91)</ion-label>
+								</div>
+								<p class="medium-emphasis-text">Ludlow & Prime joins the neighborhood as a locally owned & operated
+									Restaurant &
+									Lounge serving USDA Prime Steaks & Cuts, Fresh Seafood & Oysters, Gumbo & many other everyday
+									favorites.</p>
+								<!-- mat-divider inset></mat-divider-->
+								<h2 class="ign-body-2">Tonight's availability</h2>
+								<ion-item lines="none">
+									<ion-chip>
+										<ion-label>5:30PM</ion-label>
+									</ion-chip>
+									<ion-chip selected color="secondary" outline>
+										<ion-label>7:30PM</ion-label>
+									</ion-chip>
+									<ion-chip>
+										<ion-label>8:00PM</ion-label>
+									</ion-chip>
+									<ion-chip>
+										<ion-label>9:00PM</ion-label>
+									</ion-chip>
+								</ion-item>
+							</ion-card-content>
+							<ion-footer>
+								<ion-toolbar>
+									<ion-buttons slot="start">
+										<ion-button color="secondary" fill="clear">reserve</ion-button>
+									</ion-buttons>
+									<ion-buttons slot="end">
+										<ion-button color="secondary">
+											<ion-icon slot="start" name="call"></ion-icon>
+										</ion-button>
+										<ion-button color="secondary">
+											<ion-icon slot="start" name="bookmark"></ion-icon>
+										</ion-button>
+										<ion-button color="secondary">
+											<ion-icon slot="start" name="share"></ion-icon>
+										</ion-button>
+									</ion-buttons>
+								</ion-toolbar>
+							</ion-footer>
+						</ion-card>
 					</ion-col>
 					<ion-col>
-							<ion-card>
+						<ion-card>
+							<ion-card-header>
+
+								<ion-card-title>
+									<ion-item lines="none">
+										<ion-avatar slot="start">
+											<img
+												src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/puppy-1.png"
+												alt="Norwich Terrier">
+										</ion-avatar>
+										<ion-label>
+											<h2 class="ign-headline">Norwich Terrier</h2>
+											<p>Mr. Toby Jones</p>
+										</ion-label>
+									</ion-item>
+								</ion-card-title>
+							</ion-card-header>
+							<img
+								src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/puppy-1.png"
+								alt="Norwich Terrier">
+							<ion-card-content>
+								<div class="high-emphasis-text">
+									<p>The Norwich Terrier is a breed of dog originating in the United Kingdom, and was bred to hunt small
+										vermin or rodents.
+										With a friendly personality, Norwich Terriers are today mostly a companion dog breed.</p>
+								</div>
+							</ion-card-content>
+							<ion-footer>
+								<ion-toolbar>
+									<ion-buttons slot="start">
+										<ion-button color="secondary" fill="clear">more details</ion-button>
+									</ion-buttons>
+									<ion-buttons slot="end">
+										<ion-button color="secondary">
+											<ion-icon slot="start" name="heart"></ion-icon>
+										</ion-button>
+										<ion-button color="secondary">
+											<ion-icon slot="start" name="share"></ion-icon>
+										</ion-button>
+									</ion-buttons>
+								</ion-toolbar>
+							</ion-footer>
+						</ion-card>
+
+
+					</ion-col>
+					<ion-col>
+						<ion-card>
+							<img image-fit
+								src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/puppy-2.png"
+								title="placeholder image example of data visualization">
+							<ion-card-header>
+								<ion-card-title>
+									<h2 class="ign-headline">Norwich Terrier</h2>
+								</ion-card-title>
+								<ion-card-subtitle>Canis Lupus Familiaris</ion-card-subtitle>
+							</ion-card-header>
+							<ion-card-content>
+								<div class="high-emphasis-text">
+									<p>The Norwich Terrier is a companion dog with a friendly personality originating in the United
+										kingdom, and bred to hunt small rodents.</p>
+								</div>
+							</ion-card-content>
+							<ion-footer>
+								<ion-toolbar>
+									<ion-buttons slot="start">
+										<ion-button color="secondary" fill="clear">more details</ion-button>
+									</ion-buttons>
+									<ion-buttons slot="end">
+										<ion-button color="secondary">
+											<ion-icon slot="start" name="heart"></ion-icon>
+										</ion-button>
+										<ion-button color="secondary">
+											<ion-icon slot="start" name="share"></ion-icon>
+										</ion-button>
+									</ion-buttons>
+								</ion-toolbar>
+							</ion-footer>
+						</ion-card>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col>
+						<ion-card>
+							<ion-card-header>
+								<ion-card-subtitle>Conversion +12.3% of target</ion-card-subtitle>
+								<ion-card-title class="ign-display-2">432.1M</ion-card-title>
+							</ion-card-header>
+							<ion-card-content>
+								<img image-fit
+									src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/trend-line-blue.png"
+									title="placeholder image example of data visualization">
+							</ion-card-content>
+						</ion-card>
+					</ion-col>
+					<ion-col>
+						<ion-card>
+							<ion-card-header text-center>
+								<ion-avatar object-center class="avatar-icon">
+									<ion-icon size="large" name="people"></ion-icon>
+								</ion-avatar>
+								<ion-card-title class="ign-headline" text-center>Card title</ion-card-title>
+								<ion-card-subtitle text-center>Card subtitle</ion-card-subtitle>
+							</ion-card-header>
+							<ion-card-content>
+							</ion-card-content>
+							<ion-footer>
+								<ion-progress-bar type="indeterminate"></ion-progress-bar>
+							</ion-footer>
+						</ion-card>
+					</ion-col>
+					<ion-col>
+							<ion-card class="image-card">
+									<img image-fit
+									src="https://www.tripsavvy.com/thmb/LKIlj5CVrqSTUTpr1tzmwpzj6Js=/950x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/San-Diego-California-5847c8693df78c02308542f6.jpg"
+									title="San Diego California">
 									<ion-card-header text-center>
-											<ion-avatar object-center class="avatar-icon">
-												<ion-icon size="large" name="people"></ion-icon>
-											</ion-avatar>
-										<ion-card-title class="ign-headline" text-center>Card title</ion-card-title>
-										<ion-card-subtitle text-center>Card subtitle</ion-card-subtitle>
-									</ion-card-header>
-									<ion-card-content>
-										<p class="medium-emphasis-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-									</ion-card-content>
-									<ion-footer>
-											<ion-progress-bar type="indeterminate"></ion-progress-bar>
-									</ion-footer>
-								</ion-card>
-							
+										<ion-card-title class="ign-display-2">San Diego</ion-card-title>
+										<ion-card-subtitle>California</ion-card-subtitle>
+								</ion-card-header>
+							</ion-card>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col>
+
 					</ion-col>
 					<ion-col>
-							<ion-card>
-									<ion-card-header>
-											<ion-card-subtitle>Conversion +12.3% of target</ion-card-subtitle>
-											<ion-card-title class="ign-display-2">432.1M</ion-card-title>
-										</ion-card-header>
-									<ion-card-content>
-										<img image-fit src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/trend-line-blue.png" title="placeholder image example of data visualization">
-									</ion-card-content>
-								</ion-card>
+
+					</ion-col>
+					<ion-col>
 
 					</ion-col>
 				</ion-row>
@@ -156,10 +415,51 @@
 		</div>
 
 
+		<!-- card template -->
+		<!--
+						<ion-card>
+							<img image-fit
+								src="https://raw.githubusercontent.com/MichaelScottBurke/Angular-Material-Shared-Files/master/images/puppy-1.png"
+								title="placeholder image example of data visualization">
+							<ion-card-header>
+								<ion-card-title>
+									<h2 class="ign-headline">Card title</h2>
+								</ion-card-title>
+								<ion-card-subtitle>Card subtitle</ion-card-subtitle>
+							</ion-card-header>
+							<ion-card-content>
+								<div class="high-emphasis-text">
+									<h3 class="ign-body-2">Subheading</h3>
+									<p>Content paragraph</p>
+									<h3 class="ign-body-2">Subheading</h3>
+									<p>Content paragraph</p>
+								</div>
+							</ion-card-content>
+							<ion-footer>
+								<ion-toolbar>
+									<ion-buttons slot="start">
+										<ion-button color="secondary" fill="clear">action 1</ion-button>
+										<ion-button color="secondary" fill="clear">action 2</ion-button>
+									</ion-buttons>
+									<ion-buttons slot="end">
+										<ion-button color="secondary">
+											<ion-icon slot="start" name="call"></ion-icon>
+										</ion-button>
+										<ion-button color="secondary">
+											<ion-icon slot="start" name="bookmark"></ion-icon>
+										</ion-button>
+										<ion-button color="secondary">
+											<ion-icon slot="start" name="share"></ion-icon>
+										</ion-button>
+									</ion-buttons>
+								</ion-toolbar>
+							</ion-footer>
+						</ion-card>
+						-->
 
 
 
-
+		<!-- examples 
 		<ion-card>
 			<ion-item>
 				<ion-icon name="pin" slot="start"></ion-icon>
@@ -194,6 +494,7 @@
 				<ion-label>Card Button Item 2</ion-label>
 			</ion-item>
 		</ion-card>
+		-->
 
 		<!-- 
 

@@ -245,10 +245,21 @@
           </section>
           <section>
             <h4>Address</h4>
-            <ion-item lines="none" no-padding-start>
-                <ion-label>Contact address is different from company</ion-label>
-                <ion-toggle #differntAddress [(ngModel)]="differentAddressToggleTrue" slot="end" color="secondary" (click)="showAddress()" checked="true"></ion-toggle>
-            </ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                    <ion-item no-padding-start>
+                        <ion-label text-wrap>Contact address is different from company</ion-label>
+                        <ion-toggle #differntAddress [(ngModel)]="differentAddressToggleTrue" slot="end" color="secondary" (click)="showAddress()" checked="true"></ion-toggle>
+                    </ion-item>
+                    <div class="assistive-text">
+                        <ion-note *ngIf="contactAddressInput.value==''" color="danger">Required</ion-note>
+                        &nbsp;
+                      </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
             <!--ion-item *ngIf="differentAddressToggle === false">
               shown
             </ion-item-->

@@ -98,3 +98,11 @@ a[disabled] {
   margin-right: auto !important;
 }
 
+
+//set app bar button height width : accessibility
+ion-button.ion-activatable:not(.button-large), ion-buttons.sc-ion-buttons-md-h.sc-ion-buttons-md-s.hydrated ion-button {
+  min-height: 48px !important;
+  min-width: 48px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}

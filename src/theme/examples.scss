@@ -1,5 +1,30 @@
 //gray panel to house examples
 div.example-panel {
+
+  --ion-grid-column-padding:        8px;
+
+  --ion-grid-column-padding-xs:     4px;
+  --ion-grid-column-padding-sm:     8px;
+  --ion-grid-column-padding-md:     12px;
+  --ion-grid-column-padding-lg:     16px;
+  --ion-grid-column-padding-xl:     24px;
+
+
+  ion-grid {
+    max-width: 1440px;
+  }
+
+
+//to do: set grid padding
+  //remove margin around card
+  ion-col ion-card.sc-ion-card-md-h {
+    -webkit-margin-start: 0px;
+    margin-inline-start: 0px;
+    -webkit-margin-end: 0px;
+    margin-inline-end: 0px;
+}
+  
+
   background-color: #ededed;
   border: 1px solid #dedede;
   //padding: 48px;
@@ -7,7 +32,7 @@ div.example-panel {
 
   //handset
   @media #{$mq-xxs} {
-    padding: 16px;
+    padding: 8px;
   }
 
   //tablet portrait
