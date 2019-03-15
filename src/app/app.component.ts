@@ -173,6 +173,11 @@ export class AppComponent {
       url: '/modal-example',
       icon: ''
     },
+    {
+      title: 'Dashboard example 1',
+      url: '/dashboard-example1',
+      icon: ''
+    },
   ];
   
 

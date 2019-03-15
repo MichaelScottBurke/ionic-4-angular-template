@@ -72,7 +72,8 @@ const routes: Routes = [
   { path: 'card-example2', loadChildren: './examples/card-example2/card-example2.module#CardExample2PageModule' },
   { path: 'card-example3', loadChildren: './examples/card-example3/card-example3.module#CardExample3PageModule' },
   { path: 'card-example4', loadChildren: './examples/card-example4/card-example4.module#CardExample4PageModule' },
-  { path: 'card-example5', loadChildren: './example/card-example5/card-example5.module#CardExample5PageModule' }
+  { path: 'card-example5', loadChildren: './example/card-example5/card-example5.module#CardExample5PageModule' },
+  { path: 'dashboard-example1', loadChildren: './examples/dashboard-example1/dashboard-example1.module#DashboardExample1PageModule' }
 ];
 
 @NgModule({
