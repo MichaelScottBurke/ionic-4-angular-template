@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="60px" viewBox="0 0 70 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>goals-lg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.1436 0.302 3.1736 0.302 3.1736 6.2995 0.1436 6.2995"></polygon>
+    </defs>
+    <g id="goals-lg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-38" transform="translate(3.000000, 4.000000)">
+            <path d="M0.397,20.3753 C1.835,14.7903 9.603,15.8333 13.875,15.0893 C18.147,14.3453 29.022,11.6393 36.522,10.0943 C44.022,8.5503 52.147,11.1343 54.772,16.0683 C57.397,21.0013 56.647,26.8353 60.272,29.7923 C63.897,32.7483 66.647,45.0823 53.647,45.7863 C40.647,46.4913 35.397,44.8973 29.772,47.1043 C24.147,49.3103 9.97,52.0923 6.397,46.0213 C3.022,40.2863 8.022,37.3743 8.022,33.1813 C8.022,28.9893 -2.103,30.0853 0.397,20.3753" id="Fill-1" fill="#E1F3F0"></path>
+            <path d="M2.127,44.9261 L6.377,44.9261" id="Stroke-3" stroke="#509E2F" stroke-linecap="round"></path>
+            <path d="M4.252,42.8011 L4.252,47.0511" id="Stroke-5" stroke="#509E2F" stroke-linecap="round"></path>
+            <path d="M50.9429,7.4066 L55.1929,7.4066" id="Stroke-7" stroke="#509E2F" stroke-linecap="round"></path>
+            <path d="M53.0679,5.2816 L53.0679,9.5316" id="Stroke-9" stroke="#509E2F" stroke-linecap="round"></path>
+            <path d="M53.522,27.053 C53.522,39.218 43.66,49.08 31.495,49.08 C19.33,49.08 9.468,39.218 9.468,27.053 C9.468,14.888 19.33,5.027 31.495,5.027 C43.66,5.027 53.522,14.888 53.522,27.053" id="Fill-11" fill="#D6EDC6"></path>
+            <path d="M47.0698,27.053 C47.0698,35.655 40.0968,42.628 31.4948,42.628 C22.8928,42.628 15.9198,35.655 15.9198,27.053 C15.9198,18.451 22.8928,11.478 31.4948,11.478 C40.0968,11.478 47.0698,18.451 47.0698,27.053" id="Fill-13" fill="#9ED47B"></path>
+            <path d="M40.7534,27.053 C40.7534,32.166 36.6084,36.312 31.4954,36.312 C26.3814,36.312 22.2364,32.166 22.2364,27.053 C22.2364,21.94 26.3814,17.795 31.4954,17.795 C36.6084,17.795 40.7534,21.94 40.7534,27.053" id="Fill-15" fill="#64B239"></path>
+            <polygon id="Fill-17" fill="#1D7E66" points="4.252 7.0379 6.136 8.9219 10.25 7.7749 8.366 5.8919"></polygon>
+            <polygon id="Fill-19" fill="#49A58F" points="6.1245 8.9105 8.0085 10.7945 12.1225 9.6475 10.2375 7.7645"></polygon>
+            <polygon id="Fill-21" fill="#1D7E66" points="8.0098 10.7957 9.8938 12.6797 14.0078 11.5327 12.1228 9.6497"></polygon>
+            <g id="Group-25" transform="translate(9.000000, 0.698300)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-24"></g>
+                <polygon id="Fill-23" fill="#1D7E66" mask="url(#mask-2)" points="1.2896 0.3015 3.1736 2.1855 2.0266 6.2995 0.1436 4.4155"></polygon>
+            </g>
+            <polygon id="Fill-26" fill="#49A58F" points="12.1621 2.8724 14.0461 4.7564 12.8991 8.8704 11.0161 6.9864"></polygon>
+            <polygon id="Fill-28" fill="#1D7E66" points="14.0474 4.7576 15.9314 6.6416 14.7844 10.7556 12.9014 8.8716"></polygon>
+            <path d="M32.9575,29.7059 C32.4365,30.2269 31.5935,30.2269 31.0725,29.7059 L7.5605,6.1929 C7.0395,5.6729 7.0395,4.8289 7.5605,4.3089 C8.0805,3.7879 8.9245,3.7879 9.4445,4.3089 L32.9575,27.8209 C33.4785,28.3419 33.4785,29.1849 32.9575,29.7059" id="Fill-30" fill="#11533D"></path>
+            <path d="M35.207,17.0071 L33.404,22.5941" id="Stroke-32" stroke="#1D7E66" stroke-linecap="round"></path>
+            <path d="M40.8745,21.1136 L36.1925,24.6566" id="Stroke-34" stroke="#1D7E66" stroke-linecap="round"></path>
+            <path d="M43.1616,27.7278 L37.2946,27.9448" id="Stroke-36" stroke="#1D7E66" stroke-linecap="round"></path>
+        </g>
+        <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="70" height="60"></rect>
+    </g>
+</svg>

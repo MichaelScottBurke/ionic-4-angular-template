@@ -1,4 +1,29 @@
+ion-content {
+  //--background: var(--ion-color-background);
+  --background: linear-gradient(to bottom,#fbfdfd 0,#e9f6f4 100%);
+}
+
 ion-grid ion-card {
   background: white;
   margin: 0;
+}
+
+ion-card.card-shortcut {
+  height: 112px;
+  width: 112px;
+  img {
+    height: 80px;
+    width: 80px;
+    margin: 8px auto 0;
+  }
+
+}
+
+ion-card.card-widget {
+  min-width: 360px;
+}
+
+.dashboard-layout {
+  max-width: 1440px;
+  margin: 0 auto;
 }

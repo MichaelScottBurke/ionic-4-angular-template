@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { TypographyPipe } from './typography.pipe';
 import { ModalExamplePage } from './examples/modal-example/modal-example.page';
 
+
+
 @NgModule({
   declarations: [AppComponent, TypographyPipe, ModalExamplePage],
   entryComponents: [ModalExamplePage ],

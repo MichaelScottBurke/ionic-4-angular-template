@@ -5,14 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DatePickersPage } from './date-pickers.page';
-import { CalendarModule } from 'ion2-calendar';
-
+import { DateSelectorsPage } from './date-selectors.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: DatePickersPage
+    component: DateSelectorsPage
   }
 ];
 
@@ -21,15 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    /*
-    CalendarModule.forRoot ({
-      doneLabel: 'Save',
-      closeIcon: true
-    })
-    */
-   CalendarModule
+    RouterModule.forChild(routes)
   ],
-  declarations: [DatePickersPage]
+  declarations: [DateSelectorsPage]
 })
-export class DatePickersPageModule {}
+export class DateSelectorsPageModule {}

@@ -70,18 +70,25 @@ a[disabled] {
 
 
 //avatar styles
+.avatar-sm {
+  height: 24px !important;
+  width: 24px !important;
+}
 .avatar-md {
   height: 40px !important;
   width: 40px !important;
 }
 .avatar-lg {
-  height: 72px !important;
-  width: 72px !important;
+  height: 64px !important;
+  width: 64px !important;
 }
+
 .avatar-xl {
-  height: 88px !important;
-  width: 88px !important;
+  height: 80px !important;
+  width: 80px !important;
 }
+
+
 
 
 

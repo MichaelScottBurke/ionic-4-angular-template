@@ -1,61 +1,213 @@
-<ion-header no-border>
+<!--ion-header no-border>
   <ion-toolbar color="transparent">
     <ion-title>Dashboard</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header-->
 
-<ion-content padding>
-  <ion-grid no-padding>
-      <ion-avatar class="avatar-xl">
-          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Jackie Taylor">
-      </ion-avatar>
-  </ion-grid>
+<ion-content>
+  <div class="dashboard-layout">
   <ion-grid no-padding>
     <ion-row>
-      <ion-col size="12" size-md="8" style="background: #aaa;">
-          <h2>Shortcuts</h2>
-            <ion-grid no-padding>
-                <ion-row>
-                    <ion-col size="4" *ngFor="let s of shortcuts">
-                      <ion-card>
-                        <img src="{{s.img}}" alt="{{s.label}}">
-                        <ion-label>{{s.label}}</ion-label>
-                      </ion-card>
-                    </ion-col>
-                  </ion-row>
-                </ion-grid>
-
+      <ion-col size="auto" class="ion-align-self-start callout-background callout-border">
+          <ion-avatar class="avatar-xl mat-elevation-z2">
+              <img src="../assets/images/woman31.jpg" alt="Jackie Taylor">
+          </ion-avatar>
       </ion-col>
-      <ion-col size="12" size-md="4" style="background: #ccc;">
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>Title</ion-card-title>
-              <ion-card-subtitle>Subtitle</ion-card-subtitle>
-            </ion-card-header>
-            <ion-card-content>
-              card content
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-              <ion-card-header>
-                <ion-card-title>Title</ion-card-title>
-                <ion-card-subtitle>Subtitle</ion-card-subtitle>
-              </ion-card-header>
-              <ion-card-content>
-                card content
-              </ion-card-content>
-            </ion-card>
-            <ion-card>
-                <ion-card-header>
-                  <ion-card-title>Title</ion-card-title>
-                  <ion-card-subtitle>Subtitle</ion-card-subtitle>
-                </ion-card-header>
-                <ion-card-content>
-                  card content
-                </ion-card-content>
-              </ion-card>
+      <ion-col class="ion-align-self-start callout-background callout-border">
+          <h2 class="ign-headline text-primary-color text-bold ion-no-margin">Jackie Taylor</h2>
+          <p class="ign-body-1 text-primary-color ion-no-margin">Claims Manager</p>
       </ion-col>
     </ion-row>
   </ion-grid>
+  <ion-grid no-padding>
+    <ion-row wrap>
+      <ion-col size="auto" class="ion-align-self-start callout-background callout-border">
+        <div style="width: 390px;">
+          <!--h2>Shortcuts</h2-->
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col size="4" *ngFor="let s of shortcuts">
+                      <ion-card class="card-shortcut" text-center>
+                        <img src="{{s.img}}" alt="{{s.label}}">
+                        <ion-label color="primary" class="text-bold">{{s.label}}</ion-label>
+                      </ion-card>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col>
+                        <ion-card class="card-widget">
+                            <ion-card-header>
+                              <ion-toolbar>
+                                <ion-buttons slot="end">
+                                    <ion-button fill="clear">
+                                        <ion-icon size="large" class="icon-button-states" name="search"></ion-icon>
+                                      </ion-button>
+                                  <ion-button fill="clear">
+                                    <ion-icon size="large" class="icon-button-states" name="settings"></ion-icon>
+                                  </ion-button>
+                                </ion-buttons>
+                                <ion-card-title>Team</ion-card-title>
+                              <ion-card-subtitle>
+                                  <ion-item lines="none" class="filter-simple">
+                                      <ion-select value="dir" okText="ok" cancelText="cancel">
+                                        <ion-select-option value="all" selected>All</ion-select-option>
+                                        <ion-select-option value="dir" selected>Direct reports</ion-select-option>
+                                        <ion-select-option value="team1" selected>Team 1</ion-select-option>
+                                        <ion-select-option value="team2" selected>Team 2</ion-select-option>
+                                      </ion-select>
+                                    </ion-item>
+                              </ion-card-subtitle>
+                              </ion-toolbar>
+                            </ion-card-header>
+                            <ion-card-content>
+                              <ion-grid no-padding>
+                                <ion-row>
+                                  <ion-col *ngFor="let e of employees; let i=index">
+                                        <ion-avatar *ngIf="i<12" class="avatar-lg ion-activatable"  href="javascript:void();">
+                                            <img src="{{e.avatar}}" alt="{{e.name}}" title="{{e.name}}">
+                                            <ion-ripple-effect></ion-ripple-effect>
+                                        </ion-avatar>
+                                  </ion-col>
+                                </ion-row>
+                              </ion-grid>
+                            </ion-card-content>
+                          </ion-card>
+                    </ion-col>
+                    <ion-col>
+                        <ion-card class="card-widget">
+                            <ion-card-header>
+                              <ion-card-title>Inbox</ion-card-title>
+                              <ion-card-subtitle>Subtitle</ion-card-subtitle>
+                            </ion-card-header>
+                            <ion-card-content>
+                              card content
+                            </ion-card-content>
+                          </ion-card>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+      </ion-col>
+      <ion-col class="callout-background callout-border">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+                <ion-card class="card-widget">
+                    <ion-card-header>
+                      <ion-card-title>Inbox</ion-card-title>
+                      <!--ion-card-subtitle>Subtitle</ion-card-subtitle-->
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-list>
+                          <ion-item-divider>
+                            Requests
+                          </ion-item-divider>
+                            <ion-item-sliding>
+                                <ion-item>
+                                    <ion-avatar slot="start"></ion-avatar>
+                                    <ion-label>
+                                      <h2>Time off request</h2>
+                                      <h3>Jamie Stark</h3>
+                                      <p>Vacation Plan Aug 1-3, 2019</p>
+                                    </ion-label>
+                                    <ion-note slot="end">Mar 3, 2019</ion-note>
+                                  </ion-item>
+                              <ion-item-options side="end">
+                                <ion-item-option color="secondary" (click)="unread(item)">Unread</ion-item-option>
+                              </ion-item-options>
+                            </ion-item-sliding>
+                            <ion-item-divider>
+                                Notifications
+                              </ion-item-divider>
+                              <ion-item-divider>
+                                  Announcements
+                              </ion-item-divider>
+                          </ion-list>
+                      <ion-list>
+                        <ion-item>
+                          <ion-avatar slot="start"></ion-avatar>
+                          <ion-label>
+                            <h2>Time off request</h2>
+                            <h3>Jamie Stark</h3>
+                            <p>Vacation Plan Aug 1-3, 2019</p>
+                          </ion-label>
+                          <ion-note slot="end">Mar 3, 2019</ion-note>
+                        </ion-item>
+                      </ion-list>
+                    </ion-card-content>
+                  </ion-card>
+            </ion-col>
+            <ion-col>
+                <ion-card class="card-widget">
+                    <ion-card-header text-center>
+                      <ion-card-title class="ign-display-3" text-center>{{today | date:'shortTime'}}</ion-card-title>
+                      <ion-card-subtitle>{{today | date:'fullDate'}}</ion-card-subtitle>
+                    </ion-card-header>
+                    <ion-card-content text-center>
+                        <ion-button color="secondary" expand="block" shape="round" fill="outline">Clock in</ion-button>
+                    </ion-card-content>
+                  </ion-card>
+            </ion-col>
+            <ion-col>
+                <ion-card class="card-widget">
+                    <ion-card-header text-center>
+                      <ion-card-title class="ign-display-3" text-center>22.25 <span class="ign-caption medium-emphasis-text">Days</span></ion-card-title>
+                      <ion-card-subtitle>
+                          <ion-item lines="none" class="filter-simple">
+                              <ion-select value="vac" okText="ok" cancelText="cancel">
+                                <ion-select-option value="vac" selected>Vacation plan</ion-select-option>
+                                <ion-select-option value="sick" selected>Sick plan</ion-select-option>
+                                <ion-select-option value="bereave" selected>Bereavement plan</ion-select-option>
+                                <ion-select-option value="comp" selected>Comp day plan</ion-select-option>
+                              </ion-select>
+                            </ion-item>
+                      </ion-card-subtitle>
+                    </ion-card-header>
+                    <ion-card-content text-center>
+                        <ion-button color="secondary" expand="block" shape="round" fill="outline">Request time off</ion-button>
+                    </ion-card-content>
+                  </ion-card>
+            </ion-col>
+            <ion-col>
+                <ion-card class="card-widget">
+                    <ion-card-header>
+                      <ion-card-title>Schedule</ion-card-title>
+                      <ion-card-subtitle>
+                        <ion-toolbar>
+                          <ion-buttons slot="end">
+                              <ion-button fill="clear">
+                                  <ion-icon name="arrow_back"></ion-icon>
+                                </ion-button>
+                            <ion-button fill="clear">
+                              <ion-icon name="arrow_forward"></ion-icon>
+                            </ion-button>
+                          </ion-buttons>
+                          <span class="medium-emphasis-text">March 18 - March 29, 2019</span>
+                        </ion-toolbar>
+                      </ion-card-subtitle>
+                    </ion-card-header>
+                    <ion-card-content>
+                      card content
+                    </ion-card-content>
+                  </ion-card>
+            </ion-col>
+            <ion-col>
+                <ion-card class="card-widget">
+                    <ion-card-header>
+                      <ion-card-title>Title</ion-card-title>
+                      <ion-card-subtitle>Subtitle</ion-card-subtitle>
+                    </ion-card-header>
+                    <ion-card-content>
+                      card content
+                    </ion-card-content>
+                  </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+          
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 
 </ion-content>

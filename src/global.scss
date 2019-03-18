@@ -15,9 +15,10 @@
 @import url('https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css');
 
 //app styles
-@import "./theme/typography.scss";
+@import "./css/typography.scss";
 @import "./theme/misc.scss";
 @import "./theme/grid-layout.scss";
 @import "./css/breakpoints.scss";
 @import "./theme/examples.scss";
+@import "./css/elevation.scss";
 

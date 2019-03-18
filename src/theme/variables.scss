@@ -78,10 +78,17 @@
   --black-rgb: 0,0,0;
   --white-rgb: 255,255,255;
 
-  //text color
+  //text color: black
   --ion-high-emphasis-text: rgba(0,0,0,.87);
   --ion-medium-emphasis-text: rgba(0,0,0,.60);
   --ion-disabled-text: rgba(0,0,0,.38);
+
+  //text color primary = must be darker/shade version of primary!!!!
+  --ion-color-primary-text: var(--ion-color-primary-shade);
+
+  .text-primary-color {
+    color: var(--ion-color-primary-text) !important;
+  }
   
 
   --ion-text-color: #212121; //equivalent to rgba .87
@@ -94,6 +101,13 @@
   --ion-active-icon-black: rgba(0,0,0,.87);
   --ion-inactive-icon-black: rgba(0,0,0,.54);
   --ion-disabled-icon-black: rgba(0,0,0,.38);
+
+  ion-icon.icon-button-states {
+    opacity: .54;
+    &:hover {
+      opacity: .87 !important;
+    }
+  }
 
 
 /* other variables */
@@ -197,8 +211,18 @@ ion-item.item-input, ion-item.item-select {
   --background: rgba(0,0,0,.04);
 }
 
-//icons as decoration in list items
+//simple filter
+ion-item.filter-simple, ion-item.ion-select.filter-simple {
+  --padding-start: 0;
+  --background: rgba(0,0,0,0);
+    background-color: transparent !important;
+  }
+  ion-select.in-item {
+    max-width: unset;
+    --padding-start: 0;
+  }
 
+//icons as decoration in list items
 
 //input clear icon
 .input-clear-icon.sc-ion-input-md {

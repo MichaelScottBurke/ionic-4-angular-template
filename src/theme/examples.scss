@@ -125,3 +125,12 @@ div.example-panel {
     width: 100%;
   }
 }
+
+$pink: #FA34B4;
+
+.callout-background {
+  //background-color: rgba($pink, .25);
+}
+.callout-border {
+  //border: 1px dashed $pink;
+}
