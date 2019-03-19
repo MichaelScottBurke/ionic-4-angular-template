@@ -107,3 +107,12 @@ ion-item[no-padding-start] {
 ion-select {
   --padding-bottom: 5px !important;
 }
+
+//for date range control; to do: move to global styles
+.date-range-input {
+  //width: 150px;
+}
+.date-range-icon {
+  margin: 32px 4px 0 4px;
+  opacity: .54;
+}

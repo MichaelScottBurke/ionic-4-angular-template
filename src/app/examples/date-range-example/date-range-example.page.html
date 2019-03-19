@@ -1,9 +1,67 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>date-range-example</ion-title>
-  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-button fill="clear">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Date Range</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+    <ion-grid no-padding>
+        <ion-row no-padding>
+          <ion-col text-center no-padding>
+            <h4 class="ign-caption medium-emphasis-text">&nbsp;</h4>
+            <ion-item (click)="openCalendar()" lines="none" class="date-range" style="cursor: pointer;" no-padding>
+              <ion-grid no-padding>
+                <ion-row no-padding nowrap align-items-start>
+                  <ion-col no-padding size="auto">
+                    <ion-item class="date-range-input">
+                      <ion-label position="floating">Start date *</ion-label>
+                      <ion-input></ion-input>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="auto" no-padding text-center>
+                    <ion-icon size="large" class="date-range-icon" name="calendar"></ion-icon>
+                  </ion-col>
+                  <ion-col no-padding size="auto">
+                    <ion-item class="date-range-input">
+                      <ion-label position="floating">End date *</ion-label>
+                      <ion-input></ion-input>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center no-padding>
+              <h4 class="ign-caption medium-emphasis-text">&nbsp;</h4>
+              <ion-item (click)="openCalendar()" lines="none" class="date-range" style="cursor: pointer;"  no-padding>
+                <ion-grid no-padding>
+                  <ion-row no-padding nowrap align-items-start>
+                      <ion-col no-padding size="auto">
+                        <ion-item class="date-range-input">
+                          <ion-label position="floating">Start date *</ion-label>
+                          <ion-input value="Mar 28, 2019"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="auto" no-padding text-center>
+                        <ion-icon size="large" class="date-range-icon" name="calendar"></ion-icon>
+                      </ion-col>
+                      <ion-col no-padding size="auto">
+                        <ion-item class="date-range-input">
+                          <ion-label position="floating">End date *</ion-label>
+                          <ion-input value="Mar 29, 2019"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                    </ion-row>
+                </ion-grid>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
 </ion-content>

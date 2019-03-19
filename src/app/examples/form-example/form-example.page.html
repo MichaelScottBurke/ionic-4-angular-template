@@ -325,6 +325,31 @@
               </ion-row>
             </ion-grid>
           </section>
+          <section>
+              <h2>Miscellaneous field examples</h2>
+              <h3 style="margin-bottom:16px;">Date range selector</h3>
+              <ion-item (click)="openCalendar()" lines="none" class="date-range" style="cursor: pointer;"  no-padding>
+                  <ion-grid no-padding>
+                    <ion-row no-padding nowrap align-items-start>
+                        <ion-col no-padding size="5">
+                          <ion-item class="date-range-input">
+                            <ion-label position="floating">Start date *</ion-label>
+                            <ion-input value="Mar 28, 2019"></ion-input>
+                          </ion-item>
+                        </ion-col>
+                        <ion-col size="2" size-md="*" no-padding text-center>
+                          <ion-icon size="large" class="date-range-icon" name="calendar"></ion-icon>
+                        </ion-col>
+                        <ion-col no-padding size="5">
+                          <ion-item class="date-range-input">
+                            <ion-label position="floating">End date *</ion-label>
+                            <ion-input value="Mar 29, 2019"></ion-input>
+                          </ion-item>
+                        </ion-col>
+                      </ion-row>
+                  </ion-grid>
+                </ion-item>
+          </section>
         </section>
         <section class="card-actions">
           <ion-button #saveButton2 class="no-elevation" color="secondary" (click)="successToast()">save</ion-button>

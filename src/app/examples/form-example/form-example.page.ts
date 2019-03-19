@@ -1,8 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl, NgForm } from '@angular/forms';
-import {  MenuController, AlertController, ToastController } from '@ionic/angular';
+import {  MenuController, AlertController, ToastController,  ModalController } from '@ionic/angular';
 import { RouterStateSnapshot } from '@angular/router';
-
+import {
+    CalendarModal,
+    CalendarModalOptions,
+    DayConfig,
+    CalendarResult
+  } from 'ion2-calendar';
+  import { async } from 'q';
 
 @Component({
   selector: 'app-form-example',
@@ -529,9 +535,34 @@ lists = [
    state: any = 'MD';
    contactState: any = 'MD';
 
-   constructor(public menuCtrl: MenuController, public alertController: AlertController, public toastController: ToastController, ) {
+   constructor(public modalCtrl: ModalController, public menuCtrl: MenuController, public alertController: AlertController, public toastController: ToastController, ) {
     this.menuCtrl.enable(false);
    }
+
+
+  async openCalendar() {
+    const options: CalendarModalOptions = {
+      pickMode: 'range',
+      title: 'Start and end dates',
+      //color: 'secondary',
+      closeIcon: true,
+      doneLabel: 'save'
+    };
+  
+    const myCalendar = await this.modalCtrl.create({
+      component: CalendarModal,
+      componentProps: { options }
+    });
+  
+    myCalendar.present();
+  
+    const event: any = await myCalendar.onDidDismiss();
+    const date = event.data;
+    const from: CalendarResult = date.from;
+    const to: CalendarResult = date.to;
+  
+    console.log(date, from, to);
+  }
 
   ngOnInit() {
   }
