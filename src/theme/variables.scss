@@ -187,8 +187,8 @@ button.button-native {
 
 //dialogs (alerts) as modal screen (for greater form element functionality)
 .modal-dialog div[role='dialog'] {
-  max-height: 360px !important;
-  max-width: 360px !important;
+  max-height: 90% !important;
+  max-width: 90% !important;
 }
 
 ion-radio {
