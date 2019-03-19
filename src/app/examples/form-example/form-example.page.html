@@ -30,10 +30,10 @@
       <p class="medium-emphasis-text informational-text ">Companies are legal entities: associations, corporations,
         partnerships,
         proprietorships, trusts, etc., that have a legitimate standing in the eyes of law.</p>
-      <form #companyInfoForm="ngForm" (ngSubmit)="onSubmit(companyInfoForm)">
+      <form name="companyInfoForm" #companyInfoForm="ngForm" (ngSubmit)="onSubmit(companyInfoForm)">
         <section>
           <h2>Company information</h2>
-          <ion-grid no-padding>
+          <ion-grid class="grid-form-fields" no-padding>
             <ion-row>
               <ion-col size="12" size-sm="9">
                 <ion-item>
@@ -127,7 +127,7 @@
           <p class="medium-emphasis-text informational-text ">Location of the organization's main office.</p>
           <section>
             <h3>Address</h3>
-            <ion-grid no-padding>
+             <ion-grid class="grid-form-fields"  no-padding>
               <ion-row>
                 <ion-col size="12" size-sm="9">
                   <ion-item>
@@ -206,7 +206,7 @@
             <p class="medium-emphasis-text informational-text ">Company respresentatives are the primary contact at an
               organization's HR department.</p>
             <h4>Contact details</h4>
-            <ion-grid no-padding>
+             <ion-grid class="grid-form-fields"  no-padding>
               <ion-row>
                 <ion-col size="12" size-sm="9">
                   <ion-item>
@@ -245,12 +245,12 @@
           </section>
           <section>
             <h4>Address</h4>
-            <ion-grid>
+             <ion-grid class="grid-form-fields" no-padding>
               <ion-row>
                 <ion-col>
                     <ion-item no-padding-start>
                         <ion-label text-wrap>Contact address is different from company</ion-label>
-                        <ion-toggle #differntAddress [(ngModel)]="differentAddressToggleTrue" slot="end" color="secondary" (click)="showAddress()" checked="true"></ion-toggle>
+                        <ion-toggle #differntAddress name="differentAddress" [(ngModel)]="differentAddressToggleTrue" slot="end" color="secondary" (click)="showAddress()" checked="true"></ion-toggle>
                     </ion-item>
                     <div class="assistive-text">
                         <ion-note *ngIf="contactAddressInput.value==''" color="danger">Required</ion-note>
@@ -263,7 +263,7 @@
             <!--ion-item *ngIf="differentAddressToggle === false">
               shown
             </ion-item-->
-            <ion-grid no-padding>
+             <ion-grid class="grid-form-fields"  no-padding>
               <ion-row>
                 <ion-col>
                   <ion-item>
@@ -328,27 +328,27 @@
           <section>
               <h2>Miscellaneous field examples</h2>
               <h3 style="margin-bottom:16px;">Date range selector</h3>
-              <ion-item (click)="openCalendar()" lines="none" class="date-range" style="cursor: pointer;"  no-padding>
-                  <ion-grid no-padding>
-                    <ion-row no-padding nowrap align-items-start>
-                        <ion-col no-padding size="5">
-                          <ion-item class="date-range-input">
-                            <ion-label position="floating">Start date *</ion-label>
-                            <ion-input value="Mar 28, 2019"></ion-input>
-                          </ion-item>
-                        </ion-col>
-                        <ion-col size="2" size-md="*" no-padding text-center>
-                          <ion-icon size="large" class="date-range-icon" name="calendar"></ion-icon>
-                        </ion-col>
-                        <ion-col no-padding size="5">
-                          <ion-item class="date-range-input">
-                            <ion-label position="floating">End date *</ion-label>
-                            <ion-input value="Mar 29, 2019"></ion-input>
-                          </ion-item>
-                        </ion-col>
-                      </ion-row>
+              <div (click)="openCalendar()" lines="none" class="date-range" style="cursor: pointer;">
+                   <ion-grid class="grid-form-fields"  no-padding>
+                      <ion-row nowrap align-items-end>
+                          <ion-col size="5" size-sm="4">
+                            <ion-item class="date-range-input">
+                              <ion-label position="floating">Start date *</ion-label>
+                              <ion-input value="Mar 28, 2019"></ion-input>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col size="2" size-sm="1" text-center align-self-end >
+                            <ion-icon size="large" color="secondary" class="date-range-icon" name="calendar"></ion-icon>
+                          </ion-col>
+                          <ion-col size="5" size-sm="4">
+                            <ion-item class="date-range-input">
+                              <ion-label position="floating">End date *</ion-label>
+                              <ion-input value="Mar 29, 2019"></ion-input>
+                            </ion-item>
+                          </ion-col>
+                        </ion-row>
                   </ion-grid>
-                </ion-item>
+                </div>
           </section>
         </section>
         <section class="card-actions">

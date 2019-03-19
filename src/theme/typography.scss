@@ -139,7 +139,7 @@ p.informational-text {
 ion-card.card-over-card {
   //remove outer margin from grid
   ion-grid {
-    margin: 0 -4px;
+    //margin: 0 -4px;
   }
   section:not(:last-child) {
     margin: 0 0 32px 0;
