@@ -82,7 +82,7 @@ div.example-panel {
   }
 }
 
-.example-mobile-outline-short { 
+.example-mobile-outline-short, .example-responsive-outline-short { 
   iframe { 
     height: 220px !important;
   }
@@ -113,7 +113,7 @@ div.example-panel {
   }
 }
 
-.example-responsive-outline {
+.example-responsive-outline, .example-responsive-outline-short {
   background-color: white;
   //height: 640px;
   min-width: 360px;
