@@ -1,0 +1,63 @@
+//styles for banner component
+.banner {
+  background: white;
+  margin: -16px -16px 16px -16px;
+  padding: 16px 0 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  ion-item {
+    --padding-start: 8px;
+    --background: transparent;
+    --ion-color-base: transparent !important;
+  }
+  ion-toolbar {
+    --background: transparent;
+--ion-color-base: transparent !important;
+  }
+  ion-grid {
+    max-width: 720px;
+  }
+}
+
+.banner-info {
+  background: rgba(var(--ion-color-secondary-rgb), .05);
+}
+.banner-warning {
+  background: rgba(var(--ion-color-warning-rgb), .05);
+}
+.banner-error {
+  background: rgba(var(--ion-color-danger-rgb), .05);
+}
+
+
+//refactor
+.expanded-search-active {
+  //height: 100%;
+  display: initial;
+}
+
+.expanded-search-inactive {
+  //height: 0px;
+  display: none;
+}
+
+.searchFormField {
+  will-change: display;
+  transition: display 30000ms;
+  animation-timing-function: ease-in;
+}
+
+
+//show & hide banner
+.banner-expanded {
+  height: 100%;
+}
+
+.banner-collapsed {
+  height: 0;
+}
+
+.banner {
+  will-change: height;
+  transition: height 300ms;
+  animation-timing-function: ease-in;
+}

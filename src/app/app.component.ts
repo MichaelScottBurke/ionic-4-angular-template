@@ -81,6 +81,11 @@ export class AppComponent {
       url: '/app-bars'
     },
     {
+      title: 'Banners',
+      url: '/banners',
+      icon: ''
+    },
+    {
       title: 'Buttons',
       url: '/buttons',
       icon: ''

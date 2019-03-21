@@ -75,7 +75,13 @@ const routes: Routes = [
   { path: 'card-example5', loadChildren: './example/card-example5/card-example5.module#CardExample5PageModule' },
   { path: 'dashboard-example1', loadChildren: './examples/dashboard-example1/dashboard-example1.module#DashboardExample1PageModule' },
   { path: 'date-selectors', loadChildren: './date-selectors/date-selectors.module#DateSelectorsPageModule' },
-  { path: 'date-range-example', loadChildren: './examples/date-range-example/date-range-example.module#DateRangeExamplePageModule' }
+  { path: 'date-range-example', loadChildren: './examples/date-range-example/date-range-example.module#DateRangeExamplePageModule' },
+  { path: 'home-dashboard-example2', loadChildren: './examples/home-dashboard-example2/home-dashboard-example2.module#HomeDashboardExample2PageModule' },
+  { path: 'banners', loadChildren: './banners/banners.module#BannersPageModule' },
+  { path: 'banner-example', loadChildren: './examples/banner-example/banner-example.module#BannerExamplePageModule' },
+  { path: 'banner-info-example', loadChildren: './examples/banner-info-example/banner-info-example.module#BannerInfoExamplePageModule' },
+  { path: 'banner-warning-example', loadChildren: './examples/banner-warning-example/banner-warning-example.module#BannerWarningExamplePageModule' },
+  { path: 'banner-error-example', loadChildren: './examples/banner-error-example/banner-error-example.module#BannerErrorExamplePageModule' }
 ];
 
 @NgModule({

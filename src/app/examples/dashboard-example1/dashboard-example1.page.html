@@ -1,12 +1,40 @@
-<!--ion-header no-border>
-  <ion-toolbar color="transparent">
-    <ion-title>Dashboard</ion-title>
-  </ion-toolbar>
-</ion-header-->
+<ion-header no-border>
+    <ion-toolbar color="primary" class="app-bar-top">
+        <ion-buttons slot="start">
+            <ion-button><ion-icon slot="start" name="menu"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end" class="desktop-buttons">
+            <ion-button>
+                <ion-icon name="notifications"></ion-icon>
+                <ion-badge color="danger">7</ion-badge>
+            </ion-button>
+            <ion-button><ion-icon name="people"></ion-icon></ion-button>
+            <ion-button><ion-icon name="search"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-title>Dashboard</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      <div class="dashboard-layout">
+        <ion-grid no-padding class="dashboard-header">
+          <ion-row>
+            <ion-col size="auto" class="ion-align-self-start callout-background callout-border">
+              <ion-avatar class="avatar-xl mat-elevation-z2">
+                <img src="../assets/images/woman31.jpg" alt="Jackie Taylor">
+              </ion-avatar>
+            </ion-col>
+            <ion-col class="ion-align-self-start callout-background callout-border">
+              <h2 class="ign-headline text-primary-color text-bold ion-no-margin">Jackie Taylor</h2>
+              <p class="ign-body-1 text-primary-color ion-no-margin">Claims Manager</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content>
   <div class="dashboard-layout">
-  <ion-grid no-padding>
+  <!--ion-grid no-padding>
     <ion-row>
       <ion-col size="auto" class="ion-align-self-start callout-background callout-border">
           <ion-avatar class="avatar-xl mat-elevation-z2">
@@ -18,7 +46,7 @@
           <p class="ign-body-1 text-primary-color ion-no-margin">Claims Manager</p>
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid-->
   <ion-grid no-padding>
     <ion-row wrap>
       <ion-col size="auto" class="ion-align-self-start callout-background callout-border">
@@ -27,10 +55,11 @@
             <ion-grid no-padding>
                 <ion-row>
                     <ion-col size="4" *ngFor="let s of shortcuts">
-                      <ion-card class="card-shortcut" text-center>
+                      <ion-card class="card-shortcut" text-center routerLink="/dashboard-example1">
                         <img src="{{s.img}}" alt="{{s.label}}">
                         <ion-label color="primary" class="text-bold">{{s.label}}</ion-label>
                       </ion-card>
+                      <ion-ripple-effect></ion-ripple-effect>
                     </ion-col>
                   </ion-row>
                   <ion-row>
@@ -211,3 +240,26 @@
 </div>
 
 </ion-content>
+<ion-tab-bar slot="bottom" selected-tab="home">
+    <ion-tab-button tab="home">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="inbox">
+      <ion-icon name="notifications"></ion-icon>
+      <ion-badge color="danger">7</ion-badge>
+      <ion-label>Inbox</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="team">
+      <ion-icon name="people"></ion-icon>
+      <ion-label>Team</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="search">
+      <ion-icon name="search"></ion-icon>
+      <ion-label>Search</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="menu">
+      <ion-icon name="menu"></ion-icon>
+      <ion-label>Menu</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>

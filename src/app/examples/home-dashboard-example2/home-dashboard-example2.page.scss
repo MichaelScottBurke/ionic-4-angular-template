@@ -1,0 +1,70 @@
+@import "../../../css/breakpoints.scss";
+
+.dashboard-layout ion-card {
+  --background: white;
+}
+
+.dashboard-layout {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+//handset portrait
+@media #{$mq-xxs} {
+  ion-content {
+    --background: linear-gradient(to bottom,#fbfdfd 0,#e9f6f4 100%);
+  }
+  ion-header ion-toolbar {
+    --background: transparent !important;
+    --ion-color-base: transparent !important; 
+  }
+}
+
+//tablet portrait
+@media #{$mq-xs} {
+  ion-content {
+    --background: linear-gradient(to bottom,#b5e0e0 0,#e9f6f4 100%);
+  }
+  ion-content {
+    --background: var(--ion-color-background);
+  }
+
+    ion-header ion-toolbar {
+      --background: var(--ion-color-primary);
+    --background: var(--ion-color-primary);
+    .dashboard-header {
+      h2, p {
+        color: white !important;
+      }
+  }
+}
+}
+
+//tablet landscape
+@media #{$mq-s} {
+  ion-content {
+    --background: var(--ion-color-background);
+  }
+}
+
+//laptop
+@media #{$mq-m} {
+
+}
+
+
+//desktop small
+@media #{$mq-l} {
+
+}
+
+//desktop medium
+@media #{$mq-xl} {
+
+}
+
+//desktop large...
+@media #{$mq-xxl} {
+
+}
+

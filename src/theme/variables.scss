@@ -74,6 +74,9 @@
   //background color (content canvas)
   --ion-color-background: var(--ion-color-light);
 
+  //transparent
+  --ion-color-transparent: transparent;
+
   //global color
   --black-rgb: 0,0,0;
   --white-rgb: 255,255,255;
@@ -221,8 +224,6 @@ ion-item.filter-simple, ion-item.ion-select.filter-simple {
     max-width: unset;
     --padding-start: 0;
   }
-
-//icons as decoration in list items
 
 //input clear icon
 .input-clear-icon.sc-ion-input-md {

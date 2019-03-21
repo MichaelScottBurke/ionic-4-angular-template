@@ -1,6 +1,6 @@
 ion-content {
   //--background: var(--ion-color-background);
-  --background: linear-gradient(to bottom,#fbfdfd 0,#e9f6f4 100%);
+  --background: linear-gradient(to bottom, #fbfdfd 0, #e9f6f4 100%);
 }
 
 ion-grid ion-card {
@@ -16,7 +16,6 @@ ion-card.card-shortcut {
     width: 80px;
     margin: 8px auto 0;
   }
-
 }
 
 ion-card.card-widget {
@@ -26,4 +25,92 @@ ion-card.card-widget {
 .dashboard-layout {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+//from dashboard 2
+@import "../../../css/breakpoints.scss";
+
+.dashboard-layout ion-card {
+  --background: white;
+}
+
+.dashboard-layout {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+//handset portrait
+@media #{$mq-xxs} {
+  ion-content {
+    --background: linear-gradient(to bottom, #fbfdfd 0, #e9f6f4 100%);
+  }
+  ion-header ion-toolbar {
+    --background: transparent !important;
+    --ion-color-base: transparent !important;
+  }
+  ion-toolbar.app-bar-top {
+    display: none;
+  }
+  .desktop-buttons {
+    display: none;
+  }
+}
+
+//tablet portrait
+@media #{$mq-xs} {
+  ion-content {
+    --background: linear-gradient(to bottom, #b5e0e0 0, #e9f6f4 100%);
+  }
+  ion-content {
+    --background: var(--ion-color-background);
+  }
+
+  ion-header ion-toolbar {
+    --background: var(--ion-color-primary);
+    --background: var(--ion-color-primary);
+    .dashboard-header {
+      h2,
+      p {
+        color: white !important;
+      }
+    }
+  }
+  ion-toolbar.app-bar-top {
+    display: none;
+  }
+  .desktop-buttons {
+    display: none;
+  }
+}
+
+//tablet landscape
+@media #{$mq-s} {
+  ion-content {
+    --background: var(--ion-color-background);
+  }
+  ion-toolbar.app-bar-top {
+    display: inherit;
+  }
+}
+
+//laptop
+@media #{$mq-m} {
+}
+
+//desktop small
+@media #{$mq-l} {
+  ion-tab-bar {
+    display: none;
+  }
+  .desktop-buttons {
+    display: inline-block;
+  }
+}
+
+//desktop medium
+@media #{$mq-xl} {
+}
+
+//desktop large...
+@media #{$mq-xxl} {
 }

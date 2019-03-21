@@ -1,3 +1,5 @@
+//Organize!
+
 //for doc examples
 //side nav menu
 ion-menu.menu-type-overlay.menu-enabled.menu-side-start.hydrated.split-pane-side.menu-pane-visible {
@@ -94,19 +96,47 @@ a[disabled] {
 
 
 //icon as avatar
-.avatar-icon {
-  opacity: .5;
-  background: var(--ion-color-primary-tint);
+.avatar-icon, .avatar-icon-gray, .avatar-icon-info, .avatar-icon-warning, .avatar-icon-error {
+  //background: rgba(var(--ion-color-primary-rgb), 0.25);
   text-align: center;
   ion-icon {
     font-size: 24px;
-    color: var(--ion-color-primary);
+    //color: var(--ion-color-primary);
     margin-top: 8px;
     &[size="large"] {
       margin-top: 16px;
     }
   }
+}
 
+.avatar-icon {
+  background: rgba(var(--ion-color-primary-rgb), 0.15);
+  ion-icon {
+    //color: var(--ion-color-primary);
+    color: rgba(black, 0.5);
+  }
+}
+
+.avatar-icon-info {
+  background: rgba(var(--ion-color-secondary-rgb), 0.15);
+  ion-icon {
+    //color: var(--ion-color-secondary);
+    color: rgba(var(--ion-color-secondary-rgb), 0.5);
+  }
+}
+
+.avatar-icon-warning {
+  background: rgba(var(--ion-color-warning-rgb), 0.15);
+  ion-icon {
+    color: rgba(var(--ion-color-warning-rgb), 0.5);
+  }
+}
+
+.avatar-icon-error {
+  background: rgba(var(--ion-color-danger-rgb), 0.15);
+  ion-icon {
+    color: rgba(var(--ion-color-danger-rgb), 0.5);
+  }
 }
 
 //css placement
