@@ -7,12 +7,21 @@
   --ion-color-primary-shade: #0D533D; //dark
   --ion-color-primary-tint: #B5E1D8; //light
 
+  --ion-color-secondary: #1374B4;
+  --ion-color-secondary-rgb: 15,71,144;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255,255,255;
+  --ion-color-secondary-shade: #0D5D90; //dark
+  --ion-color-secondary-tint: #BBDDF5;  //light
+
+  /*
   --ion-color-secondary: #0F4790;
   --ion-color-secondary-rgb: 15,71,144;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255,255,255;
   --ion-color-secondary-shade: #0A2B58; //dark
   --ion-color-secondary-tint: #BBDDF5;  //light
+  */
 
   --ion-color-tertiary: #509E2F;
   --ion-color-tertiary-rgb: 80,158,47;
@@ -230,3 +239,19 @@ ion-item.filter-simple, ion-item.ion-select.filter-simple {
   background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='rgba(0,0,0,.54)' d='M256 48C140.559 48 48 140.559 48 256c0 115.436 92.559 208 208 208 115.435 0 208-92.564 208-208 0-115.441-92.564-208-208-208zm104.002 282.881l-29.12 29.117L256 285.117l-74.881 74.881-29.121-29.117L226.881 256l-74.883-74.881 29.121-29.116L256 226.881l74.881-74.878 29.12 29.116L285.119 256l74.883 74.881z'/></svg>");
 }
 
+//buttons
+//change to sentence case
+ion-button, ion-button.button {
+    text-transform: capitalize;
+}
+
+/*
+ion-button::first-letter, ion-button.button::first-letter {
+  text-transform: uppercase !important;
+}
+*/
+
+//ion 2 calendar: selected days background
+button.days-btn.today.on-selected {
+  //background-color: var(--ion-color-secondary) !important;
+}

@@ -6,7 +6,7 @@
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="end" class="card-over-buttons">
-      <ion-button #saveButton1 fill="clear" (click)="successToast()">save</ion-button>
+      <ion-button #saveButton1 fill="clear" (click)="successToast()">Save</ion-button>
       <!-- ion-button size="large"> <ion-icon slot="start" name="more"></ion-icon></ion-button-->
     </ion-buttons>
     <ion-title class="card-over-title">
@@ -72,6 +72,7 @@
                   <ion-label position="floating"><abbr title="Federal Employer Identification Number">FEIN</abbr>*
                   </ion-label>
                   <ion-input #FEINInput maxlength="10" value="17-1223397" clearInput></ion-input>
+                  <!--ion-button slot="end" fill="clear"><ion-icon name="information-circle-outline"></ion-icon></ion-button-->
                 </ion-item>
                 <div class="assistive-text">
                   <ion-note *ngIf="FEINInput.value==''" color="danger">Required</ion-note>
@@ -352,9 +353,9 @@
           </section>
         </section>
         <section class="card-actions">
-          <ion-button #saveButton2 class="no-elevation" color="secondary" (click)="successToast()">save</ion-button>
-          <ion-button color="secondary" fill="clear" (click)="presentCancelAlert()">cancel</ion-button>
-          <ion-button color="secondary" fill="clear" (click)="presentDeleteAlert()">delete</ion-button>
+          <ion-button #saveButton2 class="no-elevation" color="secondary" (click)="successToast()">Save</ion-button>
+          <ion-button color="secondary" fill="outline" (click)="presentCancelAlert()">Cancel</ion-button>
+          <ion-button color="secondary" fill="outline" (click)="presentDeleteAlert()">Delete</ion-button>
         </section>
       </form>
     </ion-card-content>

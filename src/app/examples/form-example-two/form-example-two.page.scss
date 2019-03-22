@@ -1,0 +1,139 @@
+@import "../../../css/breakpoints.scss";
+.form-width {
+  //max-width: 672px;
+}
+
+//form actions
+.card-actions {
+  margin-top: 48px;
+}
+
+//app bar actions
+@media #{$mq-xs} {
+  .card-over-buttons {
+    display: none;
+  }
+}
+
+// Background: content canvas
+ion-content.card-over-content.hydrated {
+  //handset
+  @media #{$mq-xxs} {
+    //--ion-background-color: white ;
+  }
+
+  //tablet
+  @media #{$mq-xs} {
+    //--ion-background-color: var(--ion-color-background);
+    --background: var(--ion-color-background);
+  }
+
+  //desktop
+}
+
+@media #{$mq-xs} {
+  .card-over-title {
+    display: none;
+  }
+}
+
+// Card: main content
+ion-card.card-over-card {
+  max-width: 816px;
+  margin: -56px auto 32px auto;
+  background: white;
+  z-index: 10;
+
+  //handset
+  @media #{$mq-xxs} {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    padding-top: 16px;
+    min-height: 100px;
+    ion-card-header {
+      display: none;
+    }
+    .card-actions {
+      display: none;
+    }
+  }
+
+  //tablet portrait
+  @media #{$mq-xs} {
+    width: 92%;
+    //padding-top: 15px;
+    padding: 15px 24px 24px 24px;
+  }
+
+  //tablet landscape
+  @media #{$mq-s} {
+    width: 75%;
+    padding: 15px 32px 32px 32px;
+  }
+
+  //laptop
+  @media #{$mq-m} {
+    width: 75%;
+    padding: 15px 48px 48px 48px;
+  }
+
+  //desktop small
+  @media #{$mq-l} {
+    width: 75%;
+  }
+
+  //desktop medium
+  @media #{$mq-xl} {
+    width: 65%;
+  }
+
+  //desktop large...
+  @media #{$mq-xxl} {
+    width: 65%;
+  }
+}
+
+
+//To Do: fix for select menu height bug
+
+
+//to do: move to global
+ion-item[no-padding-start] {
+  --padding-start: none;
+}
+
+//fixes discrepency between input and select
+ion-select {
+  --padding-bottom: 5px !important;
+}
+
+//for date range control; to do: move to global styles
+.date-range-input {
+  //width: 150px;
+}
+.date-range-icon {
+  //margin-top: 32px;
+  //opacity: .54;
+}
+
+//for grid layout of form fields
+ion-grid.grid-form-fields {
+  ion-col:first-child {
+    padding-left: 0 !important;
+  }
+  ion-col:last-child {
+    padding-right: 0 !important;
+  }
+}
+
+//grid test
+ion-grid.grid-form-fields {
+  //background: red;
+  ion-row {
+    //background: blue;
+  }
+  ion-col {
+    //background: green;
+  }
+}
