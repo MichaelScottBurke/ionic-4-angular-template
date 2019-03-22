@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl, NgForm } from '@angular/forms';
-import {  MenuController, AlertController, ToastController,  ModalController } from '@ionic/angular';
+import {  MenuController, AlertController, ToastController,  ModalController, LoadingController } from '@ionic/angular';
 import { RouterStateSnapshot } from '@angular/router';
 import {
     CalendarModal,
@@ -17,7 +17,7 @@ import {
 })
 export class FormExamplePage implements OnInit {
 
-    differentAddressToggleTrue = true;
+differentAddressToggleTrue = true;
 differentAddressToggle:boolean = true;
 
 toggleAddress() {
@@ -535,9 +535,32 @@ lists = [
    state: any = 'MD';
    contactState: any = 'MD';
 
-   constructor(public modalCtrl: ModalController, public menuCtrl: MenuController, public alertController: AlertController, public toastController: ToastController, ) {
+   constructor(public loadingController: LoadingController, public modalCtrl: ModalController, public menuCtrl: MenuController, public alertController: AlertController, public toastController: ToastController, ) {
     this.menuCtrl.enable(false);
    }
+
+   async presentLoading() {
+    const loading = await this.loadingController.create({
+      message: 'Hellooo',
+      duration: 2000
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+
+    console.log('Loading dismissed!');
+  }
+
+  async presentLoadingWithOptions() {
+    const loading = await this.loadingController.create({
+      spinner: null,
+      duration: 5000,
+      message: 'Please wait...',
+      translucent: true,
+      cssClass: 'custom-class custom-loading'
+    });
+    return await loading.present();
+  }
 
 
   async openCalendar() {
@@ -566,12 +589,13 @@ lists = [
 
   ngOnInit() {
   }
+  
 
   async presentCancelAlert() {
     const alert = await this.alertController.create({
       header: 'Discard edits?',
       //subHeader: 'Subtitle',
-      message: 'You have unsaved edits. Are you sure you want to discard them?.',
+      message: 'You have unsaved edits. Are you sure you want to discard them?',
       buttons: ['Cancel', 'Discard']
     });
 

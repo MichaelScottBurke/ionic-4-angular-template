@@ -5,15 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-//import { ModalExamplePage } from './modal-example.page';
+import { SelectInputsPage } from './select-inputs.page';
 
 const routes: Routes = [
-  /*
   {
     path: '',
-    component: ModalExamplePage
+    component: SelectInputsPage
   }
-  */
 ];
 
 @NgModule({
@@ -23,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  //declarations: [ModalExamplePage]
+  declarations: [SelectInputsPage]
 })
-export class ModalExamplePageModule {}
+export class SelectInputsPageModule {}

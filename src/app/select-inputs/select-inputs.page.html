@@ -1,0 +1,79 @@
+<ion-header no-border>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar color="primary">
+        <div class="doc-layout-header">
+          <ion-title>
+            <h1 class="ign-display-3">Select Inputs</h1>
+          </ion-title>
+        </div>
+      </ion-toolbar>
+  </ion-header>
+  <ion-content padding>
+      <div class="doc-layout">
+        <p class="medium-emphasis-text">A Select input (aka dropdown menu) is a type of text field which offers a menu of choices from a moderately long list, when only one selection is valid.</p>
+        <h3>Examples</h3>
+        <div class="example-panel">
+          <ion-card>
+            <ion-grid no-padding>
+              <ion-row>
+                <ion-col text-center>
+                  <h4 class="ign-caption medium-emphasis-text">enabled</h4>
+                  <ion-item>
+                      <ion-label position="floating">State *</ion-label>
+                      <ion-select #stateSelectEmpty [(ngModel)]="stateEmpty" name="stateEmpty">
+                        <ion-select-option *ngFor="let state of states" [value]="state.value">{{state.name}}
+                        </ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                  <div class="assistive-text">
+                    <ion-note *ngIf="stateSelect.value==''" color="danger">Required</ion-note>&nbsp;
+                  </div>
+                  <br />
+                  <ion-item>
+                      <ion-label position="floating">State *</ion-label>
+                      <ion-select #stateSelect [(ngModel)]="state" name="state">
+                        <ion-select-option *ngFor="let state of states" [value]="state.value">{{state.name}}
+                        </ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                  <div class="assistive-text">
+                    <ion-note *ngIf="stateSelect.value==''" color="danger">Required</ion-note>&nbsp;
+                  </div>
+                </ion-col>
+                <ion-col text-center>
+                    <h4 class="ign-caption medium-emphasis-text">disabled</h4>
+                    <ion-item>
+                        <ion-label position="floating">State disabled *</ion-label>
+                        <ion-select disabled #stateSelectEmptyDisabled [(ngModel)]="stateEmpty" name="stateSelectEmptyDisabled">
+                          <ion-select-option *ngFor="let state of states" [value]="state.value">{{state.name}}
+                          </ion-select-option>
+                        </ion-select>
+                      </ion-item>
+                    <div class="assistive-text">
+                      <ion-note *ngIf="stateSelect.value==''" color="danger">Required</ion-note>&nbsp;
+                    </div>
+                    <br />
+                    <ion-item>
+                        <ion-label position="floating">State disabled *</ion-label>
+                        <ion-select disabled #stateSelectDisabled [(ngModel)]="state" name="stateSelectDisabled">
+                          <ion-select-option *ngFor="let state of states" [value]="state.value">{{state.name}}
+                          </ion-select-option>
+                        </ion-select>
+                      </ion-item>
+                    <div class="assistive-text">
+                      <ion-note *ngIf="stateSelect.value==''" color="danger">Required</ion-note>&nbsp;
+                    </div>
+
+   
+                </ion-col>           
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+        </div>
+      </div>
+    
+    </ion-content>

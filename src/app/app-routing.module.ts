@@ -81,7 +81,9 @@ const routes: Routes = [
   { path: 'banner-example', loadChildren: './examples/banner-example/banner-example.module#BannerExamplePageModule' },
   { path: 'banner-info-example', loadChildren: './examples/banner-info-example/banner-info-example.module#BannerInfoExamplePageModule' },
   { path: 'banner-warning-example', loadChildren: './examples/banner-warning-example/banner-warning-example.module#BannerWarningExamplePageModule' },
-  { path: 'banner-error-example', loadChildren: './examples/banner-error-example/banner-error-example.module#BannerErrorExamplePageModule' }
+  { path: 'banner-error-example', loadChildren: './examples/banner-error-example/banner-error-example.module#BannerErrorExamplePageModule' },
+  { path: 'select-inputs', loadChildren: './select-inputs/select-inputs.module#SelectInputsPageModule' },
+  { path: 'sheets', loadChildren: './sheets/sheets.module#SheetsPageModule' }
 ];
 
 @NgModule({

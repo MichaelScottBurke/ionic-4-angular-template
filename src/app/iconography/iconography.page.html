@@ -5,11 +5,31 @@
       </ion-buttons>
     </ion-toolbar>
     <ion-toolbar color="primary">
-      <ion-title>
-        <h1 class="ign-display-3">Iconography</h1>
-      </ion-title>
-    </ion-toolbar>
+        <div class="doc-layout-header">
+          <ion-title>
+            <h1 class="ign-display-3">Iconography</h1>
+          </ion-title>
+        </div>
+      </ion-toolbar>
   </ion-header>
-<ion-content padding>
+  <ion-content padding>
+      <div class="doc-layout">
+        <p class="medium-emphasis-text">Simple pattern description</p>
+        <!--h2>Custom SVGs</h2-->
+        
+        <h2>Ionicons</h2>
+        <p class="medium-emphasis-text">Out-of-box ionic icons (ionicons); Note: ionicons names do not match material design icon names</p>
+            <ion-grid no-padding>
+              <ion-row wrap>
+                <ion-col text-center *ngFor="let i of icons" class="icon-item-container">
+                  <ion-card>
+                    <ion-icon title="{{i.code}}" size="large" name="{{i.name}}"></ion-icon><br />
+                    <ion-note class="ign-caption" text-nowrap><small>{{i.name}}</small></ion-note>
+                  </ion-card>
+                </ion-col>       
+              </ion-row>
+            </ion-grid>
 
-</ion-content>
+      </div>
+    
+    </ion-content>

@@ -16,7 +16,7 @@
     </ion-list>
     <ion-item>
       <ion-label position="floating">How could we improve?</ion-label>
-      <ion-textarea rows="5" #improveComments></ion-textarea>
+      <ion-textarea rows="5" #improveComments  clearOnEdit="true"></ion-textarea>
     </ion-item>
     <ion-item lines="none">
         <ion-text class="ign-caption medium-emphasis-text" clearInput text-right slot="end">{{improveComments.value.length}} / 1500</ion-text>

@@ -1,6 +1,13 @@
 @import "./breakpoints.scss";
 //document layout styles
 .doc-layout-header {
+  margin-top: -32px;
+  ion-title {
+    h1.ign-display-3 {
+      line-height: 72px !important;
+    }
+  }
+
   //handset
   @media #{$mq-xxs} {
     padding: 0;

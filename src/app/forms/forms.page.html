@@ -5,26 +5,48 @@
       </ion-buttons>
     </ion-toolbar>
     <ion-toolbar color="primary">
-      <ion-title>
-        <h1 class="ign-display-3">Form Layout</h1>
-      </ion-title>
-    </ion-toolbar>
+        <div class="doc-layout-header">
+          <ion-title>
+            <h1 class="ign-display-3">Form Layouts</h1>
+          </ion-title>
+        </div>
+      </ion-toolbar>
   </ion-header>
 
 <ion-content padding>
 
   <h2>Examples</h2>
-  <div class="example-panel">
-      <div class="example-mobile-outline mat-elevation-z16">
-          <iframe src="/form-example">
-            <p>Your browser does not support iframes.</p>
-        </iframe>
+    <div class="example-panel">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+              <div class="example-mobile-outline mat-elevation-z16">
+                  <iframe src="/form-example">
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
+              </div>
+          </ion-col>
+          <ion-col>
+              <div class="example-mobile-outline mat-elevation-z16">
+                  <iframe src="/form-example-two">
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
+              </div>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
       </div>
-    </div>
 
     <div class="example-panel">
         <div class="example-responsive-outline mat-elevation-z16">
             <iframe src="/form-example">
+              <p>Your browser does not support iframes.</p>
+          </iframe>
+        </div>
+        <br />
+        <div class="example-responsive-outline mat-elevation-z16">
+            <iframe src="/form-example-two">
               <p>Your browser does not support iframes.</p>
           </iframe>
         </div>

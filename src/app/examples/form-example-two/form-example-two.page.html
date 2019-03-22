@@ -1,369 +1,128 @@
 <ion-header>
-    <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-button size="large" (click)="presentCancelAlert()">
-          <ion-icon slot="start" name="close"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-      <ion-buttons slot="end" class="card-over-buttons">
-        <ion-button #saveButton1 fill="clear" (click)="successToast()">Save</ion-button>
-        <!-- ion-button size="large"> <ion-icon slot="start" name="more"></ion-icon></ion-button-->
-      </ion-buttons>
-      <ion-title class="card-over-title">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button size="large" (click)="presentCancelAlert()">
+        <ion-icon slot="start" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="card-over-buttons">
+      <ion-button #saveButton1 fill="clear" (click)="successToast()">Save</ion-button>
+      <!-- ion-button size="large"> <ion-icon slot="start" name="more"></ion-icon></ion-button-->
+    </ion-buttons>
+    <ion-title class="card-over-title">
+      <h1>Edit Time Off Request</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-over-content">
+  <ion-toolbar class="card-over-toolbar" color="primary" ion-fixed no-padding>
+    &nbsp;
+  </ion-toolbar>
+  <ion-card class="card-over-card">
+    <ion-card-header>
+      <ion-card-title>
         <h1>Edit Time Off Request</h1>
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content class="card-over-content">
-    <ion-toolbar class="card-over-toolbar" color="primary" ion-fixed no-padding>
-      &nbsp;
-    </ion-toolbar>
-    <ion-card class="card-over-card">
-      <ion-card-header>
-        <ion-card-title>
-          <h1>Edit Time Off Request</h1>
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content class="card-over-content">
-        <form name="companyInfoForm" #companyInfoForm="ngForm" (ngSubmit)="onSubmit(companyInfoForm)">
-          <section>
-            <ion-grid class="grid-form-fields" no-padding>
-              <ion-row>
-                <ion-col size="12" size-sm="9">
-                  <ion-item>
-                    <ion-label class="medium-emphasis-text" position="floating">Company name *</ion-label>
-                    <ion-input #companyInput value="Western Mutual Insurance Company" required="true" clearInput>
-                    </ion-input>
-                  </ion-item>
-                  <div class="assistive-text">
-                    <ion-note *ngIf="companyInput.value==''" color="danger">Required</ion-note>&nbsp;
-                  </div>
-                </ion-col>
-                <ion-col size="6" size-sm="3">
-                  <ion-item>
-                    <ion-label position="floating">Code</ion-label>
-                    <ion-input #codeInput inputmode="text" maxlength="6" value="WMIC" clearInput></ion-input>
-                  </ion-item>
-                  <div class="assistive-text">
-                    <ion-note *ngIf="codeInput.value==''" color="danger">Required</ion-note>&nbsp;
-                  </div>
-                </ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col size="12" size-sm="9">
-                  <ion-item>
-                    <ion-label position="floating">Doing business as *</ion-label>
-                    <ion-input #DBAInput inputmode="text" value="Western Mutual" clearInput></ion-input>
-                  </ion-item>
-                  <div class="assistive-text">
-                    <ion-note *ngIf="DBAInput.value==''" color="danger">Required</ion-note>&nbsp;
-                  </div>
-                </ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col size="6" size-sm="3">
-                  <ion-item>
-                    <ion-label position="floating"><abbr title="Federal Employer Identification Number">FEIN</abbr>*
-                    </ion-label>
-                    <ion-input #FEINInput maxlength="10" value="17-1223397" clearInput></ion-input>
-                    <!--ion-button slot="end" fill="clear"><ion-icon name="information-circle-outline"></ion-icon></ion-button-->
-                  </ion-item>
-                  <div class="assistive-text">
-                    <ion-note *ngIf="FEINInput.value==''" color="danger">Required</ion-note>
-                    <ion-note *ngIf="FEINInput.value!==''" class="medium-emphasis-text">e.g., 12-3456789
-                      </ion-note>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="card-over-content">
+      <form name="companyInfoForm" #companyInfoForm="ngForm" (ngSubmit)="onSubmit(companyInfoForm)">
+
+        <ion-grid class="grid-form-fields" no-padding>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Time off plan *</ion-label>
+                <ion-select #ptoPlanSelect [(ngModel)]="ptoPlan" name="ptoPlanSelect">
+                  <ion-select-option *ngFor="let p of plans" [value]="p.value">{{p.name}}
+                  </ion-select-option>
+                </ion-select>
+              </ion-item>
+              <div class="assistive-text">
+                <ion-note *ngIf="ptoPlanSelect.value==''" color="danger">Required</ion-note>
+                <ion-note *ngIf="ptoPlanSelect.value=='vt'" class="medium-emphasis-text">31.25 hours available
+                </ion-note>
+                <ion-note *ngIf="ptoPlanSelect.value=='ct'" class="medium-emphasis-text">16.0 hours available
+                </ion-note>
+                <ion-note *ngIf="ptoPlanSelect.value=='bt'" class="medium-emphasis-text">40.0 hours available
+                </ion-note>
+                <ion-note *ngIf="ptoPlanSelect.value=='st'" class="medium-emphasis-text">8.5 hours available
+                </ion-note>
+                &nbsp;
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item no-padding-start>
+                <ion-label text-wrap>Partial day</ion-label>
+                <ion-toggle #differntAddress name="differentAddress" [(ngModel)]="differentAddressToggleTrue" slot="end"
+                  color="secondary" (click)="showAddress()" checked="false"></ion-toggle>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6" size-sm="4">
+              <ion-item>
+                <ion-label position="floating">Total hours *</ion-label>
+                <ion-input #totalHoursInput value="0.00" clearInput></ion-input>
+              </ion-item>
+              <div class="assistive-text">
+                <ion-note *ngIf="totalHoursInput.value==''" color="danger">Required</ion-note>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" no-padding>
+              <div (click)="openCalendar()" lines="none" class="date-range" style="cursor: pointer;">
+                <ion-grid class="grid-form-fields" no-padding>
+                  <ion-row nowrap align-items-end>
+                    <ion-col size="5" size-sm="4">
+                      <ion-item class="date-range-input">
+                        <ion-label position="floating">Start date *</ion-label>
+                        <ion-input #ptoStartDateInput value="Mar 28, 2019"></ion-input>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col size="2" size-sm="1" text-center align-self-end>
+                      <ion-icon size="large" color="secondary" class="date-range-icon" name="calendar"></ion-icon>
+                    </ion-col>
+                    <ion-col size="5" size-sm="4">
+                      <ion-item class="date-range-input">
+                        <ion-label position="floating">End date *</ion-label>
+                        <ion-input value="Mar 29, 2019"></ion-input>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+                <div class="assistive-text">
+                    <ion-note *ngIf="ptoStartDateInput.value==''" color="danger">Required</ion-note>
                     &nbsp;
                   </div>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </section>
-  
-          <section>
-            <h2>Business structure *</h2>
-            <p class="medium-emphasis-text">Choose the type of business that best fits your organizational structure.</p>
-            <ion-list lines="none">
-              <ion-radio-group #structureInput value="corporation">
-                <!--ion-note *ngIf="structureInput.value==''" color="danger">Required</ion-note>&nbsp;-->
-                <ion-item>
-                  <ion-label>Corporation</ion-label>
-                  <ion-radio slot="start" value="corporation" checked="true"></ion-radio>
-                </ion-item>
-  
-                <ion-item>
-                  <ion-label>Sole proprietorship</ion-label>
-                  <ion-radio slot="start" value="solepro"></ion-radio>
-                </ion-item>
-  
-                <ion-item>
-                  <ion-label>General partnership</ion-label>
-                  <ion-radio slot="start" value="hudson"></ion-radio>
-                </ion-item>
-  
-                <ion-item>
-                  <ion-label>Limited liability partnership (LLP)</ion-label>
-                  <ion-radio slot="start" value="llp"></ion-radio>
-                </ion-item>
-  
-                <ion-item>
-                  <ion-label>Limited partnership</ion-label>
-                  <ion-radio slot="start" value="limitedpartner"></ion-radio>
-                </ion-item>
-                <ion-item>
-                  <ion-label>Other</ion-label>
-                  <ion-radio slot="start" value="other"></ion-radio>
-                </ion-item>
-              </ion-radio-group>
-            </ion-list>
-          </section>
-  
-          <section>
-            <h2>Location</h2>
-            <p class="medium-emphasis-text informational-text ">Location of the organization's main office.</p>
-            <section>
-              <h3>Address</h3>
-               <ion-grid class="grid-form-fields"  no-padding>
-                <ion-row>
-                  <ion-col size="12" size-sm="9">
-                    <ion-item>
-                      <ion-label position="floating">Country *</ion-label>
-                      <ion-select #companyCountrySelect [(ngModel)]="country" name="country">
-                        <ion-select-option *ngFor="let country of countries" [value]="country.value">{{country.name}}
-                        </ion-select-option>
-                      </ion-select>
-                    </ion-item>
-                    <div class="assistive-text">
-                      <ion-note *ngIf="companyCountrySelect.value==''" color="danger">Required</ion-note>
-                      &nbsp;
-                    </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    <ion-item>
-                      <ion-label position="floating">Address line 1 *</ion-label>
-                      <ion-input #companyAddress1 clearInput value="6732 St. Michael's Circle" clearInput></ion-input>
-                    </ion-item>
-                    <div class="assistive-text">
-                      <ion-note *ngIf="companyAddress1.value==''" color="danger">Required</ion-note>&nbsp;
-                    </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    <ion-item>
-                      <ion-label position="floating">Address line 2</ion-label>
-                      <ion-input clearInput value="Suite 401" clearInput></ion-input>
-                    </ion-item>
-                    <div class="assistive-text">
-                      &nbsp;
-                    </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col size="12" size-sm="5">
-                    <ion-item>
-                      <ion-label position="floating">City *</ion-label>
-                      <ion-input #cityInput value="Winchester-on-Severn" clearInput></ion-input>
-                    </ion-item>
-                    <div class="assistive-text">
-                      <ion-note *ngIf="cityInput.value==''" color="danger">Required</ion-note>&nbsp;
-                    </div>
-                  </ion-col>
-                  <ion-col size="12" size-sm="4">
-                    <ion-item>
-                        <ion-label position="floating">State *</ion-label>
-                        <ion-select #stateSelect [(ngModel)]="state" name="state">
-                          <ion-select-option *ngFor="let state of states" [value]="state.value">{{state.name}}
-                          </ion-select-option>
-                        </ion-select>
-                      </ion-item>
-                    <div class="assistive-text">
-                      <ion-note *ngIf="stateSelect.value==''" color="danger">Required</ion-note>&nbsp;
-                    </div>
-                  </ion-col>
-                  <ion-col size="6" size-sm="3">
-                    <ion-item>
-                      <ion-label position="floating">Zip code *</ion-label>
-                      <ion-input type="zip" clearInput></ion-input>
-                    </ion-item>
-                    <div class="assistive-text">
-                        <ion-note *ngIf="contactZipInput.value==''" color="danger">Required</ion-note>
-                        <ion-note *ngIf="contactZipInput.value!==''" class="medium-emphasis-text">e.g. 37220, or 37220-8971
-                        </ion-note>
-                    </div>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-            </section>
-            <section>
-              <h3>Company representative</h3>
-              <p class="medium-emphasis-text informational-text ">Company respresentatives are the primary contact at an
-                organization's HR department.</p>
-              <h4>Contact details</h4>
-               <ion-grid class="grid-form-fields"  no-padding>
-                <ion-row>
-                  <ion-col size="12" size-sm="9">
-                    <ion-item>
-                      <ion-label position="floating">Name *</ion-label>
-                      <ion-input #nameInput clearInput value="Mary Ann Evans"></ion-input>
-                    </ion-item>
-                    <div class="assistive-text">
-                      <ion-note *ngIf="nameInput.value==''" color="danger">Required</ion-note>&nbsp;
-                    </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    <ion-item>
-                      <ion-label position="floating">Phone number *</ion-label>
-                      <ion-input type="phone" #phoneInput clearInput value="(410) 555-1375"></ion-input>
-                    </ion-item>
-                    <div class="assistive-text">
-                      <ion-note *ngIf="phoneInput.value==''" color="danger">Required</ion-note>&nbsp;
-                    </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    <ion-item>
-                      <ion-label position="floating">Email Address</ion-label>
-                      <ion-input #emailInput type="email" clearInput value="mary_ann_evans@westernmutual.com"></ion-input>
-                    </ion-item>
-                    <div class="assistive-text">
-                      <ion-note *ngIf="emailInput.value==''" color="danger">Required</ion-note>&nbsp;
-                    </div>
-                  </ion-col>
-                </ion-row>
-  
-              </ion-grid>
-            </section>
-            <section>
-              <h4>Address</h4>
-               <ion-grid class="grid-form-fields" no-padding>
-                <ion-row>
-                  <ion-col>
-                      <ion-item no-padding-start>
-                          <ion-label text-wrap>Contact address is different from company</ion-label>
-                          <ion-toggle #differntAddress name="differentAddress" [(ngModel)]="differentAddressToggleTrue" slot="end" color="secondary" (click)="showAddress()" checked="true"></ion-toggle>
-                      </ion-item>
-                      <div class="assistive-text">
-                          <ion-note *ngIf="contactAddressInput.value==''" color="danger">Required</ion-note>
-                          &nbsp;
-                        </div>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-  
-              <!--ion-item *ngIf="differentAddressToggle === false">
-                shown
-              </ion-item-->
-               <ion-grid class="grid-form-fields"  no-padding>
-                <ion-row>
-                  <ion-col>
-                    <ion-item>
-                      <ion-label position="floating">Address line 1*</ion-label>
-                      <ion-input #contactAddressInput clearInput value="P.O. Box 7615"></ion-input>
-                    </ion-item>
-                    <div class="assistive-text">
-                      <ion-note *ngIf="contactAddressInput.value==''" color="danger">Required</ion-note>
-                      &nbsp;
-                    </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    <ion-item>
-                      <ion-label position="floating">Address line 2</ion-label>
-                      <ion-input clearInput value=""></ion-input>
-                    </ion-item>
-                    <div class="assistive-text">
-                      &nbsp;
-                    </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col size="12" size-sm="5">
-                    <ion-item>
-                      <ion-label position="floating">City *</ion-label>
-                      <ion-input #contactCityInput value="Rising Sun" clearInput></ion-input>
-                    </ion-item>
-                    <div class="assistive-text">
-                      <ion-note *ngIf="contactCityInput.value==''" color="danger">Required</ion-note>&nbsp;
-                    </div>
-                  </ion-col>
-                  <ion-col size="12" size-sm="4">
-                    <ion-item>
-                      <ion-label position="floating">State *</ion-label>
-                      <ion-select #contactStateSelect [(ngModel)]="contactState" name="contactState">
-                        <ion-select-option *ngFor="let state of states" [value]="state.value">{{state.name}}
-                        </ion-select-option>
-                      </ion-select>
-                    </ion-item>
-                    <div class="assistive-text">
-                      <ion-note *ngIf="contactStateSelect.value==''" color="danger">Required</ion-note>
-                      &nbsp;
-                    </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                    <ion-col size="6" size-sm="3">
-                        <ion-item>
-                          <ion-label position="floating">Total hours *</ion-label>
-                          <ion-input #contactZipInput value="0.00" clearInput></ion-input>
-                        </ion-item>
-                        <div class="assistive-text">
-                          <ion-note *ngIf="contactZipInput.value==''" color="danger">Required</ion-note>
-                        </div>
-                      </ion-col>
-                </ion-row>
-              </ion-grid>
-            </section>
-            <section>
-                <div (click)="openCalendar()" lines="none" class="date-range" style="cursor: pointer;">
-                     <ion-grid class="grid-form-fields"  no-padding>
-                        <ion-row nowrap align-items-end>
-                            <ion-col size="5" size-sm="4">
-                              <ion-item class="date-range-input">
-                                <ion-label position="floating">Start date *</ion-label>
-                                <ion-input value="Mar 28, 2019"></ion-input>
-                              </ion-item>
-                            </ion-col>
-                            <ion-col size="2" size-sm="1" text-center align-self-end >
-                              <ion-icon size="large" color="secondary" class="date-range-icon" name="calendar"></ion-icon>
-                            </ion-col>
-                            <ion-col size="5" size-sm="4">
-                              <ion-item class="date-range-input">
-                                <ion-label position="floating">End date *</ion-label>
-                                <ion-input value="Mar 29, 2019"></ion-input>
-                              </ion-item>
-                            </ion-col>
-                          </ion-row>
-                    </ion-grid>
-                  </div>
-                  <ion-grid no-padding>
-                      <ion-row>
-                          <ion-col>
-                              <ion-item>
-                                  <ion-label position="floating">Comments</ion-label>
-                                  <ion-textarea rows="5" #ptoComments></ion-textarea>
-                                </ion-item>
-                                <ion-item lines="none">
-                                    <ion-text class="ign-caption medium-emphasis-text" clearInput text-right slot="end">{{ptoComments.value.length}} / 1500</ion-text>
-                                </ion-item>
-                          </ion-col>
-                        </ion-row>
-                  </ion-grid>
-            </section>
-          </section>
-          <section class="card-actions">
-            <ion-button #saveButton2 class="no-elevation" color="secondary" (click)="successToast()">&nbsp; Save &nbsp;</ion-button>
-            <ion-button color="secondary" fill="outline" (click)="presentCancelAlert()">Cancel</ion-button>
-            <ion-button color="secondary" fill="outline" (click)="presentDeleteAlert()">Delete</ion-button>
-          </section>
-        </form>
-      </ion-card-content>
-    </ion-card>
-  
-  </ion-content>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Comments</ion-label>
+                <ion-textarea rows="5" #ptoComments></ion-textarea>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-text class="ign-caption medium-emphasis-text" clearInput text-right slot="end">
+                  {{ptoComments.value.length}} / 1500</ion-text>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <section class="form-actions">
+          <ion-button #saveButton2 class="no-elevation" color="secondary" (click)="successToast()">&nbsp;
+            Save &nbsp;
+          </ion-button>
+          <ion-button color="secondary" fill="outline" (click)="presentCancelAlert()">Cancel</ion-button>
+          <ion-button color="secondary" fill="outline" (click)="presentDeleteAlert()">Delete</ion-button>
+        </section>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,18 +1,17 @@
 <ion-header no-border>
-	<ion-toolbar color="primary">
-		<ion-buttons slot="start">
-			<ion-menu-button></ion-menu-button>
-		</ion-buttons>
-	</ion-toolbar>
-	<ion-toolbar color="primary">
-		<div class="doc-layout-header">
-			<ion-title>
-				<h1 class="ign-display-3">Cards</h1>
-			</ion-title>
-		</div>
-	</ion-toolbar>
-</ion-header>
-
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar color="primary">
+        <div class="doc-layout-header">
+          <ion-title>
+            <h1 class="ign-display-3">Cards</h1>
+          </ion-title>
+        </div>
+      </ion-toolbar>
+  </ion-header>
 <ion-content>
 	<div class="doc-layout">
 		<p class="medium-emphasis-text">Cards contain content and actions about a single subject. They should be easy to
@@ -589,10 +588,10 @@ Please see ion-card-content, ion-card-header, ion-card-title, ion-card-subtitle.
 						<p>The Norwich Terrier is a companion dog with a friendly personality originating in the United Kingdom, and bred to hunt
 							small rodents.</p>
 					</ion-card-content>
-					<ion-card-actions slot="end">
+					<ion-form-actions slot="end">
 						<button ion-button color="secondary">LIKE</button>
 						<button ion-button color="secondary">SHARE</button>
-					</ion-card-actions>
+					</ion-form-actions>
 				</ion-card>
 
 				<ion-card>
@@ -610,7 +609,7 @@ Please see ion-card-content, ion-card-header, ion-card-title, ion-card-subtitle.
 						<p>The Norwich Terrier is a breed of dog originating in the United Kingdom, and was bred to hunt small vermin or rodents.
 							With a friendly personality, Norwich Terriers are today mostly a companion dog breed.</p>
 					</ion-card-content>
-					<ion-card-actions>
+					<ion-form-actions>
 						<button ion-button color="secondary">action 1</button>
 						<button ion-button color="secondary">action 2</button>
 						<span fxFlex></span>
@@ -620,7 +619,7 @@ Please see ion-card-content, ion-card-header, ion-card-title, ion-card-subtitle.
 						<button ion-icon-button>
         <ion-icon aria-label="Example icon-button with a share icon">share</ion-icon>
       </button>
-					</ion-card-actions>
+					</ion-form-actions>
 				</ion-card>
 
 				<ion-card class="example-card">
@@ -631,11 +630,11 @@ Please see ion-card-content, ion-card-header, ion-card-title, ion-card-subtitle.
 							spires and jagged cliffs aged by time and the elements.</p>
 					</ion-card-content>
 					<mat-divider></mat-divider>
-					<ion-card-actions>
+					<ion-form-actions>
 						<button ion-button color="secondary">full article</button>
 						<span fxFlex></span>
 						<ion-icon aria-label="navigate to other site">open_in_new</ion-icon>
-					</ion-card-actions>
+					</ion-form-actions>
 				</ion-card>
 
 				<ion-card>
@@ -669,10 +668,10 @@ Please see ion-card-content, ion-card-header, ion-card-title, ion-card-subtitle.
 							<p>This is supporting text.</p>
 							<p>{{longText}}</p>
 						</ion-card-content>
-						<ion-card-actions>
+						<ion-form-actions>
 							<button ion-button color="secondary">LIKE</button>
 							<button ion-button color="secondary">SHARE</button>
-						</ion-card-actions>
+						</ion-form-actions>
 						<ion-card-footer>
 							<mat-progress-bar mode="indeterminate"></mat-progress-bar>
 						</ion-card-footer>
@@ -686,10 +685,10 @@ Please see ion-card-content, ion-card-header, ion-card-title, ion-card-subtitle.
 							<p>{{longText}}</p>
 						</ion-card-content>
 						<mat-divider [inset]="true"></mat-divider>
-						<ion-card-actions>
+						<ion-form-actions>
 							<button ion-button color="secondary">LIKE</button>
 							<button ion-button color="secondary">SHARE</button>
-						</ion-card-actions>
+						</ion-form-actions>
 					</ion-card>
 
 					<ion-card>
@@ -707,9 +706,9 @@ Please see ion-card-content, ion-card-header, ion-card-title, ion-card-subtitle.
 					<ion-card class="demo-card-blue ion-card-flat">
 						<ion-card-title>Flat card</ion-card-title>
 						<ion-card-subtitle>Card with no elevation with background color</ion-card-subtitle>
-						<ion-card-actions>
+						<ion-form-actions>
 							<button ion-button color="secondary">single full width action</button>
-						</ion-card-actions>
+						</ion-form-actions>
 					</ion-card>
 
 					<hr>
@@ -798,11 +797,11 @@ Please see ion-card-content, ion-card-header, ion-card-title, ion-card-subtitle.
 					<div class="content-filler-med"></div>
 					<div class="content-filler-large"></div>
 				</ion-card-content>
-				<ion-card-actions>
+				<ion-form-actions>
 					<button mat-flat-button color="accent">save</button>
 					<button ion-button color="secondary">cancel</button>
 					<button ion-button color="secondary">delete</button>
-				</ion-card-actions>
+				</ion-form-actions>
 			</ion-card>
 
 

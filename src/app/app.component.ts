@@ -136,13 +136,18 @@ export class AppComponent {
       icon: ''
     },
     {
+      title: 'Progress indicators',
+      url: '/progress-indicators',
+      icon: ''
+    },
+    {
       title: 'Radio buttons',
       url: '/radio-buttons',
       icon: ''
     },
     {
-      title: 'Progress indicators',
-      url: '/progress-indicators',
+      title: 'Select inputs',
+      url: '/select-inputs',
       icon: ''
     },
     {
@@ -172,13 +177,13 @@ export class AppComponent {
       title: 'Form example 1',
       url: '/form-example',
       icon: ''
-    },
+    }
+    /*,
     {
       title: 'Modal example 1',
       url: '/modal-example',
       icon: ''
-    }
-    /*,
+    },
     {
       title: 'Dashboard example 1',
       url: '/dashboard-example1',
