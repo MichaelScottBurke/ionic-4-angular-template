@@ -1,0 +1,52 @@
+ion-content.hub-layout {
+  --background: var(--ion-color-background);
+}
+
+.hub-layout-header {
+  padding: 16px 16px;
+  background: white;
+  margin: 0;
+  border-bottom: 1px solid rgba(0,0,0, .12);
+}
+
+.hub-layout-content {
+  max-width: 1024px;
+  //background: red;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+//change margin around cards from 10px default
+.hub-layout-content .sc-ion-card-md-h {
+  -webkit-margin-start: 0;
+  margin-inline-start: 0;
+  -webkit-margin-end: 0;
+  margin-inline-end: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hub-layout-section {
+  //background: blue;
+  margin: 0 0 32px 0;
+}
+
+.hub-layout-section-header {
+  border-bottom: none;
+  h2 {
+    font-weight: 500;
+  }
+}
+
+.card-list-horizontal {
+  overflow-x: auto;
+  padding-bottom: 16px;
+  ion-grid {
+    margin: -4px;
+  }
+  ion-card {
+    min-width: 215px;
+    min-height: 100px;
+    --background: white;
+  }
+}

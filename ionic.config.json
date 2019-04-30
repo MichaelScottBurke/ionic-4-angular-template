@@ -1,6 +1,8 @@
 {
   "name": "ionic-4-angular-template",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "e6d0b889"
 }

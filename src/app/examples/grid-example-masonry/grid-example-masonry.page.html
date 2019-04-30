@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>grid-example-masonry</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!--ion-row>
+    <ion-col col-4 *ngFor="let image of images">
+      <img [src]="image" />
+    </ion-col>
+  </ion-row-->
+
+  <div class="pins">
+    <div class="pin>" *ngFor="let image of images">
+      <img [src]="image" />
+    </div>
+  </div>
+
+</ion-content>

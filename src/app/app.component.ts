@@ -86,6 +86,11 @@ export class AppComponent {
       icon: ''
     },
     {
+      title: 'Bottom Navigation',
+      url: '/bottom-navigation',
+      icon: ''
+    },
+    {
       title: 'Buttons',
       url: '/buttons',
       icon: ''
@@ -151,6 +156,11 @@ export class AppComponent {
       icon: ''
     },
     {
+      title: 'Sheets',
+      url: '/sheets',
+      icon: ''
+    },
+    {
       title: 'Snackbars',
       url: '/snackbars',
       icon: ''
@@ -166,6 +176,11 @@ export class AppComponent {
       icon: ''
     },
     {
+      title: 'Tabs',
+      url: '/tabs',
+      icon: ''
+    },
+    {
       title: 'Text fields',
       url: '/text-fields',
       icon: ''
@@ -177,19 +192,39 @@ export class AppComponent {
       title: 'Form example 1',
       url: '/form-example',
       icon: ''
-    }
+    },
+    {
+      title: 'Hub layout example 2',
+      url: '/hub-layout-example2',
+      icon: ''
+    },
+    {
+      title: 'Hub layout example 1',
+      url: '/hub-layout-example',
+      icon: ''
+    },
     /*,
     {
       title: 'Modal example 1',
       url: '/modal-example',
       icon: ''
     },
+    */
+   {
+    title: 'Grid example masonry',
+    url: '/grid-example-masonry',
+    icon: ''
+  },
     {
       title: 'Dashboard example 1',
       url: '/dashboard-example1',
       icon: ''
     },
-    */
+    {
+      title: 'Dashboard example 2',
+      url: '/home-dashboard-example2',
+      icon: ''
+    }
   ];
   
 

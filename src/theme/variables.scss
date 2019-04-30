@@ -213,15 +213,27 @@ ion-label.label-floating {
   --color: var(--ion-medium-emphasis-text) !important;
 }
 
-//focus input divider border
+//focus input divider border: make secondary rather than primary!
 ion-item {
   --highlight-color-focused: var(--ion-color-secondary) !important;
 }
 
+//text field background color to new match MD spec
 ion-item.item-input, ion-item.item-select {
   --border-radius: 4px 4px 0 0;
   --background: rgba(0,0,0,.04);
 }
+
+//input clear icon; to better differentiate between 'close' vs 'clear'
+.input-clear-icon.sc-ion-input-md {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='rgba(0,0,0,.54)' d='M256 48C140.559 48 48 140.559 48 256c0 115.436 92.559 208 208 208 115.435 0 208-92.564 208-208 0-115.441-92.564-208-208-208zm104.002 282.881l-29.12 29.117L256 285.117l-74.881 74.881-29.121-29.117L226.881 256l-74.883-74.881 29.121-29.116L256 226.881l74.881-74.878 29.12 29.116L285.119 256l74.883 74.881z'/></svg>");
+}
+
+//text fields additional elements: make assistive text align to input text
+.assistive-text {
+  padding: 4px 16px 0 16px;
+}
+
 
 //simple filter
 ion-item.filter-simple, ion-item.ion-select.filter-simple {
@@ -234,22 +246,19 @@ ion-item.filter-simple, ion-item.ion-select.filter-simple {
     --padding-start: 0;
   }
 
-//input clear icon
-.input-clear-icon.sc-ion-input-md {
-  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='rgba(0,0,0,.54)' d='M256 48C140.559 48 48 140.559 48 256c0 115.436 92.559 208 208 208 115.435 0 208-92.564 208-208 0-115.441-92.564-208-208-208zm104.002 282.881l-29.12 29.117L256 285.117l-74.881 74.881-29.121-29.117L226.881 256l-74.883-74.881 29.121-29.116L256 226.881l74.881-74.878 29.12 29.116L285.119 256l74.883 74.881z'/></svg>");
-}
+
 
 //buttons
 //change to sentence case
-ion-button, ion-button.button {
-    text-transform: capitalize;
+
+.sentence-case {
+  text-transform: lowercase;
+  
+	&:first-letter {
+		text-transform: capitalize !important;
+	}
 }
 
-/*
-ion-button::first-letter, ion-button.button::first-letter {
-  text-transform: uppercase !important;
-}
-*/
 
 //ion 2 calendar: selected days background
 button.days-btn.today.on-selected {

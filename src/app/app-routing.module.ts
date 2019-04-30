@@ -83,7 +83,15 @@ const routes: Routes = [
   { path: 'banner-warning-example', loadChildren: './examples/banner-warning-example/banner-warning-example.module#BannerWarningExamplePageModule' },
   { path: 'banner-error-example', loadChildren: './examples/banner-error-example/banner-error-example.module#BannerErrorExamplePageModule' },
   { path: 'select-inputs', loadChildren: './select-inputs/select-inputs.module#SelectInputsPageModule' },
-  { path: 'sheets', loadChildren: './sheets/sheets.module#SheetsPageModule' }
+  { path: 'sheets', loadChildren: './sheets/sheets.module#SheetsPageModule' },
+  { path: 'fab-example2', loadChildren: './examples/fab-example2/fab-example2.module#FabExample2PageModule' },
+  { path: 'bottom-navigation-example', loadChildren: './examples/bottom-navigation-example/bottom-navigation-example.module#BottomNavigationExamplePageModule' },
+  { path: 'tab-example', loadChildren: './examples/tab-example/tab-example.module#TabExamplePageModule' },
+  { path: 'grid-example-masonry', loadChildren: './examples/grid-example-masonry/grid-example-masonry.module#GridExampleMasonryPageModule' },
+  { path: 'hub-layout-example2', loadChildren: './examples/hub-layout-example2/hub-layout-example2.module#HubLayoutExample2PageModule' },
+  { path: 'hub-layout-example3', loadChildren: './examples/hub-layout-example3/hub-layout-example3.module#HubLayoutExample3PageModule' },
+  { path: 'hub-layout-example4', loadChildren: './examples/hub-layout-example4/hub-layout-example4.module#HubLayoutExample4PageModule' },
+  { path: 'fab-extended-example', loadChildren: './examples/fab-extended-example/fab-extended-example.module#FabExtendedExamplePageModule' }
 ];
 
 @NgModule({

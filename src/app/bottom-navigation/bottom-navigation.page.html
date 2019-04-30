@@ -1,9 +1,43 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>bottom-navigation</ion-title>
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <div class="doc-layout-header">
+      <ion-title>
+        <h1 class="ign-display-3">Bottom Navigation</h1>
+      </ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <div class="doc-layout">
+    <p class="medium-emphasis-text">Bottom navigation bars (aka 'tabs') allow movement between primary destinations in an app.</p>
+    <h2>Use</h2>
+    <p class="medium-emphasis-text">Bottom navigation should be used for:</p>
+    <ul class="medium-emphasis-text">
+      <li>Top-level destinations that need to be accessible from anywhere in the app</li>
+      <li>Three to five destinations</li>
+      <li>Mobile or tablet only</li>
+    </ul>
+    <p class="medium-emphasis-text">Bottom navigation shouldn’t be used for:</p>
+    <ul class="medium-emphasis-text">
+      <li>Single tasks, such as viewing a single email</li>
+      <li>User preferences or settings</li>
+    </ul>
+    <h2>Examples</h2>
+    <div class="example-panel">
+
+      <div class="example-mobile-outline-short mat-elevation-z16">
+        <iframe src="/bottom-navigation-example">
+          <p>Your browser does not support iframes.</p>
+        </iframe>
+      </div>
+
+    </div>
+  </div>
 
 </ion-content>

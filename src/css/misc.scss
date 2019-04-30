@@ -153,3 +153,18 @@ ion-button.ion-activatable:not(.button-large), ion-buttons.sc-ion-buttons-md-h.s
   padding-top: 6px !important;
   padding-bottom: 6px !important;
 }
+
+//badge
+//badge in bottom navigation
+ion-tab-button ion-badge {
+  min-width: 20px;
+    height: 20px;
+    /* border-radius: 50%; */
+    font-size: 12px;
+    font-weight: 900;
+    padding: 4px;
+    text-align: center;
+    margin-left: -4px;
+    margin-top: -4px;
+    border: 1px solid white;
+}

@@ -13,7 +13,6 @@
       </ion-toolbar>
   </ion-header>
 
-<ion-content padding>
   
   <!--
   <ion-button expand="block" id="showBottomToast" onclick="presentToast('bottom')">Show Toast Bottom</ion-button>
@@ -27,24 +26,22 @@
         <ion-button expand="block" onclick="presentToastWithOptions({message: 'click to close', showCloseButton: true, color: 'danger'})">Show Color Toast</ion-button>
         <ion-button expand="block" onclick="presentToastWithOptions({message: 'click to close', showCloseButton: true, cssClass: 'my-custom-class'})">Show Toast with Custom Class</ion-button>
   -->
-</ion-content>
+
 
 <ion-content padding>
     <div class="doc-layout">
         <p class="medium-emphasis-text">Snackbars (aka 'Toasts') inform users of a process that an app has performed or will perform. They appear temporarily, towards the bottom of the screen. They shouldn’t interrupt the user experience, and they don’t require user input to disappear.</p>
       <h2>Types</h2>
       <p class="medium-emphasis-text">Description of particular type</p>
-      <h3 class="subheading-2">Subheading</h3>
       <div class="example-panel">
         <ion-card>
           <ion-grid no-padding>
             <ion-row>
               <ion-col text-center>
-                <h4 class="ign-caption medium-emphasis-text">state</h4>
                 <ion-button (click)="successToast()" color="secondary">show snackbar</ion-button>
               </ion-col>
               <ion-col text-center>
-                  <h4 class="ign-caption medium-emphasis-text">state</h4>
+
               </ion-col>           
             </ion-row>
           </ion-grid>

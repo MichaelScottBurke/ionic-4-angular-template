@@ -78,7 +78,7 @@
           </ion-item>
           <ion-item lines="none" href="javascript: void();">
             <ion-label color="secondary">
-              <h3>See all</h3>
+              <h3>View all</h3>
             </ion-label>
           </ion-item>
         </ion-list>
@@ -106,11 +106,32 @@
           </ion-item>
           <ion-item lines="none" href="javascript: void();">
             <ion-label color="secondary">
-              <h3>See all</h3>
+              <h3>View all</h3>
             </ion-label>
           </ion-item>
         </ion-list>
       </ion-card>
+      <ion-card>
+          <ion-card-header>
+              <ion-card-title>
+                  <h2 class="ign-headline">Taxes</h2>
+                </ion-card-title>
+          </ion-card-header>
+        <ion-list>
+          <ion-item lines="none" href="javascript: void();" *ngFor="let t of taxes">
+            <ion-label>
+              <h3>{{ t.name }}</h3>
+              <h4 class="medium-emphasis-text">{{ t.description }}</h4>
+            </ion-label>
+          </ion-item>
+          <ion-item lines="none" href="javascript: void();">
+            <ion-label color="secondary">
+              <h3>View all</h3>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
     </section>
 
   </div>
