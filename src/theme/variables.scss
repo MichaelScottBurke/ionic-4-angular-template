@@ -222,7 +222,15 @@ ion-item {
 ion-item.item-input, ion-item.item-select {
   --border-radius: 4px 4px 0 0;
   --background: rgba(0,0,0,.04);
+
+  //fix spacing to match MD spec for inputs and selects (overall height)
+  .native-input.sc-ion-input-md, ion-select {
+    --padding-top: 0;
+  }
+
 }
+
+
 
 //input clear icon; to better differentiate between 'close' vs 'clear'
 .input-clear-icon.sc-ion-input-md {
