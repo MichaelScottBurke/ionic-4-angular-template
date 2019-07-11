@@ -91,7 +91,8 @@ const routes: Routes = [
   { path: 'hub-layout-example2', loadChildren: './examples/hub-layout-example2/hub-layout-example2.module#HubLayoutExample2PageModule' },
   { path: 'hub-layout-example3', loadChildren: './examples/hub-layout-example3/hub-layout-example3.module#HubLayoutExample3PageModule' },
   { path: 'hub-layout-example4', loadChildren: './examples/hub-layout-example4/hub-layout-example4.module#HubLayoutExample4PageModule' },
-  { path: 'fab-extended-example', loadChildren: './examples/fab-extended-example/fab-extended-example.module#FabExtendedExamplePageModule' }
+  { path: 'fab-extended-example', loadChildren: './examples/fab-extended-example/fab-extended-example.module#FabExtendedExamplePageModule' },
+  { path: 'form-input-width', loadChildren: './examples/form-input-width/form-input-width.module#FormInputWidthPageModule' }
 ];
 
 @NgModule({

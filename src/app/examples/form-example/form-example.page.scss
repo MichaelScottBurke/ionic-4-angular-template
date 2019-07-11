@@ -3,15 +3,34 @@
   //max-width: 672px;
 }
 
+//form fields inline
+fieldset .text-field-input-container {
+	//background:#f00;
+	display:inline-block;
+	//height:100px;
+  //margin-left:10px;
+  //width:300px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  &:last-child {
+    margin-right: 0;
+  }
+  ion-item {width: 100%;}
+}
+
 //form actions
 .form-actions {
   margin-top: 48px;
+
+  ion-button.ion-activatable:not(.button-large), ion-buttons.sc-ion-buttons-md-h.sc-ion-buttons-md-s.hydrated ion-button {
+    min-width: 88px !important;
+  }
 }
 
 //app bar actions
 @media #{$mq-xs} {
   .card-over-buttons {
-    display: none;
+    //display: none;
   }
 }
 
@@ -20,6 +39,7 @@ ion-content.card-over-content.hydrated {
   //handset
   @media #{$mq-xxs} {
     //--ion-background-color: white ;
+    --background: var(--ion-color-background);
   }
 
   //tablet
@@ -43,18 +63,18 @@ ion-card.card-over-card {
   margin: -56px auto 32px auto;
   background: white;
   z-index: 10;
+  border: 1px solid rgba(0,0,0,.12);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 
   //handset
   @media #{$mq-xxs} {
     width: 100%;
+    //width: 92%; to show off card over
     border-radius: 0;
-    box-shadow: none;
     padding-top: 16px;
     min-height: 100px;
-    ion-card-header {
-      display: none;
-    }
-    .form-actions {
+    ion-card-header, .form-actions, .business-structure-large {
       display: none;
     }
   }
@@ -64,6 +84,9 @@ ion-card.card-over-card {
     width: 92%;
     //padding-top: 15px;
     padding: 15px 24px 24px 24px;
+    .business-structure-small {
+      display: none;
+    }
   }
 
   //tablet landscape

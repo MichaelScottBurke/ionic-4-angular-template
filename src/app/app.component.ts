@@ -194,6 +194,11 @@ export class AppComponent {
       icon: ''
     },
     {
+      title: 'Form inputs',
+      url: '/form-input-width',
+      icon: ''
+    },
+    {
       title: 'Hub layout example 2',
       url: '/hub-layout-example2',
       icon: ''

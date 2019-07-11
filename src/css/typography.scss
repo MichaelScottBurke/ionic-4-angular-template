@@ -158,7 +158,9 @@ ion-card.card-over-card {
    color: inherit !important;
    h1, h2, h3, h4, h5, h6 {
     margin:0 0 8px 0;
-
+  }
+  h2 {
+    margin-bottom: 16px;
   }
   }
 }
@@ -183,7 +185,7 @@ ion-card.card-over-card {
 }
 
 
-//variables on light background
+//variables on light background;
 $high-emphasis: .87;
 $med-emphasis: .60;
 $disabled: .38;

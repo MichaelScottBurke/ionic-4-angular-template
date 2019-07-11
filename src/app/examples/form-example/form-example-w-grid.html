@@ -34,11 +34,9 @@
       <form name="companyInfoForm" #companyInfoForm="ngForm" (ngSubmit)="onSubmit(companyInfoForm)">
         <section>
           <h2>Company information</h2>
-          <fieldset>
-          <!--ion-grid class="grid-form-fields" no-padding>
+          <ion-grid class="grid-form-fields" no-padding>
             <ion-row>
-              <ion-col size="12" size-sm="9"-->
-               <div class="text-field-input-container input-l">
+              <ion-col size="12" size-sm="9">
                 <ion-item>
                   <ion-label class="medium-emphasis-text" position="floating" >Company name *</ion-label>
                   <ion-input #companyInput value="Western Mutual Insurance Company" required="true" clearInput>
@@ -47,28 +45,19 @@
                 <div class="assistive-text">
                   <ion-note *ngIf="companyInput.value==''" color="danger">Required</ion-note>&nbsp;
                 </div>
-              </div>
-              <!--
               </ion-col>
               <ion-col size="6" size-sm="3">
-              -->
-              <div class="text-field-input-container input-xs">
                 <ion-item>
                   <ion-label position="floating">Code</ion-label>
-                  <ion-input #codeInput inputmode="text" maxlength="6" value="WMIC"></ion-input>
-                  <ion-icon slot="end" class="icon-button-states" name="information-circle-outline"></ion-icon>
+                  <ion-input #codeInput inputmode="text" maxlength="6" value="WMIC" clearInput></ion-input>
                 </ion-item>
                 <div class="assistive-text">
                   <ion-note *ngIf="codeInput.value==''" color="danger">Required</ion-note>&nbsp;
                 </div>
-                </div>
-                 </fieldset>
-                <!--
               </ion-col>
             </ion-row>
             <ion-row>
               <ion-col size="12" size-sm="9">
-              -->
                 <ion-item>
                   <ion-label position="floating">Doing business as *</ion-label>
                   <ion-input #DBAInput inputmode="text" value="Western Mutual" clearInput></ion-input>
@@ -76,18 +65,15 @@
                 <div class="assistive-text">
                   <ion-note *ngIf="DBAInput.value==''" color="danger">Required</ion-note>&nbsp;
                 </div>
-                <!--
               </ion-col>
             </ion-row>
             <ion-row>
               <ion-col size="6" size-sm="3">
-              -->
-                <ion-item class="input-s">
+                <ion-item>
                   <ion-label position="floating"><abbr title="Federal Employer Identification Number">FEIN</abbr>*
                   </ion-label>
                   <ion-input #FEINInput maxlength="10" value="17-1223397" clearInput></ion-input>
                   <!--ion-button slot="end" fill="clear"><ion-icon name="information-circle-outline"></ion-icon></ion-button-->
-                  <ion-icon slot="end" class="icon-button-states" name="information-circle-outline"></ion-icon>
                 </ion-item>
                 <div class="assistive-text">
                   <ion-note *ngIf="FEINInput.value==''" color="danger">Required</ion-note>
@@ -95,31 +81,14 @@
                     </ion-note>
                   &nbsp;
                 </div>
-                <!--
               </ion-col>
             </ion-row>
           </ion-grid>
-        -->
         </section>
 
-        <section class="business-structure-small">
-            <ion-item>
-                <ion-label position="floating">Business structure *</ion-label>
-                <ion-select #businessSelect [(ngModel)]="business" name="business">
-                  <ion-select-option *ngFor="let business of businesses" [value]="business.value">{{business.name}}
-                  </ion-select-option>
-                </ion-select>
-              </ion-item>
-              <div class="assistive-text">
-                  <ion-note *ngIf="FEINInput.value==''" color="danger">Required</ion-note>
-                  <ion-note *ngIf="FEINInput.value!==''" class="medium-emphasis-text">Business type that best fits your organization.
-                    </ion-note>
-                  &nbsp;
-              </div>
-        </section>
-        <section class="business-structure-large">
-          <h3>Business structure *</h3>
-          <p class="medium-emphasis-text">Business type that best fits your organization.</p>
+        <section>
+          <h2>Business structure *</h2>
+          <p class="medium-emphasis-text">Choose the type of business that best fits your organizational structure.</p>
           <ion-list lines="none">
             <ion-radio-group #structureInput value="corporation">
               <!--ion-note *ngIf="structureInput.value==''" color="danger">Required</ion-note>&nbsp;-->
@@ -159,7 +128,7 @@
           <h2>Location</h2>
           <p class="medium-emphasis-text informational-text ">Location of the organization's main office.</p>
           <section>
-            <h3>Contact address</h3>
+            <h3>Address</h3>
              <ion-grid class="grid-form-fields"  no-padding>
               <ion-row>
                 <ion-col size="12" size-sm="9">
@@ -265,7 +234,7 @@
               <ion-row>
                 <ion-col>
                   <ion-item>
-                    <ion-label position="floating">Email *</ion-label>
+                    <ion-label position="floating">Email Address</ion-label>
                     <ion-input #emailInput type="email" clearInput value="mary_ann_evans@westernmutual.com"></ion-input>
                   </ion-item>
                   <div class="assistive-text">
@@ -277,18 +246,18 @@
             </ion-grid>
           </section>
           <section>
-            <h4>Contact address</h4>
+            <h4>Address</h4>
              <ion-grid class="grid-form-fields" no-padding>
               <ion-row>
                 <ion-col>
                     <ion-item no-padding-start>
                         <ion-label text-wrap>Contact address is different from company</ion-label>
-                        <ion-toggle #differntAddress name="differentAddress" [(ngModel)]="differentAddressToggleTrue" color="secondary" (click)="showAddress()" checked="true"></ion-toggle>
+                        <ion-toggle #differntAddress name="differentAddress" [(ngModel)]="differentAddressToggleTrue" slot="end" color="secondary" (click)="showAddress()" checked="true"></ion-toggle>
                     </ion-item>
                     <div class="assistive-text">
                         <ion-note *ngIf="contactAddressInput.value==''" color="danger">Required</ion-note>
                         &nbsp;
-                    </div>
+                      </div>
                 </ion-col>
               </ion-row>
             </ion-grid>
@@ -392,5 +361,10 @@
       </form>
     </ion-card-content>
   </ion-card>
+
+  <!-- w/ grid 
+  
+  
+  -->
 
 </ion-content>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl, NgForm } from '@angular/forms';
-import {  MenuController, AlertController, ToastController,  ModalController, LoadingController } from '@ionic/angular';
+import {  MenuController, AlertController, ToastController,  ModalController, LoadingController, ActionSheetController } from '@ionic/angular';
 import { RouterStateSnapshot } from '@angular/router';
 import {
     CalendarModal,
@@ -44,6 +44,36 @@ lists = [
         name: 'CCC'
     }
 ]
+businesses = [
+  {
+    name: 'None selected',
+    value: '0'
+  },
+  {
+      name: 'Corporation',
+      value: 'CP'
+  },
+  {
+    name: 'Sole proprietorship',
+    value: 'SP'
+},
+{
+  name: 'General partnership',
+  value: 'GP'
+},
+{
+  name: 'Limited libability partnership (LLP)',
+  value: 'LLP'
+},
+{
+  name: 'Limited partnership',
+  value: 'LP'
+},
+{
+  name: 'Other',
+  value: 'OT'
+}
+];
 
   states = [
     {
@@ -531,11 +561,12 @@ lists = [
     {name: 'Zimbabwe', value: 'ZW'}
    ];
 
+   business: any = 'CP';
    country: any = 'US';
    state: any = 'MD';
    contactState: any = 'MD';
 
-   constructor(public loadingController: LoadingController, public modalCtrl: ModalController, public menuCtrl: MenuController, public alertController: AlertController, public toastController: ToastController, ) {
+   constructor(public loadingController: LoadingController, public modalCtrl: ModalController, public menuCtrl: MenuController, public alertController: AlertController, public toastController: ToastController, public actionSheetController: ActionSheetController ) {
     this.menuCtrl.enable(false);
    }
 
@@ -560,6 +591,52 @@ lists = [
       cssClass: 'custom-class custom-loading'
     });
     return await loading.present();
+  }
+
+  //action sheet actions
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Actions',
+      buttons: [{
+        text: 'Delete',
+        role: 'destructive',
+        icon: 'trash',
+        handler: () => {
+          console.log('Delete clicked');
+        }
+      }, 
+      {
+        text: 'Save',
+        role: 'submit',
+        icon: 'save',
+        handler: () => {
+          console.log('Save clicked');
+        }
+      }, 
+      {
+        text: 'Share',
+        icon: 'share',
+        handler: () => {
+          console.log('Share clicked');
+        }
+      }
+      /*, 
+      {
+        text: 'Favorite',
+        icon: 'heart',
+        handler: () => {
+          console.log('Favorite clicked');
+        }
+      }*/, {
+        text: 'Cancel',
+        icon: 'close',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      } ]
+    });
+    await actionSheet.present();
   }
 
 

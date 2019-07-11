@@ -1,3 +1,4 @@
+@import "src/css/breakpoints.scss"; 
 :root {
 
   --ion-color-primary: #1B7F66;
@@ -91,9 +92,9 @@
   --white-rgb: 255,255,255;
 
   //text color: black
-  --ion-high-emphasis-text: rgba(0,0,0,.87);
-  --ion-medium-emphasis-text: rgba(0,0,0,.60);
-  --ion-disabled-text: rgba(0,0,0,.38);
+  --ion-high-emphasis-text: #212121; //rgba(0,0,0,.87);
+  --ion-medium-emphasis-text: #666; //rgba(0,0,0,.60);
+  --ion-disabled-text: #9E9E9E;//rgba(0,0,0,.38);
 
   //text color primary = must be darker/shade version of primary!!!!
   --ion-color-primary-text: var(--ion-color-primary-shade);
@@ -110,14 +111,20 @@
   //--ion-button-opacity: .38 !important;
 
   //icon color
-  --ion-active-icon-black: rgba(0,0,0,.87);
-  --ion-inactive-icon-black: rgba(0,0,0,.54);
-  --ion-disabled-icon-black: rgba(0,0,0,.38);
+  --ion-active-icon-black:  #212121; //rgba(0,0,0,.87);
+  --ion-inactive-icon-black: #757575; //rgba(0,0,0,.54);
+  --ion-disabled-icon-black: #9E9E9E; //rgba(0,0,0,.38);
 
   ion-icon.icon-button-states {
+    /*
     opacity: .54;
     &:hover {
       opacity: .87 !important;
+    }
+    */
+    color: #757575;
+    &:hover {
+      opacity: #212121 !important;
     }
   }
 
@@ -219,9 +226,11 @@ ion-item {
 }
 
 //text field background color to new match MD spec
-ion-item.item-input, ion-item.item-select {
+ion-item.item-input, ion-item.item-select, ion-item.item-toggle {
   --border-radius: 4px 4px 0 0;
-  --background: rgba(0,0,0,.04);
+  //--background: rgba(0,0,0,.04);
+  --background: #f7f7f7;
+  --padding-start: 12px;
 
   //fix spacing to match MD spec for inputs and selects (overall height)
   .native-input.sc-ion-input-md, ion-select {
@@ -230,6 +239,41 @@ ion-item.item-input, ion-item.item-select {
 
 }
 
+/************ reorganize *****************/
+
+//input widths
+//x-small: 1-4 characters
+.input-xs {
+  width: 114px;
+}
+
+
+//small: 5-17 characters
+.input-s {
+ width: 188px;
+}
+//medium: 18-32 characters
+.input-m {
+ width: 336px;
+ @media #{$mq-xxs} {
+   width: 100%;
+ }
+}
+
+//33-60 characters
+.input-l {
+  width: 504px;
+  @media #{$mq-xxs} {
+    width: 100%;
+  }
+}
+//61+ characters
+.input-full {
+  width: 600px;
+  @media #{$mq-xxs} {
+    width: 100%;
+  }
+}
 
 
 //input clear icon; to better differentiate between 'close' vs 'clear'
@@ -239,7 +283,13 @@ ion-item.item-input, ion-item.item-select {
 
 //text fields additional elements: make assistive text align to input text
 .assistive-text {
-  padding: 4px 16px 0 16px;
+  padding: 4px 12px 0 12px;
+}
+
+//text fields floating label size to be 14px
+.item-has-value .label-floating.sc-ion-label-md-h, .label-floating.sc-ion-label-md-h {
+  -webkit-transform: translateZ(0) scale(.9);
+  transform: translateZ(0) scale(.9);
 }
 
 
@@ -268,7 +318,17 @@ ion-item.filter-simple, ion-item.ion-select.filter-simple {
 }
 
 
+ion-button, .alert-button.sc-ion-alert-md {
+  text-transform: capitalize !important;
+}
+
 //ion 2 calendar: selected days background
 button.days-btn.today.on-selected {
   //background-color: var(--ion-color-secondary) !important;
 }
+
+//alert select menu
+//make first option in selection list be medium emphasis text 'none selected'
+button.alert-radio-button:first-child .alert-radio-label.sc-ion-alert-md [value="0"] {
+  color: rgba(0,0,0,.6);
+ }

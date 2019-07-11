@@ -3,7 +3,7 @@ ion-content.hub-layout {
 }
 
 .hub-layout-header {
-  padding: 16px 16px;
+  padding: 0px 16px;
   background: white;
   margin: 0;
   border-bottom: 1px solid rgba(0,0,0, .12);
@@ -28,7 +28,7 @@ ion-content.hub-layout {
 
 .hub-layout-section {
   //background: blue;
-  margin: 0 0 32px 0;
+  margin: 0 0 16px 0;
 }
 
 .hub-layout-section-header {
@@ -49,4 +49,8 @@ ion-content.hub-layout {
     min-height: 100px;
     --background: white;
   }
+}
+
+.no-link-styling {
+  color: var(--ion-medium-emphasis-text) !important;
 }

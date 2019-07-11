@@ -1,0 +1,14 @@
+//component style overrides
+@import "../src/theme/variables.scss";
+
+//Action Sheet
+//to do: add global variables
+.action-sheet-icon.sc-ion-action-sheet-md {
+  color: var(--ion-disabled-text);
+}
+
+//@at-rootto do: add global variables
+.action-sheet-title.sc-ion-action-sheet-md {
+  font-weight: 500;
+  color: var(--ion-medium-emphasis-text);
+}
