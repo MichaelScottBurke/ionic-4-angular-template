@@ -27,7 +27,7 @@
     "@ionic/angular": "^4.0.0",
     "@ionic/pro": "2.0.4",
     "core-js": "^2.5.4",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.4.5",
     "ion2-calendar": "^3.0.0-rc.0",
     "ion2-calendar-menusifu": "^1.0.13",
     "moment": "^2.24.0",
