@@ -30,7 +30,7 @@
     "handlebars": "^4.1.2",
     "ion2-calendar": "^3.0.0-rc.0",
     "ion2-calendar-menusifu": "^1.0.13",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.4.0",
     "zone.js": "~0.8.29"
